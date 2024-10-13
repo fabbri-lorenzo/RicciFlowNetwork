@@ -31,7 +31,7 @@ The following Python libraries are required:
 To install these, run:
 ```bash
 pip3 install networkx ricci-graph-tool numpy matplotlib scikit-learn
-
+```
 
 
 ## Data
@@ -46,6 +46,7 @@ import networkx as nx
 
 # Load the Facebook Ego Network
 graph = nx.read_adjlist("facebook_combined.txt", nodetype=int)
+```
 
 ### 2. Compute Ollivier-Ricci Curvature
 You can compute the Ollivier-Ricci curvature for each edge in the network using:
@@ -59,7 +60,7 @@ orc.compute_ricci_curvature()
 # Add curvature to edge attributes
 for u, v, d in graph.edges(data=True):
     d['ricciCurvature'] = orc.G[u][v]['ricciCurvature']
-
+```
 
 ### 3. Apply Ricci Flow
 Simulate the discrete Ricci Flow process by iteratively adjusting edge weights based on their curvature:
@@ -74,7 +75,7 @@ def ricci_flow(graph, iterations=10):
 
 # Run Ricci Flow for 15 iterations
 ricci_flow(graph, iterations=15)
-
+```
 
 
 ### 4. Perform Network Surgery
@@ -87,7 +88,7 @@ def perform_surgery(graph, threshold=4):
 
 # Perform surgery after Ricci Flow
 perform_surgery(graph, threshold=4)
-
+```
 
 ### 5. Visualize Communities
 Visualize the network with color-coded communities:
@@ -99,7 +100,7 @@ pos = nx.spring_layout(graph)
 curvature_values = [d['ricciCurvature'] for u, v, d in graph.edges(data=True)]
 nx.draw(graph, pos, edge_color=curvature_values, edge_cmap=plt.cm.RdBu, node_size=50, with_labels=False)
 plt.show()
-
+```
 
 ### 6. Evaluate results
 Compare the detected communities with ground-truth friend circles using Adjusted Rand Index (ARI):
@@ -113,7 +114,7 @@ detected_labels = [...]  # Detected from the algorithm
 
 ari = adjusted_rand_score(true_labels, detected_labels)
 print(f"Adjusted Rand Index: {ari}")
-
+```
 
 ## Results
 After running the Ricci Flow algorithm on the Facebook Ego Network, communities can be identified based on the edge curvatures. The resulting network will reveal clearly separated clusters corresponding to the original friend circles. Further evaluation metrics like ARI and modularity can be used to validate the accuracy of the detected communities.
