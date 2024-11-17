@@ -1,0 +1,111 @@
+% ******************************************************************************
+% *************************** INSIEMISTICA *************************************
+\newcommand{\numberset}{\mathbb}
+\newcommand{\N}{\numberset{N}}
+\newcommand{\Z}{\numberset{Z}}
+\newcommand{\R}{\numberset{R}}
+\newcommand{\C}{\numberset{C}}
+\newcommand{\1}{\mathds{1}}
+% ******************************************************************************
+% ****************************** OPERATORS **************************************
+%\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\mynorm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\inner}{\langle}{\rangle}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Realpart}{Re} % ridefinisco parte reale
+\DeclareMathOperator{\Impart}{Im}
+\renewcommand{\Re}{\Realpart} % ridefinisco parte reale (altrimenti dà simbolo in gotico)
+\renewcommand{\Im}{\Impart} 
+\DeclareMathOperator*{\argmax}{arg\,max}
+%\DeclareMathOperator{\Tr}{Tr}
+%\DeclareMathOperator{\Res}{Res}
+
+
+% ******************************************************************************
+% *************************** VECTOR CALCULUS **********************************
+\newcommand{\bcdot}{\boldsymbol{\cdot}} % così \bcdot è prodotto scalare in grassetto
+\renewcommand{\vec}{\boldsymbol}
+\newcommand{\del}{\vec{\nabla}}
+
+
+% ******************************************************************************
+% *************************** DIFFERENTIATION **********************************
+\newcommand{\ud}{\mathop{}\!\mathrm{d}}
+\newcommand{\udd}{{\ud}^2}
+\newcommand{\udt}{{\ud}^3}
+\newcommand{\udq}{{\ud}^4}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\de}{\partial}
+
+
+% ******************************************************************************
+% ******************************* THEOREMS *************************************
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{plain}
+\newtheorem*{principle}{Principle}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\renewcommand{\thelemma}{L.\arabic{lemma}}
+\renewcommand{\thetheorem}{T.\arabic{theorem}}
+
+\newenvironment{innerproof}
+ {\renewcommand{\qedsymbol}{}\proof}
+ {\endproof}
+
+% ******************************************************************************
+% ******************************* SHORTCUTS ************************************
+\newcommand{\invgamma}{\sqrt{1- \frac{v^2}{c^2}}}
+\renewcommand{\L}{\mathcal{L}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\qi}{q^{(m)}}
+\newcommand{\qf}{q^{(g)}}
+\newcommand{\bdelta}{\bar{\delta}}
+\newcommand{\deltat}{{\delta}^3}
+\newcommand{\deltaq}{{\delta}^4}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\phis}{{\phi}^*}
+\newcommand{\hbarq}{{\hbar}^2}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\q}{\hat{\vec{q}}}
+\newcommand{\Tau}{\mathcal{T}}
+\newcommand{\ray}{\mathcal{R}}
+
+% ******************************************************************************
+% ************************ SHORTCUTS WITH ARGUMENTS ****************************
+\newcommand{\bravec}[1]{\bra{\vec{#1}}} 
+\newcommand{\ketvec}[1]{\ket{\vec{#1}}} 
+\renewcommand{\op}[1]{\hat{#1}}
+\newcommand{\opvec}[1]{\op{\vec{#1}}}
+\newcommand{\dual}[1]{\widetilde{#1}}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\id}{id}
+
+% ******************************************************************************
+% ******************************** GRAPHICS ************************************
+\renewcommand\qedsymbol{$\blacksquare$}
+
+% ******************************************************************************
+% ******************************** matrices and scalar prodict ************************
+\newcommand{\irow}[1]{% inline row vector
+  \begin{smallmatrix}(\,#1\,)\end{smallmatrix}%
+}
+
+\newcommand{\icol}[1]{% inline column vector
+  \left(\begin{smallmatrix}#1\end{smallmatrix}\right)%
+}
+
+\newcommand{\scalar}[2]{\langle #1, #2 \rangle}
+\renewcommand{\norm}[1]{\scalar{#1}{#1}}

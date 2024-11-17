@@ -2,20 +2,23 @@
 
 This repository implements community detection on the **Facebook Ego Network** using **Discrete Ricci Flow**, based on the methodology presented in the paper ["Community Detection on Networks with Ricci Flow"](https://doi.org/10.1038/s41598-019-46380-9) by Chien-Chun Ni et al.
 
+The essay can be found [here](latex/DiscreteRicciFlow.pdf)
+
 ## Table of Contents
-- [Introduction](#introduction)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Data](#data)
-- [Usage](#usage)
-  - [1. Load the Network](#1-load-the-network)
-  - [2. Compute Ollivier-Ricci Curvature](#2-compute-ollivier-ricci-curvature)
-  - [3. Apply Ricci Flow](#3-apply-ricci-flow)
-  - [4. Perform Network Surgery](#4-perform-network-surgery)
-  - [5. Visualize Communities](#5-visualize-communities)
-  - [6. Evaluate Results](#6-evaluate-results)
-- [Results](#results)
-- [References](#references)
+- [Community Detection on Facebook Ego Network with Ricci Flow](#community-detection-on-facebook-ego-network-with-ricci-flow)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Requirements](#requirements)
+  - [Data](#data)
+  - [Usage](#usage)
+    - [1. Load the Network](#1-load-the-network)
+    - [2. Compute Ollivier-Ricci Curvature](#2-compute-ollivier-ricci-curvature)
+    - [3. Apply Ricci Flow](#3-apply-ricci-flow)
+    - [4. Perform Network Surgery](#4-perform-network-surgery)
+    - [5. Visualize Communities](#5-visualize-communities)
+    - [6. Evaluate results](#6-evaluate-results)
+  - [Results](#results)
+  - [References](#references)
 
 ## Introduction
 This project uses **Ricci Flow** as a geometric approach to detect community structures in networks. It applies **Ollivier-Ricci curvature** to adjust the weights of edges in a graph, iterating the process to shrink intra-community edges and stretch inter-community edges. The **Facebook Ego Network** is used as the dataset, with the goal of identifying the known friend circles (communities) using the Ricci Flow method.
