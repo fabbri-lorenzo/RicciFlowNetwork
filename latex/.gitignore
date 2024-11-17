@@ -1,5 +1,6 @@
 ## ignore all directories with the name test
 out/
+.DS_Store
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
