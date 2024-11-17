@@ -1,0 +1,66 @@
+% ******************************************************************************
+% *********************** Language Font and Colors *****************************
+\usepackage[english]{babel}
+
+\usepackage[T1]{fontenc} % codifica dei font
+\usepackage[utf8]{inputenc} % lettere accentate da tastiera
+
+\usepackage{indentfirst} % indenta primo capoverso di paragrafo
+\usepackage{microtype} % migliora riempimento righe - carica sempre
+
+%\usepackage[dvipsnames]{xcolor}
+
+
+% ******************************************************************************
+% ******************************* Utilities ************************************
+\usepackage{lipsum}
+\usepackage{comment}
+\usepackage{quoting} % per le citazioni in display
+\quotingsetup{font=small} % serve per mantenere lo stesso stile in tutte le citazioni
+\usepackage{enumitem}
+
+
+
+% ******************************************************************************
+% *************************** Math and Physics *********************************
+\usepackage{amsmath} % per la matematica
+\usepackage{amssymb} % per la matematica
+\usepackage{mathtools} % per valore assoluto e norma
+\usepackage{braket} % per i comandi \Set e \Bra e simili
+\usepackage{amsthm} % per teoremi e dimostrazioni
+\usepackage{tensor} % per tensori e indici alto/basso
+\usepackage{physics}
+\usepackage{bm}
+
+
+% ******************************************************************************
+% ************************* Tables and Figures *********************************
+\usepackage{caption} % per tabelle
+\usepackage{graphicx} % per figure
+
+
+% ******************************************************************************
+% ************************* TIKZ AND SETTINGS **********************************
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc,graphs,intersections,plotmarks,shapes,hobby}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{calc,patterns,decorations.markings}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta, patterns.meta}
+%\usepackage{pgfplots} 
+%\pgfplotsset{compat=newest}
+
+
+% ******************************************************************************
+% ******************************* OTHERS ***************************************
+\usepackage[autostyle,italian=guillemets]{csquotes}
+%\usepackage{biblatex} % Viene CONSIGLIATO biber invece di bibtex [backend=biber]
+\addbibresource{FrontBackMatter/bibliography.bib}
+\usepackage{hyperref}
+\usepackage{subfiles}
+\usepackage{setspace}
+\usepackage{titlesec} % TO CHANGE SIZE OF SECTIONS, SUBSECTIONS ECC
+
+% ******************************************************************************
+% ********************* !!!!!SILENCE WARNINGS!!!!! *****************************
