@@ -1,0 +1,96 @@
+
+\section*{\hyperlink{Sphere}{Metric of a 2-sphere}} \label{appendix}
+Start with the parameterisation of a 2-sphere with a radius $R$ and define the metric tensor $\eta$
+\begin{equation*}
+\centering
+    \begin{cases}
+      x = R \sin{(\theta)} \cos{(\phi)} \\
+      y=  R \sin{(\theta)} \sin{(\phi)}\\
+      z=  R \cos{(\theta)}
+    \end{cases}
+    \quad \text{and} \quad \eta_{ij} \equiv \begin{pmatrix}
+\frac{\partial \Vec{x}}{\partial \theta} \frac{\partial \Vec{x}}{\partial \theta} & \frac{\partial \Vec{x}}{\partial \theta} \frac{\partial \Vec{x}}{\partial \phi} \\
+\frac{\partial \Vec{x}}{\partial \phi}\frac{\partial \Vec{x}}{\partial \theta} & \frac{\partial \Vec{x}}{\partial \phi}\frac{\partial \Vec{x}}{\partial \phi} \\
+\end{pmatrix}
+\end{equation*}
+\begin{equation*}
+    \Rightarrow  \quad \eta_{ij}=\begin{pmatrix}
+R^2 & 0 \\
+0 & R^2 \sin^2(\theta) \\
+\end{pmatrix}
+\end{equation*}
+where $\Vec{x}=\left( x , y , z \right)$. Now we can write the metric as
+\begin{equation*}
+    dl^2= \eta_{ij}\left( du^i , du^j \right) = R^2 \left( d\theta , d\phi \right) \begin{pmatrix}
+1 & 0 \\
+0 & \sin^2(\theta) \\
+\end{pmatrix} \begin{pmatrix}
+d\theta \\
+d\phi \\
+\end{pmatrix} = R^2 \left( d\theta^2 + \sin^2(\theta)d\phi^2 \right)
+\end{equation*} 
+where $\Vec{u}=(\theta,\phi)$.
+\hspace*{\fill} $\Box$
+
+\section*{\hyperlink{Ricci}{Components of the Ricci tensor for a generic spherically symmetric four dimensional metric}}
+The explicit derivation will be shown only for the first component $R^0_0$, as the procedure is analogous for the others.
+
+Starting from the expression of the Ricci tensor in terms of Christoffel symbols:
+\begin{equation*}
+    R^k {}_{\alpha k \beta} = \partial_\beta  \Gamma^k {}_{\alpha k} -\partial_k \Gamma^k {}_{\alpha \beta}+  \Gamma^\sigma {}_{\beta k} \Gamma^k {}_{\sigma \alpha}  -\Gamma^k {}_{k \sigma} \Gamma^\sigma {}_{\alpha \beta} 
+\end{equation*}
+
+we get 
+\begin{align*}
+    &R_{0 0} \equiv R^k {}_{0 k 0} =  \partial_0  \Gamma^k {}_{0 k}-\partial_k \Gamma^k {}_{0 0}  + \Gamma^\sigma {}_{0 k} \Gamma^k {}_{\sigma 0} - \Gamma^k {}_{k \sigma} \Gamma^\sigma {}_{0 0}   
+\end{align*}
+
+For the metric (\ref{eq2.1}), the terms that define $R_{00}$ are then expressed as
+\begin{align*}
+  \bullet \text{ } \Gamma^k {}_{0k} =& \partial_0 (\gamma + \alpha + 2\beta + \ln{\sin{\theta}}) = \Dot{\gamma} + \Dot{\alpha} +2\Dot{\beta} 
+    \\ \rightarrow \quad \partial_0 \Gamma^k {}_{0k} =& \partial_0  (\Dot{\gamma} + \Dot{\alpha} +2\Dot{\beta})  = \Ddot{\gamma} + \Ddot{\alpha} +2\Ddot{\beta} \text{ ;}
+    \\[15pt]  \bullet  \text{ } \Gamma^k {}_{0 0} =& \frac{1}{2} g^{k \nu} \left( g_{\nu 0 ,0} +  g_{\nu 0 ,0} -  g_{0 0,\nu} \right)= \frac{1}{2} g^{k\nu} \left(2g_{\nu 0,0}-g_{00,\nu}\right) 
+  \\ =& \frac{1}{2}\left[ g^{k0}g_{0 0,0} + g^{k1}(2g_{0 1,0} - g_{0 0,1})\right] = \frac{1}{2}\left[ g^{k0}g_{0 0,0} - g^{k1} g_{0 0,1}\right] 
+   \\ \rightarrow \quad \partial_k \Gamma^k {}_{00} =& \partial_0 \frac{1}{2}\left( e^{-2\gamma}2\dot{\gamma}e^{2\gamma}\right) - \partial_1 \frac{1}{2}\left(-e^{-2\alpha} 2\gamma^\prime e^{2\gamma}\right)
+   \\ =& \Ddot{\gamma} + e^{2\gamma-2\alpha}\left(\gamma^{\prime \prime}+2{\gamma^\prime}^2 -2 \gamma^\prime \alpha^\prime \right) \text{;}
+    \\[15pt]  \bullet \text{ } \Gamma^\sigma {}_{0 k} =& \frac{1}{2} g^{\sigma \nu} \left( g_{\nu 0, k} + g_{\nu k, 0} - g_{0 k, \nu}\right) 
+    \\=& \frac{1}{2} \left[g^{\sigma 0} \left(  g_{0 0, k} + g_{0 k, 0} - g_{0 k, 0}\right) + g^{\sigma 1} \left( g_{1 0, k} + g_{1 k, 0} - g_{0 k, 1}\right) \right]
+    \\ \Gamma^k {}_{\sigma 0} =& \frac{1}{2} g^{k \nu} \left( g_{\nu \sigma, 0} + g_{\nu 0,\sigma} - g_{\sigma 0, \nu}\right) 
+    \\=& \frac{1}{2} \left[g^{k 0} \left( g_{0 \sigma, 0} + g_{0 0, \sigma} + - g_{\sigma 0, 0}\right) + g^{k 1}\left( g_{0 1, \sigma} + g_{\sigma 1, 0} - g_{\sigma 0, 1}\right) \right]
+    \\ \rightarrow \quad \Gamma^\sigma {}_{0 k} \Gamma^k {}_{\sigma 0}  =& \Gamma^0 {}_{0 0} \Gamma^0 {}_{0 0} + \Gamma^0 {}_{0 1} \Gamma^1 {}_{0 0} + \cancel{\Gamma^0 {}_{0 2} \Gamma^2 {}_{0 0}} + \cancel{\Gamma^0 {}_{0 3} \Gamma^3 {}_{0 0}} + \Gamma^1 {}_{0 0} \Gamma^0 {}_{1 0} + \Gamma^1 {}_{0 1} \Gamma^1 {}_{1 0} 
+    \\ +&\cancel{\Gamma^1 {}_{0 2} \Gamma^2 {}_{1 0}} + \cancel{\Gamma^1 {}_{0 3} \Gamma^3 {}_{1 0}} + \cancel{\Gamma^2 {}_{0 0} \Gamma^0 {}_{2 0}} + \cancel{\Gamma^2 {}_{0 1} \Gamma^1 {}_{2 0}} + \Gamma^2 {}_{0 2} \Gamma^2 {}_{2 0} + \cancel{\Gamma^2 {}_{0 3} \Gamma^3 {}_{2 0}} 
+    \\ +&\cancel{\Gamma^3 {}_{0 0} \Gamma^0 {}_{3 0}} + \cancel{\Gamma^3 {}_{0 1} \Gamma^1 {}_{3 0}} + \cancel{\Gamma^3 {}_{0 2} \Gamma^2 {}_{3 0}}  + \Gamma^3 {}_{0 3} \Gamma^3 {}_{3 0} 
+    \\ =& \Dot{\gamma}^2 + {\gamma^\prime}^2 e^{2\gamma-2\alpha} + {\gamma^\prime}^2 e^{2\gamma-2\alpha}+ \Dot{\alpha}^2 + \Dot{\beta}^2 + \Dot{\beta}^2
+    \\ =& \dot{\gamma}^2 + \dot{\alpha}^2 + 2 \dot{\beta}^2 + 2{\gamma^\prime}^2 e^{2\gamma-2\alpha} \text{ ;}
+    \\[15pt]  \bullet \text{ } \Gamma^\sigma 
+    {}_{0 0} =&  \frac{1}{2} g^{\sigma \nu}(2g_{\nu 0,0} - g_{00,\nu})  
+    = \frac{1}{2} \left[ g^{\sigma 0}g_{00,0} -g^{\sigma 1}g_{00,1}\right]
+    \\ \Gamma^k {}_{k \sigma} =& \partial_\sigma (\gamma + \alpha +2\beta + \ln{\sin{\theta}})
+    \\ \rightarrow \quad  \Gamma^k {}_{k \sigma} \Gamma^\sigma {}_{0 0} =& \frac{1}{2} e^{-2\gamma}\left(2 \Dot{\gamma}e^{2\gamma}\right)  \left(\Dot{\gamma} + \Dot{\alpha} +2\Dot{\beta} \right) - \frac{1}{2} e^{-2\alpha}\left(- 2 \gamma^\prime e^{2\gamma}\right)  \left(\gamma^\prime +\alpha^\prime +2\beta^\prime \right)
+    \\ =&\dot{\gamma}^2 + \dot{\gamma}\Dot{\alpha} + 2\dot{\gamma}\Dot{\beta} + e^{2\gamma-2\alpha}\left({\gamma^\prime}^2+ \gamma^\prime \alpha^\prime + 2\gamma^\prime \beta^\prime \right)
+\end{align*}
+where dots and primes stand for $\frac{\partial}{\partial t}$ and  $\frac{\partial}{\partial r}$, respectively. 
+In the computation we made use of two important relationships that hold in the case of a symmetric connection: 
+\begin{equation*}
+    \Gamma^\mu {}_{\alpha \beta} = \frac{1}{2} g^{\mu \nu} \left( g_{\nu \alpha,\beta} + g_{\nu \beta,\alpha} -  g_{\alpha \beta,\nu} \right) \quad \text{and} \quad \Gamma^\alpha {}_{\mu \alpha} = \Gamma^\alpha {}_{\alpha \mu} = \partial_\mu \left( \ln{\sqrt{-g}}\right)
+\end{equation*}
+Where the term $\ln{\sqrt{-g}} \equiv \ln{\sqrt{-\det g_{\mu \nu}}}$ evaluates as
+\begin{align*}
+    g  &= -e^{2\gamma + 2\alpha +4\beta}\sin^2{\theta}
+    \\ \sqrt{-g} &= e^{\gamma + \alpha +2\beta}\sin{\theta}
+    \\ \ln{\sqrt{-g}} &=\gamma + \alpha +2\beta + \ln{\sin{\theta}}
+\end{align*}
+
+We are now able to write
+\begin{align*}
+    R_{00} =& \text{ } \Ddot{\gamma} + \Ddot{\alpha} + 2\Ddot{\beta} - \Ddot{\gamma} - e^{2\gamma-2\alpha}\left(\gamma^{\prime \prime}+2{\gamma^\prime}^2 -2 \gamma^\prime \alpha^\prime \right) + \dot{\gamma}^2 + \dot{\alpha}^2 + 2 \dot{\beta}^2 + {\gamma^\prime}^2 e^{2\gamma-2\alpha}
+    \\ -& \dot{\gamma}^2 - \dot{\gamma}\Dot{\alpha} - 2\dot{\gamma}\Dot{\beta} 
+     - e^{2\gamma-2\alpha}\left({\gamma^\prime}^2+ \gamma^\prime \alpha^\prime + 2\gamma^\prime \beta^\prime \right)
+    \\ =& \text{ } \Ddot{\alpha} + 2\Ddot{\beta} + 2 \dot{\beta}^2  -
+    \Dot{\gamma} \left( \Dot{\alpha} + 2\Dot{\beta} \right) + \dot{\alpha}^2 - e^{2\gamma-2\alpha}\left( \gamma^{\prime \prime} - \gamma^\prime \alpha^\prime + {\gamma^\prime}^2 + 2\gamma^\prime \beta^\prime\right)
+\end{align*}
+To obtain $R^0_0$ we use the relationship $R^0_0=g^{0 0}R_{0 0}$, where $g^{0 0} = e^{-2\gamma}$. 
+\begin{equation*}
+    R^0_0=e^{-2\gamma}\left[ 2 \Ddot{\beta} + \Ddot{\alpha} + 2 \dot{\beta}^2 + \dot{\alpha}^2 - \dot{\gamma} \left( 2 \dot{\beta} + \dot{\alpha} \right) \right] - e^{-2 \alpha}\left[ \gamma^{\prime \prime} + \gamma^{\prime} \left( 2 \beta^\prime + \gamma^\prime - \alpha^\prime \right) \right]
+\end{equation*}
+\hspace*{\fill} $\Box$
