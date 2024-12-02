@@ -1,6 +1,7 @@
 ## ignore all directories with the name test
 out/
 .DS_Store
+main-chat.tex
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
