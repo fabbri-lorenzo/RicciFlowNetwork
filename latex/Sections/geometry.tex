@@ -14,3 +14,76 @@ Let's first refine the definition of a differentiable Manifold~\ref{def:manifold
 \end{definition}
 
 The pair $(U_i, \phi_i)$ is called a \emph{chart}, while the whole family $\{(U_i, \phi_i)\}$ is an \emph{atlas}. The subset $U_i$ is called the \emph{coordinate neighbourhood}, while $\phi_i$ is the \emph{coordinate function}. This homeomorphism is represented by $n$ functions $\{x_1(p), \dots, x_n(p)\}$, which are called \emph{coordinates}. However, notice that a point $p\in\M$ is independent of its coordinates. In each coordinate neighbourhood $U_i$, $\M$ looks like an open subset of $\R_n$ whose element is $\{x^1, \dots x^n\}$, and this explains our previous definition~\ref{def:manifold-prev}.
+
+Recall from the previous section that we're interested in Manifolds with boundaries. We're now able to define them.
+\begin{definition}{Manifold with boundary}
+    A \emph{Manifold with boundary} is a topological space $\M$ which is covered by a family of open sets $\{U_i\}$, each of which is homeomorphic to an open set of $H^n$, where
+    \begin{equation}
+        H^n \coloneq \{ (x^1, \dots, x^n) \in R^n | x^n \geq 0 \} .
+    \end{equation} 
+\end{definition}
+
+The set of points which are mapped to points with $x_n = 0$ is called the \emph{boundary} of $\M$, denoted by $\partial \M$. The coordinates of $\partial \M$ may be given by $n-1$ numbers $(x^1, \dots, x^{n-1},0)$. One must then be careful to define smoothness. Indeed, the map $\psi_{ij} \colon \phi_j (U_i \cap U_j) \to \phi_i(U_i \cap U_j)$ is defined on an open set of $H^n$ in general, and $\phi_{ij}$ is said to be smooth if it's $C^\infty$ in an open set of $\R^n$ which contains $\phi_j(U_i \cap U_j)$.
+
+\section{Differentiable Maps}
+Due to the presence of the differentiable structure on a Manifold, we're able to use the calculus techniques developed for $\R^n$. We can define a map between manifolds.
+
+Let $\M$ and $\mathcal{N}$  be an $m$-dimensional and an $n$-dimensional Manifold, respectively. Let's then consider a map between them, i.e., $f: \M \to \mathcal{N}$, where $\M \ni p \mapsto f(p) \in \mathcal{N}$. Taking the charts $(U, \phi)$ on $\M$ and $(V,\psi)$ on $\mathcal{N}$,the coordinate representation of $f$ will be
+\begin{equation}
+    \phi \circ f \circ \phi^{-1}: \R^m \to \R^n .
+\end{equation}
+We can write $\phi(p) = \{x^\mu\}$ and $\psi(f(p)) = \{y^\alpha\}$, which makes explicit that $y \equiv \psi \circ f \circ \phi^{-1}(x)$ is an $m$-variables, vector-valued, usual function. Rendering the coordinate charts implicit, we may write $y^\alpha = f^\alpha(x^\mu)$, which makes clear why $f$ is said to be \emph{differentiable} at $p$ if $y$ is $C^\infty$. Notice, however, that the differentiability of $f$ is independent of the chosen coordinates.
+
+A very important type of maps between manifold is given by diffeomorphisms.
+\begin{definition}[Diffeomorphism]
+    Let $f \colon \M \to \mathcal{N}$ be a homeomorphism and $\psi$ and $\phi$ the same coordinate functions as before. Then, if $\psi \circ f \circ \phi^{-1}$ is invertible and both $y \equiv \psi \circ f \circ \phi^{-1}(x)$ and $x \equiv \phi \circ f^{-1} \circ \psi^{-1}(y)$ are $C^\infty$, $f$ is called a \emph{diffeomorphism} and $\M$ is said to be \emph{diffeomorphic} to $\mathcal{N}$, $\M \equiv \mathcal{N}$.
+\end{definition}
+
+Taking a diffeomorphism from a Manifold into itself, we can implement the concept of change of coordinates, in two different interpretation. First, the set of diffeomorphisms $f\colon \M \to \M$ form a group denoted by $\diff(\M)$. Considering a particular $f \in \diff(\M)$, and a chart $(U, \phi)$, such that, for $p \in U$ and $f(p) \in U$, we get $\phi(p) = x^\mu(p)$ and $\phi(f(p))=y^\mu(f(p))$, then $y$ is a differentiable function of $x$ and the above diffeomorphism can be thought as an \emph{active transformation} for a change of coordinates.
+
+However, if $(U,\phi)$ and $(V,\psi)$ are overlapping charts, for a point $p \in U \cap V$, there are two coordinates values, i.e., $x^\mu = \phi(p)$ and $y^\mu = \psi(p)$. Then, the map $x \mapsto y$ is differentiable, and it represents a \emph{passive transformation} for a change of coordinates.
+
+Two important kinds of maps are curves and functions.
+
+\begin{definition}[Curve]
+    An \emph{open curve} in an $n$-dimensional Manifold $\M$ is a map $c \colon (a,b) \to \M$, where $(a,b)$ is an open interval such that $a<0<b$. A \emph{closed curve} is a map $c \colon S^1 \to \M$. On a chart $(U,\phi)$, a curve $c(t)$ ha the coordinates representation $x=\phi \circ c \colon \R \to \R^n$.
+\end{definition}
+
+\begin{definition}[Function]
+    A \emph{function} $f$ on $\M$ is a smooth map from $\M$ to $\R$. On a chart $(U,\phi)$, the coordinate representation of $f$ is given by $f \circ \phi^{-1} \colon \R^n \to \R$, which is a real-valued function of $n$ variables. The set of functions is denotes as $\mathfrak{F}(\M)$.
+\end{definition}
+
+\section{Vectors}
+The curves allow us to define a vector as a differential operator. So understand this more deeply, let's take a Manifold $\M$, a curve $c\colon (a,b) \to \M$ and a function $f \colon \M \to \R$, where $(a,b)$ is an open interval containing $t=0$, as showed in fig.\color{red}vector\color{black}. The tangent vector at $c(0)$ is defined to be the directional derivative of a function $f(c(t))$ along the curve $c(t)$ at $t=0$. In particular,
+\begin{equation}
+    X[f] \coloneq \left. \frac{\ud f (c(t))}{\ud t}\right|_{t=0} = \left. \frac{\partial f}{\partial x^\mu} \frac{\ud x^\mu(c(t))}{\ud t} \right|_{t=0} = X^\mu \left(\frac{\de f}{\de x^\mu}\right),
+\end{equation}
+where we defined
+\begin{equation}\label{eq:def-vectors}
+    X = X^\mu \left(\frac{\de}{\de x^\mu}\right), \quad X^\mu = \left. \frac{\ud x^\mu(c(t))}{\ud t} \right|_{t=0}
+\end{equation}
+Notice that we used abuse of notation, that is $\de f / \de x^\mu$ really means $\de (f \circ \phi^{-1}(x))/\de x^\mu$.
+
+Trying to be more precise, as known from multivariate analysis, whenever we have a curve, we can define an equivalence class. This case is no different. Indeed, given two curves $c_1(t)$ and $c_2(t)$ on $\M$, if they satisfy
+\begin{subequations}
+\begin{gather}
+    c_1(0)= c_2(0)=p, \\
+    \left. \frac{\ud x^\mu(c_1(t))}{\ud t} \right|_{t=0} = \left. \frac{\ud x^\mu(c_2(t))}{\ud t} \right|_{t=0} ,
+\end{gather}
+\end{subequations}
+then they yield the same differential operator $X$ at $p$. Then, the above conditions define an equivalence relation $\sim$ such that $c_1(t) \sim c_2(t)$. This allows us to define
+\begin{definition}[Vector]
+    A \emph{tangent vector} $X$ is the \emph{equivalence class of curves}
+    \begin{equation}
+        [c(t)] = \left\{ \tilde{c}(t) \; \Big| \; \tilde{c}(0) = c(0) \; \land \; \left. \frac{\ud x^\mu (\tilde{c}(t))}{\ud t}\right|_{t=0} = \left. \frac{\ud x^\mu (c(t))}{\ud t}\right|_{t=0} \right\} .
+    \end{equation}
+\end{definition}
+All the tangent vectors at a particular point $p \in \M$ form a vector space called \emph{tangent space} of $\M$ at $p$, denoted by $T_p \M$. By means of equation~\cite{eq:def-vectors}, it's straightforward to see that the basis vectors of this vector space are
+\begin{equation}
+    .
+\end{equation}
+
+
+\section{One-Forms}
+\section{Tensors}
+\section{Flow generated by a vector field}
