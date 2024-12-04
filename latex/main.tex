@@ -2,13 +2,13 @@
 % ******************************* BEGIN DOCUMENT *******************************
 % ******************************************************************************
 %\documentclass[a4paper,12pt,twoside,print,customfont,custombib,PageStyleI]{Settings/PhDThesisPSnPDF}
-\documentclass[a4paper,12pt,oneside,online,customfont,custombib,PageStyleI,draftclassic]{Settings/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,twoside,online,customfont,custombib,PageStyleI,draftclassic]{Settings/PhDThesisPSnPDF}
 
 % ********************************** Preamble **********************************
 % Preamble: Contains packages and user-defined commands and settings
 \input{Settings/preamble}
 \input{Settings/myPreamble}
-%\input{Settings/mySettings}
+\input{Settings/mySettings}
 
 % ******************************** Front Matter ********************************
 \begin{document}
@@ -56,9 +56,24 @@
 
 % ******************************** Main Matter *********************************
 \mainmatter
+\chapter{Overview of the Project}
+\input{Sections/introduction.tex}
 
-\chapter{Introduction}
-\input{Sections/1_introduction.tex}
+\chapter{Motivation}
+\input{Sections/motivation.tex}
+
+\chapter{Basics of Differential Geometry}
+\input{Sections/geometry.tex}
+
+\chapter{Ricci Flow and Oliver-Ricci Curvature}
+
+\chapter{Application to Complex Networks}
+
+\chapter{Implementation of the Code}
+
+\chapter{Conclusions and Future Directions}
+
+
 
 \chapter{Ricci Flow Method}
 \input{Sections/2_ricciFlowMethod.tex}

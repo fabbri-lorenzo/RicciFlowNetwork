@@ -1,0 +1,16 @@
+In order to understand the Ricci Flow applications, it's necessary to study the properties of Riemannian Manifolds, in particular how to define a flow on a Manifold and how this is related to some differential equations. We'll see that the Ricci Flow is nothing but a differential equation for some class of different metrics on a Riemannian Manifold.
+
+\section{Differentiable Manfifolds}
+Let's first refine the definition of a differentiable Manifold~\ref{def:manifold-prev}.
+
+\begin{definition}[Differentiable manifold]
+    $\M$ is an $n$-dimensional differentiable manifold if
+    \begin{itemize}
+        \item $\M$ is a topological space.
+        \item $\M$ is provided with a family of pairs $\{ (U_i, \phi_i) \}$.
+        \item $\{U_i\}$ is a family of open sets which covers $\M$, that is, $\cup_i U_i = \M$. $\phi_i$ is a homeomorphism from $U_i$ onto open subsets $U_i'$ of $\R^n$.
+        \item Given $U_i$ and $U_j$ such that $U_i \cap U_j \neq \emptyset$, the map $\psi_{ij} = \phi_i \circ \phi_j^{-1}$ from $\phi_j (U_i \cap U_j)$ to $\phi_i(U_i \cap U_j)$ is infinitely differentiable.
+    \end{itemize}
+\end{definition}
+
+The pair $(U_i, \phi_i)$ is called a \emph{chart}, while the whole family $\{(U_i, \phi_i)\}$ is an \emph{atlas}. The subset $U_i$ is called the \emph{coordinate neighbourhood}, while $\phi_i$ is the \emph{coordinate function}. This homeomorphism is represented by $n$ functions $\{x_1(p), \dots, x_n(p)\}$, which are called \emph{coordinates}. However, notice that a point $p\in\M$ is independent of its coordinates. In each coordinate neighbourhood $U_i$, $\M$ looks like an open subset of $\R_n$ whose element is $\{x^1, \dots x^n\}$, and this explains our previous definition~\ref{def:manifold-prev}.
