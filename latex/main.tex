@@ -1,14 +1,15 @@
 % ******************************************************************************
 % ******************************* BEGIN DOCUMENT *******************************
 % ******************************************************************************
-%\documentclass[a4paper,12pt,twoside,print,customfont,custombib,PageStyleI]{Settings/PhDThesisPSnPDF}
-\documentclass[a4paper,12pt,twoside,online,customfont,custombib,PageStyleI,draftclassic]{Settings/PhDThesisPSnPDF}
+%\documentclass[a4paper,12pt,twoside,online,customfont,custombib,PageStyleI,draftclassic]{Settings/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,twoside,online,customfont,custombib,PageStyleI]{Settings/PhDThesisPSnPDF}
 
 % ********************************** Preamble **********************************
 % Preamble: Contains packages and user-defined commands and settings
 \input{Settings/preamble}
 \input{Settings/myPreamble}
 \input{Settings/mySettings}
+\graphicspath{ {./Graphics} }
 
 % ******************************** Front Matter ********************************
 \begin{document}
@@ -74,7 +75,7 @@
 \chapter{Conclusions and Future Directions}
 
 
-
+\begin{comment}
 \chapter{Ricci Flow Method}
 \input{Sections/2_ricciFlowMethod.tex}
 
@@ -83,6 +84,7 @@
 
 \chapter{Implementation for Planar Graphs}
 \input{Sections/4_implementationPlanarGraphs.tex}
+\end{comment}
 
 % ********************************** Appendices ********************************
 \begin{appendices} % Using appendices environment for more functunality
