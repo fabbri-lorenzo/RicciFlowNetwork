@@ -123,7 +123,7 @@ which clearly shows that $\{ \ud x^\mu \}$ is a basis of $T^*_p \M$. In particul
 \end{equation}
 
 It's now easy to consider generic one-forms $\omega \in T^*_p \M$ and generic vectors $V \in T_p \M$. Picking a coordinate basis for the tangent space and its dual basis for the cotangent one, we can expand $\omega = \omega_\mu \ud x^\mu$ and $V = V^\mu \de_\mu$. Then, as usual, we can define an \emph{inner product} $\scalar{.}{.}\colon T^*_p \M \times T_p \M \to \R$ by
-\begin{equation}
+\begin{equation}\label{eq:def-inner-product-vector-one-form}
     \scalar{\omega}{V} = \omega_\mu V^\mu \scalar{\ud x^\mu}{\de_\nu} = \omega_\mu V^\nu \delta^\mu_\nu = \omega_\mu V^\mu.
 \end{equation}
 
@@ -219,3 +219,27 @@ We're now ready to introduce Riemannian Manifold and their most relevant propert
 
 %***************** METRIC TENSOR ********************
 \subsection{Riemannian Manifolds}
+A Riemannian Manifold is defined as a smooth Manifold which admits a Riemannian metric.
+
+\begin{definition}
+    Let $\M$ be a differentiable Manifold. A \emph{Riemannian metric} $g$ on $\M$ is a type $(0,2)$ tensor field on $\M$ such that, at each point $p \in \M$:
+    \begin{itemize}
+        \item $g_p (U,V) = g_p (V,U)$,
+        \item $g_p(U,V) \geq 0$, where the equality holds only when $U=0$.
+    \end{itemize}
+    Here, $U,V \in T_p \M$ and $g_p = g|_p$. Basically, $g_p$ is a symmetric positive-definite bilinear form.
+\end{definition}
+
+Recall the previous definition of inner product~\eqref{eq:def-inner-product-vector-one-form} between vectors and dual forms. For $V \in T_p \M$ and $\omega \in T^*_p \M$, then $\scalar{.}{.} \colon T^*_p \M \times T_p \M \to \R$. If there exists a metric tensor $g$, then, we can use it to define the inner product between two vectors $U,V \in T_p \M$, specifically by $g_p(U,V)$. Since $g_p \colon T_p \M \otimes T_p \M \to \R$, we may define a linear map $g_p(U,.) \colon T_p \M \to \R$ by $V \mapsto g_p(U,V)$. Then, it's straightforward that $g_p(U,.) \in T^*_p \M$ is a one-form. Thus, the metric $g_p$ gives rise to an isomorphism between $T_p \M$ and $T^*_p \M$.
+
+Picking a chart $(\phi,U)$, with coordinates $\{ x^\mu \}$, we can expand the metric tensor in coordinates as
+\begin{equation}
+    g_p = g_{\mu\nu}(p) \ud x^\mu \otimes \ud x^\nu, \quad g_{\mu\nu}(p) = g_p (\de_\mu, \de_\nu) = g_{\nu\mu}(p), \quad p \in \M.
+\end{equation}
+
+It's usual convention to forget about the point $p$, denote the inverse metric as $g^{\mu\nu}$, and the determinant as $\det(g_{\mu\nu}) \coloneq g$ and $\det(g^{\mu\nu}) \coloneq g^{-1}$. Then, the isomorphism between $T_p \M$ and $T^*_p \M$ can be expressed as
+\begin{equation}
+    \omega_\mu = g_{\mu\nu} U^\nu, \quad U^\mu = g^{\mu\nu} \omega_\nu .
+\end{equation}
+
+The purpose of the next chapter will be to rigorously define the Ricci Flow. However, to conclude this motivation part, let's take a brief detour onto string theory, in which, with a simple example in the context of non-linear sigma models, it's possible to grasp the meaning of the Ricci Flow application to understand topological properties of a Manifold through renormalization group flows in a Riemannian Manifold.
