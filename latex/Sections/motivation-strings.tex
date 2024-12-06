@@ -1,16 +1,68 @@
 %**************** NON-LINEAR SIGMA MODELS AND STRINGS ******************
 \section{Non-Linear Sigma Models and String Theory}
 The standard starting point of string theory is \emph{Polyakov action}, which describes a bosonic classical, one-dimensional, string, which describes a two-dimensional worldsheet $\Sigma$ on a $26$-dimensional spacetime described by the spacetime coordinates $X^\mu(\xi)$, $\mu = 0, \dots 25$, where $\xi^a = (\tau, \sigma)$, $a = 1,2$, are the intrinsic coordinates on $\Sigma$. The metric on spacetime is denoted by $g_{\mu\nu}$, while the metric on the worldsheet is $\gamma_{ab}$. For a flat spacetime, with Minkowski metric $g_{\mu\nu} \equiv \eta_{\mu\nu} = \textup{diag}(-1,+1,+1,+1)$, the action reads
-\begin{equation}
+\begin{equation}\label{eq:polyakov}
     S_P [X^\mu(\xi), \gamma_{ab}(\xi)] = -\frac{T}{2} \int_\Sigma \ud \tau \ud \sigma \sqrt{-\det(\gamma)} \gamma^{ab} \de_a X_\mu (\xi) \de_b X^\mu (\xi),
 \end{equation}
 where $T$ is a characteristic parameter of the string, related to the string length $l$.
 
 The symmetries of this action allow us to consider a flat worldsheet metrix, $\gamma_{ab} = \eta_{ab}$, considering the so-called \emph{unit gauge}. Then, reintroducing explicitly the metric $g_{\mu\nu}$, even if it's flat in this case, we obtain
-\begin{equation}
+\begin{equation}\label{eq:polyakov-metric}
     S_P = - T \int_\Sigma \ud^2 \xi g_{\mu\nu}(X) \de_a X^\mu \de^a X^\nu.
 \end{equation}
 
+Basically, it represents a 2-dimensional field theory on the worldsheet, where the coordinates $X^\mu$ are 26 dynamical fields in there. This allows us to quantize the theory with the usual quantization prescription, based on the substitution of the classical Poisson brackets defined on a symplectic manifold with the commutators of operators acting on a Hilbert space.
+
 After quantization, one notice that, for a closed string, defined by the periodicity condition $X^\mu(\tau,\sigma) = X^\mu (\tau, \sigma + l)$, the particle spectrum contains a \emph{graviton} $\gamma_{\mu\nu}$, which resembles a gravitational wave at low energies, a scalar field $\phi$ called \emph{dilaton} and an antisymmetric two-tensor $b_{\mu\nu}$ called \emph{Kalb-Ramond tensor}.
 
-Therefore, due to the presence of the graviton, one could wonder what happens for a non-flat spacetime. Then, after 
+Therefore, due to the presence of the graviton, one could wonder what happens for a non-flat spacetime. Then, after redefining the coordinates as a constant $X^\mu_0$ plus some other arbitrary fields $Y^\mu$, i.e.,
+\begin{equation}
+    X^\mu (\xi) = X^\mu_0 (\xi) + \sqrt{\alpha'} Y^\mu (\xi),
+\end{equation}
+we can expand the term in the Lagrangian as
+\begin{equation}\label{eq:expansion-coordinates}
+\begin{split}
+    &g_{\mu\nu}(X) \de_a X^\mu \de^a X^\nu \\
+    &= \alpha' \left[ g_{\mu\nu}(X_0) + \sqrt{\alpha'} g_{\mu\nu,\rho}(X_0)Y^\rho(\xi) + \frac{\alpha'}{2} g_{\mu\nu,\rho\sigma}(X_0)Y^\rho(\xi Y^\sigma(\xi)) + \dots \right] \de_a Y^\mu \de^a Y^\nu ,
+\end{split}
+\end{equation}
+where $g_{\mu\nu,\rho} \equiv \de_\rho g_{\mu\nu}$. 
+
+We obtained an expansion in $\alpha'$, where each term is an interaction term for the fields $Y^\mu$, with couplings given by the derivatives of the metric. However, a crucial symmetry of the Polyakov action~\eqref{eq:polyakov} is the invariance under \emph{conformal transformations}. Those are diffeomorphisms on a Riemannian Manifold which preserve the metric up to rescaling, i.e.,
+\begin{equation}\label{eq:conformal-transformation}
+    g(x) \to \tilde{g}(\tilde{x}) = e^{2\omega(\tilde{x})} g(\tilde{x}).
+\end{equation}
+
+Without going into the details, the presence of this symmetry is considered as a consistency condition for the theory, as it allows for a perturbative interpretation of the interactions. In addition, the above interacting quantum field theory must undergo renormalization, in order to cure the divergences. 
+
+However, after renormalization, the conformal symmetry may be anomalous\footnote{An anomaly is a classical symmetry which is not preserved at the quantum level. In particular, it is due to a non-invariance of the measure of the path integral.}. Indeed, a particular example of conformal transformation~\eqref{eq:conformal-transformation} is provided by scale-invariance. That is to say, the theory can't depend on a scale to be conformal invariant. But, as the methods of \emph{renormalization group} teach us, after renormalization the couplings run with the energy scale $M$ of the system, dependence which is encapsulated into the \emph{$\beta$-function}
+\begin{equation}
+    \beta(g_{\mu\nu}) = M \frac{\de}{\de M} g_{\mu\nu}.
+\end{equation}
+
+As a consequence, for a quantum string theory to make sense, it must be conformal invariance, so the $\beta$-function associated to the metric, in the action~\eqref{eq:polyakov-metric} with the expansion~\eqref{eq:expansion-coordinates}, must vanish
+\begin{equation}
+    \beta(g_{\mu\nu}) \overset{!}{=} 0.
+\end{equation} 
+
+A similar argument can be pursued for the other two particles in the closed string spectrum, i.e., the dilaton $\phi$ and the Kalb-Ramond form $b_{\mu\nu}$. The corresponding action will be
+\begin{equation}
+    S_\sigma = -\frac{T}{2} \int_\Sigma \ud^2 \xi \sqrt{-\det(\gamma)}\left[ \left( \gamma^{ab} g_{\mu\nu}(X) + i \epsilon^{ab} b_{\mu\nu}(X) \right) \de_a X^\mu \de_b ^\nu + \alpha' \mathcal{R} \phi(X) \right],
+\end{equation}
+where $\epsilon^{ab}$ is the $2$d Levi-Civita symbol, while $\mathcal{R} = \mathcal{R}(\gamma)$ is the Ricci scalar on the worldsheet.
+
+Defining the Field Strength $H_{\mu\nu\rho} = \de_\mu b_{\nu\rho} + \de_\nu b_{\rho\mu} + \de_\rho b_{\mu\nu}$, the vanishing of the beta functions reads
+\begin{subequations}\label{eq:beta-functions}
+\begin{align}
+    \beta(g_{\mu\nu}) &= \alpha' \left( R_{\mu\nu} - \frac{1}{4} H_{\mu\lambda\rho} H^{\mu\lambda\rho} + 2 \cov_\mu \cov_\nu \phi \right) + O(\alpha'^2)\overset{!}{=} 0,\\
+    \beta(b_{\mu\nu}) &= \alpha' \left( \frac{1}{2} \cov^\rho H_{\rho\mu\nu} + \cov^\rho \phi H_{\rho\mu\nu} \right) + O(\alpha'^2)\overset{!}{=} 0, \\
+    \beta(\phi) &= \alpha' \left( \frac{1}{2} \cov_\mu \phi \cov^\mu \phi - \frac{1}{2} \cov^2 \phi - \frac{1}{24} H_{\mu\nu\rho} H^{\mu\nu\rho} \right) + O(\alpha'^2)\overset{!}{=} 0.
+\end{align}
+\end{subequations}
+
+The above equations are constraints for the spacetime fields $(g,b,\phi)$, imposed to preserve conformal invariance of the quantum string. However, since those fields should be dynamical on spacetime, those must also be their equations of motion. This leads to the following \emph{low-energy effective action}, which has~\eqref{eq:beta-functions} as equations of motion
+\begin{equation}
+    S_{26} = \frac{1}{k^2_0} \int \ud^{26}x \sqrt{\det(g)} e^{-2\phi} \left( \mathcal{R}(g) - \frac{1}{12} H_{\mu\nu\rho} H^{\mu\nu\rho} + 4 \cov_\mu \phi \cov^\mu \phi \right).
+\end{equation}
+
+To set this problem to a more general ground, and understand how this model is related to Ricci-Flow, let's define more accurately what a $\sigma$-model is in field theory.
