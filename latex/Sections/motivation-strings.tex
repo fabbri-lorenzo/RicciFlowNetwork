@@ -1,2 +1,16 @@
 %**************** NON-LINEAR SIGMA MODELS AND STRINGS ******************
 \section{Non-Linear Sigma Models and String Theory}
+The standard starting point of string theory is \emph{Polyakov action}, which describes a bosonic classical, one-dimensional, string, which describes a two-dimensional worldsheet $\Sigma$ on a $26$-dimensional spacetime described by the spacetime coordinates $X^\mu(\xi)$, $\mu = 0, \dots 25$, where $\xi^a = (\tau, \sigma)$, $a = 1,2$, are the intrinsic coordinates on $\Sigma$. The metric on spacetime is denoted by $g_{\mu\nu}$, while the metric on the worldsheet is $\gamma_{ab}$. For a flat spacetime, with Minkowski metric $g_{\mu\nu} \equiv \eta_{\mu\nu} = \textup{diag}(-1,+1,+1,+1)$, the action reads
+\begin{equation}
+    S_P [X^\mu(\xi), \gamma_{ab}(\xi)] = -\frac{T}{2} \int_\Sigma \ud \tau \ud \sigma \sqrt{-\det(\gamma)} \gamma^{ab} \de_a X_\mu (\xi) \de_b X^\mu (\xi),
+\end{equation}
+where $T$ is a characteristic parameter of the string, related to the string length $l$.
+
+The symmetries of this action allow us to consider a flat worldsheet metrix, $\gamma_{ab} = \eta_{ab}$, considering the so-called \emph{unit gauge}. Then, reintroducing explicitly the metric $g_{\mu\nu}$, even if it's flat in this case, we obtain
+\begin{equation}
+    S_P = - T \int_\Sigma \ud^2 \xi g_{\mu\nu}(X) \de_a X^\mu \de^a X^\nu.
+\end{equation}
+
+After quantization, one notice that, for a closed string, defined by the periodicity condition $X^\mu(\tau,\sigma) = X^\mu (\tau, \sigma + l)$, the particle spectrum contains a \emph{graviton} $\gamma_{\mu\nu}$, which resembles a gravitational wave at low energies, a scalar field $\phi$ called \emph{dilaton} and an antisymmetric two-tensor $b_{\mu\nu}$ called \emph{Kalb-Ramond tensor}.
+
+Therefore, due to the presence of the graviton, one could wonder what happens for a non-flat spacetime. Then, after 
