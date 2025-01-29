@@ -4,34 +4,18 @@ utils package
 Submodules
 ----------
 
-utils.config module
--------------------
+utils.plot module
+-----------------
 
-.. automodule:: utils.config
+.. automodule:: utils.plot
    :members:
    :undoc-members:
    :show-inheritance:
 
-utils.graph\_drawing module
----------------------------
-
-.. automodule:: utils.graph_drawing
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-utils.helpers module
+utils.surgery module
 --------------------
 
-.. automodule:: utils.helpers
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-utils.my\_surgery module
-------------------------
-
-.. automodule:: utils.my_surgery
+.. automodule:: utils.surgery
    :members:
    :undoc-members:
    :show-inheritance:

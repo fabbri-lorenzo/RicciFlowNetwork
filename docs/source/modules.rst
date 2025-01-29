@@ -1,11 +1,9 @@
-utils
-=====
+RicciFlowNetwork
+================
 
 .. toctree::
    :maxdepth: 4
 
-   karate
+   karate_club
    toymodel
-   football
-   planar
    utils

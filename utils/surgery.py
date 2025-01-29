@@ -13,7 +13,7 @@ def ARI(G, clustering, clustering_label):
     Compute the Adjust Rand Index (clustering accuracy) of "clustering" with "clustering_label" as ground truth.
 
     :param G: A graph with node attribute "clustering_label" as ground truth.
-    :type G: NetworkX graph
+    :type G: networkx.Graph
     :param clustering: Predicted community clustering.
     :type clustering: dict, list, or list of sets
     :param clustering_label: Node attribute name for ground truth.
@@ -21,9 +21,7 @@ def ARI(G, clustering, clustering_label):
     :returns: Adjust Rand Index for predicted community.
     :rtype: float
     """
-
     complex_list = nx.get_node_attributes(G, clustering_label)
-
     le = preprocessing.LabelEncoder()
     y_true = le.fit_transform(list(complex_list.values()))
 
@@ -43,18 +41,18 @@ def ARI(G, clustering, clustering_label):
     return metrics.adjusted_rand_score(y_true, y_pred)
 
 
-def perform_surgery(G_origin: nx.Graph(), clustering_label, weight="weight", cut=0):
+def perform_surgery(G_origin: nx.Graph, clustering_label, weight="weight", cut=0):
     """
     A simple surgery function that removes the edges with weight above a threshold.
 
     :param G_origin: A graph with ``weight`` as the Ricci flow metric to cut.
-    :type G_origin: NetworkX graph
+    :type G_origin: networkx.Graph
     :param weight: The edge weight used as the Ricci flow metric. Defaults to "weight".
     :type weight: str
     :param cut: Manually assigned cutoff point.
     :type cut: float or None
     :returns: A graph after surgery.
-    :rtype: NetworkX graph
+    :rtype: networkx.Graph
     """
     G = G_origin.copy()
     w = nx.get_edge_attributes(G, weight)
@@ -82,18 +80,20 @@ def perform_surgery(G_origin: nx.Graph(), clustering_label, weight="weight", cut
     return G
 
 
-def check_accuracy(G_origin, weight="weight", clustering_label="value"):
+def check_accuracy(G_origin, weight="weight", clustering_label="value", eval_cut=False):
     """
     Check the clustering quality while cutting edges with weight using different thresholds.
 
     :param G_origin: A graph with ``weight`` as the Ricci flow metric to cut.
-    :type G_origin: NetworkX graph
+    :type G_origin: networkx.Graph
     :param weight: The edge weight used as the Ricci flow metric. Defaults to "weight".
     :type weight: str
     :param clustering_label: Node attribute name for ground truth.
     :type clustering_label: str
+    :param eval_cut: To plot the good guessed cut or not.
+    :type eval_cut: bool
+    :rtype: A list of floats
     """
-
     G = G_origin.copy()
     modularity, ari = [], []
     maxw = max(nx.get_edge_attributes(G, weight).values())
@@ -124,6 +124,31 @@ def check_accuracy(G_origin, weight="weight", clustering_label="value"):
             best_ari = current_ari
             best_cutoff = cutoff
 
-    # Print the best ARI and corresponding cutoff value
-    print(f"\nBest ARI: {best_ari:.{dcp}f}, for cutoff = {best_cutoff:.{dcp-1}f}")
-    return maxw, cutoff_range, modularity, ari
+    if eval_cut:  # Search for a good cut looking at modularity
+        good_cut = -1
+        mod_last = modularity[-1]
+        drop_threshold = (
+            0.01  # at least drop this much to be considered as a drop for good_cut
+        )
+
+        # search for drop in modularity
+        drops = []
+        for i in range(len(modularity) - 1, 0, -1):
+            mod_now = modularity[i]
+            if mod_last > 1e-4 and (mod_now / mod_last) < drop_threshold:
+                drops.append((cutoff_range[i + 1], mod_last))
+
+            mod_last = mod_now
+
+        # Find the tuple with the highest modularity value in drops
+        best_drop = max(drops, key=lambda x: x[1])
+        # Extract the cutoff value and modularity value
+        good_cut = best_drop[0]
+        print(
+            f"\nBest ARI: {best_ari:.{dcp+1}f}, with cutoff = {best_cutoff:.{dcp}f}\nGuessed cutoff = {good_cut:.{dcp}f}"
+        )
+        return maxw, cutoff_range, modularity, ari, good_cut
+
+    else:
+        print(f"\nBest ARI: {best_ari:.{dcp+1}f}, with cutoff = {best_cutoff:.{dcp}f}")
+        return maxw, cutoff_range, modularity, ari
