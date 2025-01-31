@@ -48,6 +48,7 @@ def get_ARI_LFR(mu, av_deg):
         average_degree=av_deg,  # Average degree per node
         max_degree=max_deg.get(av_deg),  # Maximum degree per node
         max_iters=1000,  # Maximum number of iterations allowed to generate the graph
+        seed=42,  # Random seed for reproducibility
     )
     print("generated. ", end="")
     # -----------------------------------

@@ -16,7 +16,7 @@ from utils.surgery import check_accuracy, perform_surgery
 
 def create_SBM_graph():
     """
-    Create a Stochastic Block Model (SBM) graph with 3 communities.
+    Create a Stochastic Block Model (SBM) graph with 2 equal size communities.
 
     The sizes of the communities are predefined as 250, 250 (as it is in "Community Detection on Networks with Ricci Flow" by by Chien-Chun Ni et al.). A probability matrix defines
     the edge probabilities within and across the communities. This function also assigns community
@@ -41,10 +41,10 @@ def create_SBM_graph():
 
 def create_LFR_graph():
     """
-    Create an LFR benchmark graph for community detection tests.
+    Create an Lancichinetti Fortunato Radicchi (LFR) benchmark graph.
 
-    The graph has 280 nodes with specific degree and community size distributions. The mixing parameter
-    ensures that the communities are strongly defined. Community labels are then assigned to the nodes.
+    The graph has 500 nodes with specific degree and community size distributions.
+    Community labels are then assigned to the nodes.
 
     :returns: A NetworkX graph with community labels assigned to nodes.
     :rtype: networkx.Graph
@@ -57,7 +57,7 @@ def create_LFR_graph():
         min_community=20,  # Minimum number of nodes in each community
         max_community=70,  # Maximum number of nodes in each community
         average_degree=20,  # Average degree per node
-        max_degree=50,
+        max_degree=50,  # Maximum degree per node
         max_iters=1000,  # Maximum number of iterations for graph generation
         seed=42,  # Random seed for reproducibility
     )
