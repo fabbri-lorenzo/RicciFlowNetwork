@@ -5,8 +5,6 @@ This is a project for the course on Complex Networks of the University of Bologn
 The essay for the exam can be found [here](latex/DiscreteRicciFlow.pdf)
 
 ## Table of Contents
-- [Community Detection on Networks using Ricci Flow](#community-detection-on-facebook-ego-network-with-ricci-flow)
-  - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Requirements](#requirements)
   - [Data](#data)
@@ -16,6 +14,8 @@ The essay for the exam can be found [here](latex/DiscreteRicciFlow.pdf)
 
 ## Introduction
 In this project, we apply **Ollivier-Ricci curvature** and **Ricci Flow** to detect the two known communities in Zachary’s Karate Club graph. The approach follows the work of Ni et al. (2019), where Ricci Flow is used to reshape edge weights iteratively, enhancing the separation between different communities. After applying Ricci Flow, we perform edge surgery to remove weakly connected edges and extract communities as the connected components of the resulting graph.
+
+**Documentation** can be built inside 'docs' using Sphynx, or is simply accessible from 'documentation.html'.
 
 ## Requirements
 To run this project, you need the following dependencies:
@@ -49,7 +49,7 @@ The main script performs the following steps:
 2. **Compute the Ollivier-Ricci curvature** for all edges.
 3. **Evolve edge weights** using Ricci Flow based on the curvature.
 4. **Plots ARI and Modularity vs. Cutoff** and prints on terminal cutoff value corresponding to highest ARI.
-5. **(Optional) Guess a good cut based on drop of modularity** (useful in cases where ARI is not available)
+5. **(Optional) Guess a good cut based on drop of modularity** (useful in cases where ARI is not available).
 6. **Perform edge surgery** by removing weakly connected edges.
 7. **Detect communities** using clustering algorithms.
 8. **Visualize the results**, including the community structure and the original vs. post-surgery graphs.
@@ -67,11 +67,11 @@ You can test the code on a toymodel with a Stochastic Block Model (SBM) graph an
 You can also see the difference in performances between Optimal Transportation Method (OTD) and Average Transportation Method (ATD) applied to curvature evaluation in the Ricci Flow process of a LFR graph.
 **Before running** either 
 ```bash
-python Tests/toymodel.py
+python tests/toymodel.py
 ```
 or 
 ```bash
-python Tests/LFR.py
+python tests/LFR.py
 ```
 
 you should **change** 

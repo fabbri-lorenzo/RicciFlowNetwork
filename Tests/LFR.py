@@ -92,7 +92,7 @@ def test_LFR():
     - :math:`\mu = [0.25, 0.3, 0.35, 0.4, 0.45, 0.5]`
     - Average degrees: `[20, 25, 30, 35, 40]`
 
-    The final results are saved as `LFR.png` in the `Tests/LFRResults` directory.
+    The final results are saved as `LFR.png` in the `tests/LFRResults` directory.
     """
     mu_values = np.arange(0.25, 0.55, 0.05)
     data_avgDeg_20 = [
@@ -171,7 +171,7 @@ def test_LFR():
     plt.ylabel("ARI")
     plt.title(r"Ricci Flow on LFR graph with 1000 nodes - OTD")
 
-    save_path = "Tests/LFRResults"
+    save_path = "tests/LFRResults"
     plt.legend(loc="upper right", fontsize=14)
     plt.tight_layout()
     plt.gcf().canvas.manager.set_window_title(r"LFR Graph")

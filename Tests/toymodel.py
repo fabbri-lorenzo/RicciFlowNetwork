@@ -175,12 +175,12 @@ def run_tests():
 
     if graph_type == 1:
         G = create_SBM_graph()
-        save_path = "Tests/ToyModelResults/SBM"
+        save_path = "tests/ToyModelResults/SBM"
         iterations = 10
 
     elif graph_type == 2:
         G = create_LFR_graph()
-        save_path = "Tests/ToyModelResults/LFR"
+        save_path = "tests/ToyModelResults/LFR"
         iterations = 40
     # -----------------------------------
     orc = test_ricci_curvature(G)
