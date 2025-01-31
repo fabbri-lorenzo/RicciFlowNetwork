@@ -13,12 +13,7 @@ from sklearn import preprocessing
 """
 Global variables for plotting
 """
-node_colors = ["#90EE90", "#66CCCC", "pink", "gray", "yellow"]
-"""
-List of colors for the nodes in the graph. These colors are used in the `default_nodes_cmap` colormap.
-Each color corresponds to a distinct community in the graph visualization.
-"""
-default_nodes_cmap = mcolors.ListedColormap(node_colors)
+default_nodes_cmap = "tab20"
 
 edge_colors = [(0, "blue"), (0.5, "black"), (1, "red")]
 """
@@ -79,7 +74,7 @@ class GraphDrawer:
 
     def draw_graph(self, clustering_label, nodes_cmap=default_nodes_cmap):
         """
-        Draws the graph with community detection coloring and Ricci curvature visualization.
+        Draws the graph with community coloring (from ground truth) and Ricci curvature visualization.
 
         :param clustering_label: Node attribute name for clustering (community) labels.
         :type clustering_label: str
@@ -90,7 +85,7 @@ class GraphDrawer:
         le = preprocessing.LabelEncoder()
         node_color = le.fit_transform(list(complex_list.values()))
 
-        colormap = mcm.get_cmap(nodes_cmap, 6)  # Discrete colormap
+        colormap = mcm.get_cmap(nodes_cmap)  # Discrete colormap
         # Create node colors based on community assignment
         mapped_node_color = [colormap(comm) for comm in node_color]
 
@@ -134,6 +129,10 @@ class GraphDrawer:
         # Convert the generator to a list to get the connected components
         cc = nx.connected_components(self.graph)
         num_components = len(list(cc))
+        print(f"\nDetected {num_components} communities")
+        if num_components > 10:
+            print("Detected communities are too many for visualization.")
+            return 0
 
         # Create a figure with subplots
         fig, axes = plt.subplots(1, num_components, figsize=(5 * num_components, 5))
@@ -151,9 +150,19 @@ class GraphDrawer:
                 if k in graph_dict_colors
             }
 
-            colormap = mcm.get_cmap(nodes_cmap, 10)  # Discrete colormap
+            colormap = mcm.get_cmap(nodes_cmap)  # Discrete colormap
             # Create node colors based on community assignment
             node_colors = [colormap(comm) for comm in subgraph_dict_colors.values()]
+
+            curvature_values = [
+                d["ricciCurvature"] for _, _, d in self.graph.edges(data=True)
+            ]
+            # Normalize curvature values between 0 and 1
+            norm = plt.Normalize(
+                vmin=np.min(curvature_values), vmax=np.max(curvature_values)
+            )
+            # Apply colormap to normalized values
+            edge_colors = [curvature_cmap(norm(value)) for value in curvature_values]
 
             # Draw the subgraph for the current component
             nx.draw(
@@ -162,6 +171,7 @@ class GraphDrawer:
                 nodelist=subgraph.nodes(),
                 node_color=node_colors,
                 node_size=130,
+                edge_color=edge_colors,
                 alpha=0.9,
                 ax=ax,  # Specify the axis for the current subplot
             )
@@ -228,4 +238,58 @@ def plot_accuracy(maxw, cutoff_range, modularity, ari, save_path, good_cut=None)
 
     plt.gcf().canvas.manager.set_window_title("Surgery Accuracy")
     plt.savefig(os.path.join(save_path, "Surgery Accuracy.png"), dpi=600)
+    plt.show()
+
+
+def plot_comp_histo(modularity_values, ari_values, save_path):
+    """
+    Plot and compare modularity and Adjusted Rand Index (ARI) across different community detection methods.
+
+    This function creates two bar charts to visualize the performance of three community detection methods
+    (**Ricci Flow**, **Louvain**, and **Girvan-Newman**) based on:
+
+    - **Modularity**: Measures the strength of community structure in the network.
+    - **Adjusted Rand Index (ARI)**: Measures clustering accuracy compared to the ground truth.
+
+    The function saves the resulting comparison plot to the specified directory.
+
+    :param modularity_values: Modularity scores for Ricci Flow, Louvain, and Girvan-Newman.
+    :type modularity_values: list[float]
+    :param ari_values: ARI scores for Ricci Flow, Louvain, and Girvan-Newman.
+    :type ari_values: list[float]
+    :param save_path: Directory where the comparison plot will be saved.
+    :type save_path: str
+    """
+    # Labels and corresponding values
+    methods = ["Ricci Flow", "Louvain", "Girvan-Newman"]
+
+    # X positions for bars
+    x = np.arange(len(methods))
+    bar_width = 0.4
+
+    # Create subplots
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+
+    # Modularity histogram
+    axes[0].bar(
+        x, modularity_values, width=bar_width, color="b", alpha=0.8, label="Modularity"
+    )
+    axes[0].set_xticks(x)
+    axes[0].set_xticklabels(methods, rotation=45)
+    axes[0].set_title("Modularity Comparison")
+    axes[0].set_ylabel("Modularity")
+    axes[0].legend()
+
+    # ARI histogram
+    axes[1].bar(x, ari_values, width=bar_width, color="r", alpha=0.8, label="ARI")
+    axes[1].set_xticks(x)
+    axes[1].set_xticklabels(methods, rotation=45)
+    axes[1].set_title("ARI Comparison")
+    axes[1].set_ylabel("ARI")
+    axes[1].legend()
+
+    # Adjust layout and show plot
+    plt.tight_layout()
+    plt.gcf().canvas.manager.set_window_title("Comparison with different methods")
+    plt.savefig(os.path.join(save_path, "Comparison.png"), dpi=600)
     plt.show()
