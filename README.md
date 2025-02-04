@@ -1,5 +1,5 @@
 # Community Detection on Networks using Ricci Flow
-This repository implements community detection on **Zachary's Karate Club graph** using **Discrete Ricci Flow**, based on the methodology presented in the paper ["Community Detection on Networks with Ricci Flow"](https://doi.org/10.1038/s41598-019-46380-9) by Chien-Chun Ni et al.
+This repository implements community detection on **Zachary's Karate Club graph** using **Discrete Ricci Flow** with Python, based on the methodology presented in the paper ["Community Detection on Networks with Ricci Flow"](https://doi.org/10.1038/s41598-019-46380-9) by Chien-Chun Ni et al.
 
 This is a project for the course on Complex Networks of the University of Bologna.
 The essay for the exam can be found [here](latex/DiscreteRicciFlow.pdf)
@@ -15,7 +15,7 @@ The essay for the exam can be found [here](latex/DiscreteRicciFlow.pdf)
 ## Introduction
 In this project, we apply **Ollivier-Ricci curvature** and **Ricci Flow** to detect the two known communities in Zachary’s Karate Club graph. The approach follows the work of Ni et al. (2019), where Ricci Flow is used to reshape edge weights iteratively, enhancing the separation between different communities. After applying Ricci Flow, we perform edge surgery to remove weakly connected edges and extract communities as the connected components of the resulting graph.
 
-**Documentation** can be built inside 'docs' using Sphynx, or is simply accessible at [https://github.com/fabbri-lorenzo/RicciFlowNetwork/](https://github.com/fabbri-lorenzo/RicciFlowNetwork/).
+**Documentation** can be built inside 'docs' folder using Sphynx, or it is simply accessible at [https://github.com/fabbri-lorenzo/RicciFlowNetwork/](https://github.com/fabbri-lorenzo/RicciFlowNetwork/).
 
 ## Requirements
 To run this project, you need the following dependencies:
@@ -92,7 +92,7 @@ After running the karate club algorithm, the detected communities are visualized
 
 1. **Original Graph and Histograms Visualization**: The initial Karate Club graph with its nodes and edges.
 2. **Post-Ricci Flow Graph and Histograms Visualization**: The graph after Ricci Flow has been applied to evolve edge weights and improve community structure.
-3. **Behaviour of ARI and Modularity depending on cutoff treshold for surgery** Plots of ARI and modularity of the graph after hypotetical surgery with different cutoff parameters.
+3. **Behaviour of ARI and Modularity depending on cutoff treshold for surgery**: Plots of ARI and modularity of the graph after hypotetical surgery with different cutoff parameters.
 4. **Edge Surgery Visualization**: The graph after weak edges are removed based on a threshold chosen by the user (use the one corresponding to highest ARI for better results).
 5. **Community Detection Output**: The nodes are color-coded according to the communities detected after edge surgery.
 
