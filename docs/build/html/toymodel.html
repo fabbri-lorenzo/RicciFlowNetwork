@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>toymodel module &#8212; Ricci Flow in Networks 01/03/2025 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=fbff3254"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="utils package" href="utils.html" />
+    <link rel="prev" title="LFR module" href="LFR.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-toymodel">
+<span id="toymodel-module"></span><h1>toymodel module<a class="headerlink" href="#module-toymodel" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="toymodel.create_LFR_graph">
+<span class="sig-prename descclassname"><span class="pre">toymodel.</span></span><span class="sig-name descname"><span class="pre">create_LFR_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/toymodel.html#create_LFR_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#toymodel.create_LFR_graph" title="Link to this definition">¶</a></dt>
+<dd><p>Create an Lancichinetti Fortunato Radicchi (LFR) benchmark graph.</p>
+<p>The graph has 500 nodes with specific degree and community size distributions.
+Community labels are then assigned to the nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A NetworkX graph with community labels assigned to nodes.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>networkx.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="toymodel.create_SBM_graph">
+<span class="sig-prename descclassname"><span class="pre">toymodel.</span></span><span class="sig-name descname"><span class="pre">create_SBM_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/toymodel.html#create_SBM_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#toymodel.create_SBM_graph" title="Link to this definition">¶</a></dt>
+<dd><p>Create a Stochastic Block Model (SBM) graph with 2 equal size communities.</p>
+<p>The sizes of the communities are predefined as 250, 250 (as it is in “Community Detection on Networks with Ricci Flow” by by Chien-Chun Ni et al.). A probability matrix defines
+the edge probabilities within and across the communities. This function also assigns community
+labels to the nodes in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A NetworkX graph with community labels assigned to nodes.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>networkx.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="toymodel.run_tests">
+<span class="sig-prename descclassname"><span class="pre">toymodel.</span></span><span class="sig-name descname"><span class="pre">run_tests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/toymodel.html#run_tests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#toymodel.run_tests" title="Link to this definition">¶</a></dt>
+<dd><p>Run all tests including graph generation, Ricci curvature computation,
+accuracy checking, and surgery performance.</p>
+<p>The function allows the user to choose between generating a Stochastic Block Model (SBM) graph
+or an LFR benchmark graph. It then computes the Ricci curvature, performs Ricci flow, checks
+modularity and ARI, and performs edge surgery on the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="toymodel.test_check_accuracy">
+<span class="sig-prename descclassname"><span class="pre">toymodel.</span></span><span class="sig-name descname"><span class="pre">test_check_accuracy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/toymodel.html#test_check_accuracy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#toymodel.test_check_accuracy" title="Link to this definition">¶</a></dt>
+<dd><p>Compute Modularity and Adjusted Rand Index (ARI) for different edge weight cutoffs.</p>
+<p>This function tests the community detection performance by checking modularity and ARI
+for different cutoff values applied to the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkx.Graph</em>) – The graph on which the accuracy is tested.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Maximum weight, cutoff range, modularity, and ARI values.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="toymodel.test_perform_surgery">
+<span class="sig-prename descclassname"><span class="pre">toymodel.</span></span><span class="sig-name descname"><span class="pre">test_perform_surgery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/toymodel.html#test_perform_surgery"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#toymodel.test_perform_surgery" title="Link to this definition">¶</a></dt>
+<dd><p>Perform edge surgery on the graph by removing edges with weight greater than a given threshold.</p>
+<p>The user is prompted to input a threshold value, and edges with weights greater than this threshold
+are removed from the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkx.Graph</em>) – The graph on which the surgery is performed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="toymodel.test_ricci_curvature">
+<span class="sig-prename descclassname"><span class="pre">toymodel.</span></span><span class="sig-name descname"><span class="pre">test_ricci_curvature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/toymodel.html#test_ricci_curvature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#toymodel.test_ricci_curvature" title="Link to this definition">¶</a></dt>
+<dd><p>Compute Ricci curvature of the given graph using Ollivier-Ricci method.</p>
+<p>This function initializes the Ollivier-Ricci curvature calculation on the input graph and computes
+the Ricci curvature using the Optimal Transport Distance (OTD) method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkx.Graph</em>) – The graph to compute the Ricci curvature on.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The OllivierRicci instance containing computed Ricci curvature.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>GraphRicciCurvature.OllivierRicci</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="toymodel.test_ricci_flow">
+<span class="sig-prename descclassname"><span class="pre">toymodel.</span></span><span class="sig-name descname"><span class="pre">test_ricci_flow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/toymodel.html#test_ricci_flow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#toymodel.test_ricci_flow" title="Link to this definition">¶</a></dt>
+<dd><p>Compute Ricci flow of the graph using Ollivier-Ricci method.</p>
+<p>This function applies the Ricci flow algorithm to the graph and updates the graph’s curvature.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>orc</strong> (<em>GraphRicciCurvature.OllivierRicci</em>) – The OllivierRicci instance that has the initial Ricci curvature.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The updated graph after applying Ricci flow.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkx.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Fabbri L..
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/toymodel.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

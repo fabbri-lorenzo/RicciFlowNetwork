@@ -20,8 +20,8 @@ sys.path.insert(0, os.path.abspath("../../tests"))
 # -- Project information -----------------------------------------------------
 
 project = "Ricci Flow in Networks"
-copyright = "2025, Fabbri L., Oancia G."
-author = "Fabbri L., Oancia G."
+copyright = "2025, Fabbri L."
+author = "Fabbri L."
 
 # The full version, including alpha/beta/rc tags
 release = "01/03/2025"
@@ -52,7 +52,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "furo"
+html_theme = "alabaster"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

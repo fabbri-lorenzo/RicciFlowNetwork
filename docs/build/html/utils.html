@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>utils package &#8212; Ricci Flow in Networks 01/03/2025 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=fbff3254"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="toymodel module" href="toymodel.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="utils-package">
+<h1>utils package<a class="headerlink" href="#utils-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-utils.plot">
+<span id="utils-plot-module"></span><h2>utils.plot module<a class="headerlink" href="#module-utils.plot" title="Link to this heading">¶</a></h2>
+<p>A module for plotting graphs and charts.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="utils.plot.GraphDrawer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">utils.plot.</span></span><span class="sig-name descname"><span class="pre">GraphDrawer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/plot.html#GraphDrawer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.plot.GraphDrawer" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for visualizing network graphs with Ricci curvature and community structures.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.plot.GraphDrawer.draw_colorbar">
+<span class="sig-name descname"><span class="pre">draw_colorbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curvature_values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/plot.html#GraphDrawer.draw_colorbar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.plot.GraphDrawer.draw_colorbar" title="Link to this definition">¶</a></dt>
+<dd><p>Draws a colorbar for the Ricci curvature values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>curvature_values</strong> (<em>list</em><em> of </em><em>float</em>) – List of curvature values for edges.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.plot.GraphDrawer.draw_communities">
+<span class="sig-name descname"><span class="pre">draw_communities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clustering_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes_cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tab20'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/plot.html#GraphDrawer.draw_communities"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.plot.GraphDrawer.draw_communities" title="Link to this definition">¶</a></dt>
+<dd><p>Draws the communities (identified as the connected components) in subplots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clustering_label</strong> (<em>str</em>) – Node attribute name for clustering (community) labels.</p></li>
+<li><p><strong>nodes_cmap</strong> (<em>str</em><em>, </em><em>optional</em>) – The colormap for nodes. Default is <cite>default_nodes_cmap</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.plot.GraphDrawer.draw_graph">
+<span class="sig-name descname"><span class="pre">draw_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clustering_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes_cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tab20'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/plot.html#GraphDrawer.draw_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.plot.GraphDrawer.draw_graph" title="Link to this definition">¶</a></dt>
+<dd><p>Draws the graph with community coloring (from ground truth) and Ricci curvature visualization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clustering_label</strong> (<em>str</em>) – Node attribute name for clustering (community) labels.</p></li>
+<li><p><strong>nodes_cmap</strong> (<em>str</em><em>, </em><em>optional</em>) – The colormap for nodes. Default is <cite>default_nodes_cmap</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.plot.GraphDrawer.plot_graph_histo">
+<span class="sig-name descname"><span class="pre">plot_graph_histo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curvature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ricciCurvature'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/plot.html#GraphDrawer.plot_graph_histo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.plot.GraphDrawer.plot_graph_histo" title="Link to this definition">¶</a></dt>
+<dd><p>Plots histograms for Ricci curvature and edge weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>curvature</strong> (<em>str</em><em>, </em><em>optional</em>) – The edge attribute name for Ricci curvature values. Default is “ricciCurvature”.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.plot.GraphDrawer.save_and_show">
+<span class="sig-name descname"><span class="pre">save_and_show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/plot.html#GraphDrawer.save_and_show"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.plot.GraphDrawer.save_and_show" title="Link to this definition">¶</a></dt>
+<dd><p>Saves the current plot to the specified directory and displays it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>plot_axis</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to display the axis in the plot. Default is False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="utils.plot.edge_colors">
+<span class="sig-prename descclassname"><span class="pre">utils.plot.</span></span><span class="sig-name descname"><span class="pre">edge_colors</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[(0,</span> <span class="pre">'blue'),</span> <span class="pre">(0.5,</span> <span class="pre">'black'),</span> <span class="pre">(1,</span> <span class="pre">'red')]</span></em><a class="headerlink" href="#utils.plot.edge_colors" title="Link to this definition">¶</a></dt>
+<dd><p>Custom colormap for edges based on Ricci curvature values. The colors represent different curvature ranges:
+- Blue: Negative curvature
+- Black: Zero curvature
+- Red: Positive curvature</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.plot.plot_accuracy">
+<span class="sig-prename descclassname"><span class="pre">utils.plot.</span></span><span class="sig-name descname"><span class="pre">plot_accuracy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maxw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modularity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ari</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">good_cut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/plot.html#plot_accuracy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.plot.plot_accuracy" title="Link to this definition">¶</a></dt>
+<dd><p>Plots the accuracy of the edge weight cutoff with respect to modularity and Adjusted Rand Index (ARI).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>maxw</strong> (<em>float</em>) – Maximum edge weight for the x-axis limit.</p></li>
+<li><p><strong>cutoff_range</strong> (<em>list</em><em> or </em><em>array</em><em> of </em><em>float</em>) – Range of edge weight cutoff values.</p></li>
+<li><p><strong>modularity</strong> (<em>list</em><em> or </em><em>array</em><em> of </em><em>float</em>) – Modularity values corresponding to the cutoff range.</p></li>
+<li><p><strong>ari</strong> (<em>list</em><em> or </em><em>array</em><em> of </em><em>float</em>) – Adjusted Rand Index values corresponding to the cutoff range.</p></li>
+<li><p><strong>save_path</strong> (<em>str</em>) – Path to save the resulting plot image.</p></li>
+<li><p><strong>good_cut</strong> (<em>float</em><em>, </em><em>optional</em>) – Optional edge weight cutoff value that represents a “good” cut. If provided, a vertical line will be drawn at this value. Default is None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.plot.plot_comp_histo">
+<span class="sig-prename descclassname"><span class="pre">utils.plot.</span></span><span class="sig-name descname"><span class="pre">plot_comp_histo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modularity_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ari_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/plot.html#plot_comp_histo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.plot.plot_comp_histo" title="Link to this definition">¶</a></dt>
+<dd><p>Plot and compare modularity and Adjusted Rand Index (ARI) across different community detection methods.</p>
+<p>This function creates two bar charts to visualize the performance of three community detection methods
+(<strong>Ricci Flow</strong>, <strong>Louvain</strong>, and <strong>Girvan-Newman</strong>) based on:</p>
+<ul class="simple">
+<li><p><strong>Modularity</strong>: Measures the strength of community structure in the network.</p></li>
+<li><p><strong>Adjusted Rand Index (ARI)</strong>: Measures clustering accuracy compared to the ground truth.</p></li>
+</ul>
+<p>The function saves the resulting comparison plot to the specified directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>modularity_values</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – Modularity scores for Ricci Flow, Louvain, and Girvan-Newman.</p></li>
+<li><p><strong>ari_values</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – ARI scores for Ricci Flow, Louvain, and Girvan-Newman.</p></li>
+<li><p><strong>save_path</strong> (<em>str</em>) – Directory where the comparison plot will be saved.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-utils.surgery">
+<span id="utils-surgery-module"></span><h2>utils.surgery module<a class="headerlink" href="#module-utils.surgery" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.surgery.ARI">
+<span class="sig-prename descclassname"><span class="pre">utils.surgery.</span></span><span class="sig-name descname"><span class="pre">ARI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clustering</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clustering_label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/surgery.html#ARI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.surgery.ARI" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the Adjust Rand Index (clustering accuracy) of “clustering” with “clustering_label” as ground truth.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkx.Graph</em>) – A graph with node attribute “clustering_label” as ground truth.</p></li>
+<li><p><strong>clustering</strong> (<em>dict</em><em>, </em><em>list</em><em>, or </em><em>list</em><em> of </em><em>sets</em>) – Predicted community clustering.</p></li>
+<li><p><strong>clustering_label</strong> (<em>str</em>) – Node attribute name for ground truth.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Adjust Rand Index for predicted community.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.surgery.check_accuracy">
+<span class="sig-prename descclassname"><span class="pre">utils.surgery.</span></span><span class="sig-name descname"><span class="pre">check_accuracy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G_origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'weight'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clustering_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'community'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_cut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/surgery.html#check_accuracy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.surgery.check_accuracy" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluate the clustering quality while cutting edges with a given weight using different thresholds.</p>
+<p>This function iteratively removes edges based on a weight threshold (Ricci flow metric) and evaluates
+the clustering results using modularity and Adjusted Rand Index (ARI). If <cite>eval_cut</cite> is enabled,
+it also estimates a “good” cut threshold by detecting significant drops in modularity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G_origin</strong> (<em>networkx.Graph</em>) – A graph with <code class="docutils literal notranslate"><span class="pre">weight</span></code> as the Ricci flow metric used for edge removal.</p></li>
+<li><p><strong>weight</strong> (<em>str</em>) – The edge weight attribute used as the Ricci flow metric. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;weight&quot;</span></code>.</p></li>
+<li><p><strong>clustering_label</strong> (<em>str</em>) – Node attribute name for ground truth communities. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;community&quot;</span></code>.</p></li>
+<li><p><strong>eval_cut</strong> (<em>bool</em>) – Whether to compute an estimated optimal cut threshold based on modularity drops. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing:
+- <strong>maxw</strong> (<em>float</em>): Maximum edge weight value in the graph.
+- <strong>cutoff_range</strong> (<em>numpy.ndarray</em>): Array of tested cutoff values for edge removal.
+- <strong>modularity</strong> (<em>list[float]</em>): Modularity values at each cutoff.
+- <strong>ari</strong> (<em>list[float]</em>): ARI values at each cutoff.
+- (<strong>Optional</strong>) <strong>good_cut</strong> (<em>float</em>): Estimated best cutoff based on modularity drop (only if <code class="docutils literal notranslate"><span class="pre">eval_cut=True</span></code>).
+- (<strong>Optional</strong>) <strong>best_ari</strong> (<em>float</em>): Highest ARI value achieved (only if <code class="docutils literal notranslate"><span class="pre">eval_cut=True</span></code>).
+- (<strong>Optional</strong>) <strong>best_mod</strong> (<em>float</em>): Modularity value at best_ari (only if <code class="docutils literal notranslate"><span class="pre">eval_cut=True</span></code>).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple
+- If <code class="docutils literal notranslate"><span class="pre">eval_cut=False</span></code> → <code class="docutils literal notranslate"><span class="pre">(float,</span> <span class="pre">numpy.ndarray,</span> <span class="pre">list[float],</span> <span class="pre">list[float])</span></code>
+- If <code class="docutils literal notranslate"><span class="pre">eval_cut=True</span></code> → <code class="docutils literal notranslate"><span class="pre">(float,</span> <span class="pre">numpy.ndarray,</span> <span class="pre">list[float],</span> <span class="pre">list[float],</span> <span class="pre">float,</span> <span class="pre">float,</span> <span class="pre">float)</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.surgery.get_best_cut">
+<span class="sig-prename descclassname"><span class="pre">utils.surgery.</span></span><span class="sig-name descname"><span class="pre">get_best_cut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G_origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'weight'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clustering_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/surgery.html#get_best_cut"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.surgery.get_best_cut" title="Link to this definition">¶</a></dt>
+<dd><p>Determine the best edge removal cutoff threshold to maximize clustering accuracy (ARI).</p>
+<p>This function iteratively removes edges based on a weight threshold (e.g., Ricci flow metric)
+and evaluates the resulting clustering accuracy using the Adjusted Rand Index (ARI).
+The best cutoff is selected as the one that yields the highest ARI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G_origin</strong> (<em>networkx.Graph</em>) – A graph where edges have an attribute <code class="docutils literal notranslate"><span class="pre">weight</span></code> used as a removal criterion.</p></li>
+<li><p><strong>weight</strong> (<em>str</em>) – The edge weight attribute used as the removal metric. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;weight&quot;</span></code>.</p></li>
+<li><p><strong>clustering_label</strong> (<em>str</em>) – Node attribute name for ground truth communities. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;value&quot;</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The cutoff threshold that results in the highest ARI.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.surgery.perform_surgery">
+<span class="sig-prename descclassname"><span class="pre">utils.surgery.</span></span><span class="sig-name descname"><span class="pre">perform_surgery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'weight'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clustering_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'community'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/surgery.html#perform_surgery"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.surgery.perform_surgery" title="Link to this definition">¶</a></dt>
+<dd><p>A simple surgery function that removes the edges with weight above a threshold.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkx.Graph</em>) – A graph with <code class="docutils literal notranslate"><span class="pre">weight</span></code> as the Ricci flow metric to cut.</p></li>
+<li><p><strong>weight</strong> (<em>str</em>) – The edge weight used as the Ricci flow metric. Defaults to “weight”.</p></li>
+<li><p><strong>cut</strong> (<em>float</em><em> or </em><em>None</em>) – Manually assigned cutoff point.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-utils" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Fabbri L..
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/utils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
