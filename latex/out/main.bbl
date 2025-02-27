@@ -1,0 +1,520 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{recentdevelopmentsricciflows}{article}{}
+      \name{author}{1}{}{%
+        {{hash=65d9326a54ed3b8f383e614ff43b9314}{%
+           family={Bamler},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima H},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{65d9326a54ed3b8f383e614ff43b9314}
+      \strng{fullhash}{65d9326a54ed3b8f383e614ff43b9314}
+      \strng{bibnamehash}{65d9326a54ed3b8f383e614ff43b9314}
+      \strng{authorbibnamehash}{65d9326a54ed3b8f383e614ff43b9314}
+      \strng{authornamehash}{65d9326a54ed3b8f383e614ff43b9314}
+      \strng{authorfullhash}{65d9326a54ed3b8f383e614ff43b9314}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.DG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Recent developments in Ricci flows}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2102.12615
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2102.12615
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2102.12615
+      \endverb
+    \endentry
+    \entry{ricci-flow-renormalization-group}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a42f35f4c700dbad8cbd0e1555e61eff}{%
+           family={Carfora},
+           familyi={C\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5b86c973dbef70100744648609b1f845}{%
+           family={Dappiaggi},
+           familyi={D\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9c4243fac58ef2cc44227cea5aa5c704}{%
+           family={Drago},
+           familyi={D\bibinitperiod},
+           given={Nicolò},
+           giveni={N\bibinitperiod}}}%
+        {{hash=466435853b8dde3525364a66499594ea}{%
+           family={Rinaldi},
+           familyi={R\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f68ccbdd1968fdf6e28c20fde678ebff}
+      \strng{fullhash}{f3551da1d72c81eca2d9bec02aebc6b8}
+      \strng{bibnamehash}{f68ccbdd1968fdf6e28c20fde678ebff}
+      \strng{authorbibnamehash}{f68ccbdd1968fdf6e28c20fde678ebff}
+      \strng{authornamehash}{f68ccbdd1968fdf6e28c20fde678ebff}
+      \strng{authorfullhash}{f3551da1d72c81eca2d9bec02aebc6b8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{Ricci Flow from the Renormalization of Nonlinear Sigma Models in the Framework of Euclidean Algebraic Quantum Field Theory}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{eprint}
+      \verb 1809.07652
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1809.07652v2
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1809.07652v2
+      \endverb
+    \endentry
+    \entry{theRicciFlowAnIntroduction}{book}{}
+      \name{author}{2}{}{%
+        {{hash=4335957270f0106afca45789fe7e4c89}{%
+           family={Chow},
+           familyi={C\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=3c869e7408648e116aaadef5827a6d42}{%
+           family={Knopf},
+           familyi={K\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{43a1d03fcfdb1a411fbbf2a74b5c2480}
+      \strng{fullhash}{43a1d03fcfdb1a411fbbf2a74b5c2480}
+      \strng{bibnamehash}{43a1d03fcfdb1a411fbbf2a74b5c2480}
+      \strng{authorbibnamehash}{43a1d03fcfdb1a411fbbf2a74b5c2480}
+      \strng{authornamehash}{43a1d03fcfdb1a411fbbf2a74b5c2480}
+      \strng{authorfullhash}{43a1d03fcfdb1a411fbbf2a74b5c2480}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-8218-3515-7}
+      \field{title}{The Ricci Flow: An Introduction}
+      \field{year}{2004}
+      \true{nocite}
+      \keyw{Ricci Flow}
+    \endentry
+    \entry{crossley:topology}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fcfac5ad23d965e8cf65b6d621fa2249}{%
+           family={Crossley},
+           familyi={C\bibinitperiod},
+           given={Martin\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{fcfac5ad23d965e8cf65b6d621fa2249}
+      \strng{fullhash}{fcfac5ad23d965e8cf65b6d621fa2249}
+      \strng{bibnamehash}{fcfac5ad23d965e8cf65b6d621fa2249}
+      \strng{authorbibnamehash}{fcfac5ad23d965e8cf65b6d621fa2249}
+      \strng{authornamehash}{fcfac5ad23d965e8cf65b6d621fa2249}
+      \strng{authorfullhash}{fcfac5ad23d965e8cf65b6d621fa2249}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Essential Topology}
+      \field{year}{2005}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/1-84628-194-6
+      \endverb
+    \endentry
+    \entry{lee:riemann}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c40909f5c29f4bdd0da6b26248976fd3}{%
+           family={M.},
+           familyi={M\bibinitperiod},
+           given={Lee\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \strng{fullhash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \strng{bibnamehash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \strng{authorbibnamehash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \strng{authornamehash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \strng{authorfullhash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second Edition}
+      \field{title}{Introduction to Riemannian Manifolds}
+      \field{year}{2018}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-3-319-91755-9
+      \endverb
+    \endentry
+    \entry{lee:smooth}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c40909f5c29f4bdd0da6b26248976fd3}{%
+           family={M.},
+           familyi={M\bibinitperiod},
+           given={Lee\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \strng{fullhash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \strng{bibnamehash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \strng{authorbibnamehash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \strng{authornamehash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \strng{authorfullhash}{c40909f5c29f4bdd0da6b26248976fd3}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second Edition}
+      \field{title}{Introduction to Smooth Manifolds}
+      \field{year}{2013}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-981-99-0565-2
+      \endverb
+    \endentry
+    \entry{Ni:communitydetectionnetworksricci}{article}{}
+      \name{author}{4}{}{%
+        {{hash=3cf2a7728a7502e7fffa6fb18d59b310}{%
+           family={Ni},
+           familyi={N\bibinitperiod},
+           given={Chien-Chun},
+           giveni={C\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=e89b0df1e2a3bb95d3df9f9a9b7b6830}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Yu-Yao},
+           giveni={Y\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=036b60c7b546499099483e479b2ebb5a}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Feng},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ef0893ded45d992617683622c2755234}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c38a7a3d1367ee05f7599f66a2ee4d34}
+      \strng{fullhash}{092f7a796b73db7a092a52d95cf6b5a4}
+      \strng{bibnamehash}{c38a7a3d1367ee05f7599f66a2ee4d34}
+      \strng{authorbibnamehash}{c38a7a3d1367ee05f7599f66a2ee4d34}
+      \strng{authornamehash}{c38a7a3d1367ee05f7599f66a2ee4d34}
+      \strng{authorfullhash}{092f7a796b73db7a092a52d95cf6b5a4}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.SI}
+      \field{eprinttype}{arXiv}
+      \field{title}{Community Detection on Networks with Ricci Flow}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1907.03993
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1907.03993
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1907.03993
+      \endverb
+    \endentry
+    \entry{Ollivier-RicciLib}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0e54618b9465fc590158b94a6fc6c0ee}{%
+           family={Ni\bibnamedelima C.C.},
+           familyi={N\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Barrett\bibnamedelima S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           suffix={Cruceru\bibnamedelima C.},
+           suffixi={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \strng{fullhash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \strng{bibnamehash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \strng{authorbibnamehash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \strng{authornamehash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \strng{authorfullhash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/saibalmars/GraphRicciCurvature.git}}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{GraphRicciCurvature}
+      \field{year}{2019}
+    \endentry
+    \entry{poincare:analysis-situs}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ec9aac8108836d6b8e69d7ce94ebc275}{%
+           family={Poincaré},
+           familyi={P\bibinitperiod},
+           given={Henri},
+           giveni={H\bibinitperiod}}}%
+      }
+      \name{translator}{1}{}{%
+        {{hash=8e3125fd9a902a9b525121e39152ba3d}{%
+           family={Stillwell},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{fullhash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{bibnamehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{authorbibnamehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{authornamehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{authorfullhash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{translatorbibnamehash}{8e3125fd9a902a9b525121e39152ba3d}
+      \strng{translatornamehash}{8e3125fd9a902a9b525121e39152ba3d}
+      \strng{translatorfullhash}{8e3125fd9a902a9b525121e39152ba3d}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal de l'École Polytechnique}
+      \field{number}{2}
+      \field{title}{Analysis Situs}
+      \field{year}{1895}
+    \endentry
+    \entry{poincare:complement}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ec9aac8108836d6b8e69d7ce94ebc275}{%
+           family={Poincaré},
+           familyi={P\bibinitperiod},
+           given={Henri},
+           giveni={H\bibinitperiod}}}%
+      }
+      \name{translator}{1}{}{%
+        {{hash=8e3125fd9a902a9b525121e39152ba3d}{%
+           family={Stillwell},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{fullhash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{bibnamehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{authorbibnamehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{authornamehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{authorfullhash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{translatorbibnamehash}{8e3125fd9a902a9b525121e39152ba3d}
+      \strng{translatornamehash}{8e3125fd9a902a9b525121e39152ba3d}
+      \strng{translatorfullhash}{8e3125fd9a902a9b525121e39152ba3d}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{1904}
+      \field{journaltitle}{Rendiconti del Circolo Matematico di Palermo}
+      \field{title}{Cinquième complément à l'analysis situs}
+      \field{titleaddon}{Fifth Complement to Analysis Situs}
+      \field{volume}{18}
+      \field{year}{2008}
+      \field{pages}{45\bibrangedash 110}
+      \range{pages}{66}
+    \endentry
+    \entry{polchinski:strings}{book}{}
+      \name{author}{1}{}{%
+        {{hash=97bce5888e553e210582de442dfbfcbe}{%
+           family={Polchinski},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{97bce5888e553e210582de442dfbfcbe}
+      \strng{fullhash}{97bce5888e553e210582de442dfbfcbe}
+      \strng{bibnamehash}{97bce5888e553e210582de442dfbfcbe}
+      \strng{authorbibnamehash}{97bce5888e553e210582de442dfbfcbe}
+      \strng{authornamehash}{97bce5888e553e210582de442dfbfcbe}
+      \strng{authorfullhash}{97bce5888e553e210582de442dfbfcbe}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{series}{Cambridge Monographs on Mathematical Physics}
+      \field{title}{String theory. Vol. 1: An introduction to the bosonic string}
+      \field{year}{2007}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1017/CBO9780511816079
+      \endverb
+    \endentry
+    \entry{nr}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=b532fc783eaa51cbc0ac370944eb54bb}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={Ryan\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b29b659629068c77fb375c338f11a2b4}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Nesreen\bibnamedelima K.},
+           giveni={N\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2365b264ba81d1f80abdc24a6f742e1}
+      \strng{fullhash}{f2365b264ba81d1f80abdc24a6f742e1}
+      \strng{bibnamehash}{f2365b264ba81d1f80abdc24a6f742e1}
+      \strng{authorbibnamehash}{f2365b264ba81d1f80abdc24a6f742e1}
+      \strng{authornamehash}{f2365b264ba81d1f80abdc24a6f742e1}
+      \strng{authorfullhash}{f2365b264ba81d1f80abdc24a6f742e1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{AAAI}
+      \field{title}{The Network Data Repository with Interactive Graph Analytics and Visualization}
+      \field{year}{2015}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://networkrepository.com
+      \endverb
+      \verb{url}
+      \verb https://networkrepository.com
+      \endverb
+    \endentry
+    \entry{tu:manifolds}{book}{}
+      \name{author}{1}{}{%
+        {{hash=bd797f5054139f44f22b71934a7e9d84}{%
+           family={Tu},
+           familyi={T\bibinitperiod},
+           given={Loring\bibnamedelima W.},
+           giveni={L\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{bd797f5054139f44f22b71934a7e9d84}
+      \strng{fullhash}{bd797f5054139f44f22b71934a7e9d84}
+      \strng{bibnamehash}{bd797f5054139f44f22b71934a7e9d84}
+      \strng{authorbibnamehash}{bd797f5054139f44f22b71934a7e9d84}
+      \strng{authornamehash}{bd797f5054139f44f22b71934a7e9d84}
+      \strng{authorfullhash}{bd797f5054139f44f22b71934a7e9d84}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second Edition}
+      \field{title}{An Introduction to Manifolds}
+      \field{year}{2011}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-1-4419-7400-6
+      \endverb
+    \endentry
+    \entry{weigand:string}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=17820c3e8e3117fa2e239b205c469080}{%
+           family={Weigand},
+           familyi={W\bibinitperiod},
+           given={Timo},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Heidelberg}%
+      }
+      \strng{namehash}{17820c3e8e3117fa2e239b205c469080}
+      \strng{fullhash}{17820c3e8e3117fa2e239b205c469080}
+      \strng{bibnamehash}{17820c3e8e3117fa2e239b205c469080}
+      \strng{authorbibnamehash}{17820c3e8e3117fa2e239b205c469080}
+      \strng{authornamehash}{17820c3e8e3117fa2e239b205c469080}
+      \strng{authorfullhash}{17820c3e8e3117fa2e239b205c469080}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Lecture Notes.}
+      \field{title}{Introduction to String Theory}
+      \field{year}{2012}
+      \true{nocite}
+    \endentry
+    \entry{ZacharyKarateClubGraph}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fdc8daa132cd9d6dfd4a7a073ac407ab}{%
+           family={Zachary},
+           familyi={Z\bibinitperiod},
+           given={Wayne\bibnamedelima W.},
+           giveni={W\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \strng{fullhash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \strng{bibnamehash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \strng{authorbibnamehash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \strng{authornamehash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \strng{authorfullhash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journalsubtitle}{The University of Chicago Press Journals}
+      \field{title}{An Information Flow Model for Conflict and Fission in Small Groups}
+      \field{year}{1997}
+      \verb{urlraw}
+      \verb https://doi.org/10.1086/jar.33.4.3629752
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1086/jar.33.4.3629752
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

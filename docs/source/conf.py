@@ -20,8 +20,8 @@ sys.path.insert(0, os.path.abspath("../../tests"))
 # -- Project information -----------------------------------------------------
 
 project = "Ricci Flow in Networks"
-copyright = "2025, Fabbri L., Oancia G."
-author = "Fabbri L., Oancia G."
+copyright = "2025, Fabbri L."
+author = "Fabbri L."
 
 # The full version, including alpha/beta/rc tags
 release = "01/03/2025"
@@ -33,10 +33,15 @@ release = "01/03/2025"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "myst_parser",
+    "sphinxcontrib.mermaid",
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
     "sphinx.ext.autodoc",
 ]
+
+# For Mermaid Workflow Diagram
+mermaid_output_format = "png"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -59,4 +64,3 @@ html_theme = "furo"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-html_sidebars = {"**": []}
