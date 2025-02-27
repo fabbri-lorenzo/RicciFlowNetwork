@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.19)  25 JAN 2025 18:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.19)  27 FEB 2025 09:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -465,7 +465,9 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count323
 \c@continuedfloat=\count324
 Package caption Info: hyperref package is loaded.
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 67.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 239.
 \c@subfigure=\count325
@@ -1198,287 +1200,921 @@ Package csquotes Info: ... found 'babel' package.
 LaTeX Warning: Unused global option(s):
     [online].
 
-(out/main.aux)
-\openout1 = `main.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
- (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count520
-\scratchdimen=\dimen331
-\scratchbox=\box101
-\nofMPsegments=\count521
-\nofMParguments=\count522
-\everyMPshowfont=\toks58
-\MPscratchCnt=\count523
-\MPscratchDim=\dimen332
-\MPnumerator=\count524
-\makeMPintoPDFobject=\count525
-\everyMPtoPDFconversion=\toks59
-)
-LaTeX Info: Redefining \microtypecontext on input line 15.
-Package microtype Info: Applying patch `item' on input line 15.
-Package microtype Info: Applying patch `toc' on input line 15.
-Package microtype Info: Applying patch `eqnum' on input line 15.
-Package microtype Info: Applying patch `footnote' on input line 15.
-Package microtype Info: Applying patch `verbatim' on input line 15.
-Package microtype Info: Generating PDF output.
-Package microtype Info: Character protrusion enabled (level 2).
-Package microtype Info: Using default protrusion set `alltext'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 15.
-Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of interword spacing.
-Package microtype Info: No adjustment of character kerning.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-ppl.cfg
-File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
-)
-Package hyperref Info: Link coloring ON on input line 15.
- (out/main.out) (out/main.out)
-\@outlinefile=\write7
-\openout7 = `main.out'.
+(out/main.aux
+out/main.aux:32: Undefined control sequence.
+l.32 \@LN
+         {0}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* hratio: 1:1
-* vratio: 1:1
-* modes: twoside 
-* h-part:(L,W,R)=(74.68848pt, 448.1309pt, 74.68849pt)
-* v-part:(T,H,B)=(105.63086pt, 633.78513pt, 105.63086pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=448.1309pt
-* \textheight=633.78513pt
-* \oddsidemargin=2.41849pt
-* \evensidemargin=2.4185pt
-* \topmargin=1.48708pt
-* \headheight=14.5pt
-* \headsep=19.8738pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=88.0pt
-* \marginparsep=7.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+out/main.aux:32: LaTeX Error: Missing \begin{document}.
 
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: End \AtBeginDocument code.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \@LN{0
+           }{6}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-Package siunitx Warning: Detected the "physics" package:
-(siunitx)                omitting definition of \qty.
-(siunitx)                
-(siunitx)                If you want to use \qty with the siunitx definition,
-(siunitx)                add 
-(siunitx)                
-(siunitx)                    \AtBeginDocument{\RenewCommandCopy\qty\SI}
-(siunitx)                
-(siunitx)                to your preamble.
+out/main.aux:33: Undefined control sequence.
+l.33 \@LN
+         {1}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-(/usr/local/texlive/2023/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
-File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
-)
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 15.
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-)
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `main.bcf'.
+out/main.aux:34: Undefined control sequence.
+l.34 \@LN
+         {2}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' found.
- (out/main.bbl)
-Package biblatex Info: Reference section=0 on input line 15.
-Package biblatex Info: Reference segment=0 on input line 15.
-<Graphics/UniversityCrest.png, id=95, 766.865pt x 401.5pt>
-File: Graphics/UniversityCrest.png Graphic file (type png)
-<use Graphics/UniversityCrest.png>
-Package pdftex.def Info: Graphics/UniversityCrest.png  used on input line 39.
-(pdftex.def)             Requested size: 179.24962pt x 93.84401pt.
- [1
+out/main.aux:35: Undefined control sequence.
+l.35 \@LN
+         {3}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+out/main.aux:36: Undefined control sequence.
+l.36 \@LN
+         {4}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc} <./Graphics/UniversityCrest.png>] [2
+out/main.aux:37: Undefined control sequence.
+l.37 \@LN
+         {5}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-] (./Abstract.tex) [1
+out/main.aux:38: Undefined control sequence.
+l.38 \@LN
+         {6}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+out/main.aux:39: Undefined control sequence.
+l.39 \@LN
+         {7}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-] [2
+out/main.aux:40: Undefined control sequence.
+l.40 \@LN
+         {8}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-] (out/main.toc (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
-\tf@toc=\write8
-\openout8 = `main.toc'.
+out/main.aux:41: Undefined control sequence.
+l.41 \@LN
+         {9}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
- [3
+out/main.aux:42: Undefined control sequence.
+l.42 \@LN
+         {10}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-] [4
+out/main.aux:43: Undefined control sequence.
+l.43 \@LN
+         {11}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-]
-Chapter 1.
-(./Sections/introduction.tex
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.10 T
-      he developed code can be accessed in the corresponding GitHub reposito... [1
+out/main.aux:44: Undefined control sequence.
+l.44 \@LN
+         {12}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-])
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.63 \chapter
-             {Introduction and Motivation} [2]
-Chapter 2.
-(./Sections/motivation-poincare.tex
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 15.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [3
+out/main.aux:45: Undefined control sequence.
+l.45 \@LN
+         {13}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-] [4] [5]) (./Sections/motivation-geometry.tex [6]
-<./Graphics/Images/homeomorphism.png, id=214, 829.0975pt x 794.97pt>
-File: ./Graphics/Images/homeomorphism.png Graphic file (type png)
-<use ./Graphics/Images/homeomorphism.png>
-Package pdftex.def Info: ./Graphics/Images/homeomorphism.png  used on input line 22.
-(pdftex.def)             Requested size: 224.06544pt x 214.83885pt.
- [7 <./Graphics/Images/homeomorphism.png>]
-<./Graphics/Images/boundary.png, id=225, 878.28125pt x 790.955pt>
-File: ./Graphics/Images/boundary.png Graphic file (type png)
-<use ./Graphics/Images/boundary.png>
-Package pdftex.def Info: ./Graphics/Images/boundary.png  used on input line 39.
-(pdftex.def)             Requested size: 224.06544pt x 201.78137pt.
- [8 <./Graphics/Images/boundary.png>]
-<./Graphics/Images/map.png, id=237, 890.32625pt x 686.565pt>
-File: ./Graphics/Images/map.png Graphic file (type png)
-<use ./Graphics/Images/map.png>
-Package pdftex.def Info: ./Graphics/Images/map.png  used on input line 58.
-(pdftex.def)             Requested size: 224.06544pt x 172.78271pt.
- [9 <./Graphics/Images/map.png>]
-<./Graphics/Images/curve.png, id=246, 696.6025pt x 612.2875pt>
-File: ./Graphics/Images/curve.png Graphic file (type png)
-<use ./Graphics/Images/curve.png>
-Package pdftex.def Info: ./Graphics/Images/curve.png  used on input line 80.
-(pdftex.def)             Requested size: 224.06544pt x 196.94502pt.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 86.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-euf.cfg
-File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
-)
-<./Graphics/Images/function.png, id=248, 908.39375pt x 654.445pt>
-File: ./Graphics/Images/function.png Graphic file (type png)
-<use ./Graphics/Images/function.png>
-Package pdftex.def Info: ./Graphics/Images/function.png  used on input line 91.
-(pdftex.def)             Requested size: 224.06544pt x 161.4239pt.
- [10 <./Graphics/Images/curve.png> <./Graphics/Images/function.png>]
-<./Graphics/Images/vector.png, id=260, 956.57375pt x 723.70375pt>
-File: ./Graphics/Images/vector.png Graphic file (type png)
-<use ./Graphics/Images/vector.png>
-Package pdftex.def Info: ./Graphics/Images/vector.png  used on input line 110.
-(pdftex.def)             Requested size: 224.06544pt x 169.51826pt.
- [11 <./Graphics/Images/vector.png>] [12] [13] [14] [15]) (./Sections/motivation-strings.tex [16] [17] [18]) (./Sections/motivation-ricci-flow.tex) [19] [20
+out/main.aux:46: Undefined control sequence.
+l.46 \@LN
+         {14}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-]
-Chapter 3.
-[21] [22
+out/main.aux:47: Undefined control sequence.
+l.47 \@LN
+         {15}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-]
-Chapter 4.
-[23] [24
+out/main.aux:48: Undefined control sequence.
+l.48 \@LN
+         {16}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-]
-Chapter 5.
-[25] [26
+out/main.aux:49: Undefined control sequence.
+l.49 \@LN
+         {17}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-]
-Chapter 6.
-Excluding 'comment' comment. [27] [28
+out/main.aux:50: Undefined control sequence.
+l.50 \@LN
+         {18}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-]
-Appendix A.
-(./Sections/appendix.tex Excluding 'comment' comment.) [29] [30
+out/main.aux:51: Undefined control sequence.
+l.51 \@LN
+         {19}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 104.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `pcr' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [31
+out/main.aux:52: Undefined control sequence.
+l.52 \@LN
+         {20}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+out/main.aux:53: Undefined control sequence.
+l.53 \@LN
+         {21}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-] (out/main.aux)
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FD00191E1987759C65D0C303653BE611;4480.
-Package logreq Info: Writing requests to 'main.run.xml'.
-\openout1 = `main.run.xml'.
+out/main.aux:54: Undefined control sequence.
+l.54 \@LN
+         {22}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
- ) 
+out/main.aux:55: Undefined control sequence.
+l.55 \@LN
+         {23}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:56: Undefined control sequence.
+l.56 \@LN
+         {24}{6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:57: Undefined control sequence.
+l.57 \@LN
+         {25}{7}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:58: Undefined control sequence.
+l.58 \@LN
+         {26}{7}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:59: Undefined control sequence.
+l.59 \@LN
+         {27}{7}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:60: Undefined control sequence.
+l.60 \@LN
+         {28}{7}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:61: Undefined control sequence.
+l.61 \@LN
+         {29}{7}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:62: Undefined control sequence.
+l.62 \@LN
+         {30}{7}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:68: Undefined control sequence.
+l.68 \@LN
+         {31}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:69: Undefined control sequence.
+l.69 \@LN
+         {32}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:70: Undefined control sequence.
+l.70 \@LN
+         {33}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:72: Undefined control sequence.
+l.72 \@LN
+         {34}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:73: Undefined control sequence.
+l.73 \@LN
+         {35}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:74: Undefined control sequence.
+l.74 \@LN
+         {36}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:75: Undefined control sequence.
+l.75 \@LN
+         {37}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:76: Undefined control sequence.
+l.76 \@LN
+         {38}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:77: Undefined control sequence.
+l.77 \@LN
+         {39}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:78: Undefined control sequence.
+l.78 \@LN
+         {40}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:79: Undefined control sequence.
+l.79 \@LN
+         {41}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:80: Undefined control sequence.
+l.80 \@LN
+         {42}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:81: Undefined control sequence.
+l.81 \@LN
+         {43}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:82: Undefined control sequence.
+l.82 \@LN
+         {44}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:83: Undefined control sequence.
+l.83 \@LN
+         {45}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:84: Undefined control sequence.
+l.84 \@LN
+         {46}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:85: Undefined control sequence.
+l.85 \@LN
+         {47}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:86: Undefined control sequence.
+l.86 \@LN
+         {48}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:87: Undefined control sequence.
+l.87 \@LN
+         {49}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:88: Undefined control sequence.
+l.88 \@LN
+         {50}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:89: Undefined control sequence.
+l.89 \@LN
+         {51}{8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:90: Undefined control sequence.
+l.90 \@LN
+         {52}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:91: Undefined control sequence.
+l.91 \@LN
+         {53}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:92: Undefined control sequence.
+l.92 \@LN
+         {54}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:93: Undefined control sequence.
+l.93 \@LN
+         {55}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:94: Undefined control sequence.
+l.94 \@LN
+         {56}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:95: Undefined control sequence.
+l.95 \@LN
+         {57}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:96: Undefined control sequence.
+l.96 \@LN
+         {58}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:97: Undefined control sequence.
+l.97 \@LN
+         {59}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:98: Undefined control sequence.
+l.98 \@LN
+         {60}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:99: Undefined control sequence.
+l.99 \@LN
+         {61}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:100: Undefined control sequence.
+l.100 \@LN
+          {62}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:101: Undefined control sequence.
+l.101 \@LN
+          {63}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:102: Undefined control sequence.
+l.102 \@LN
+          {64}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:103: Undefined control sequence.
+l.103 \@LN
+          {65}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:104: Undefined control sequence.
+l.104 \@LN
+          {66}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:105: Undefined control sequence.
+l.105 \@LN
+          {67}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:106: Undefined control sequence.
+l.106 \@LN
+          {68}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:107: Undefined control sequence.
+l.107 \@LN
+          {69}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:108: Undefined control sequence.
+l.108 \@LN
+          {70}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:109: Undefined control sequence.
+l.109 \@LN
+          {71}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:110: Undefined control sequence.
+l.110 \@LN
+          {72}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:111: Undefined control sequence.
+l.111 \@LN
+          {73}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:112: Undefined control sequence.
+l.112 \@LN
+          {74}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:113: Undefined control sequence.
+l.113 \@LN
+          {75}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:114: Undefined control sequence.
+l.114 \@LN
+          {76}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:115: Undefined control sequence.
+l.115 \@LN
+          {77}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:116: Undefined control sequence.
+l.116 \@LN
+          {78}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:117: Undefined control sequence.
+l.117 \@LN
+          {79}{9}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:118: Undefined control sequence.
+l.118 \@LN
+          {80}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:119: Undefined control sequence.
+l.119 \@LN
+          {81}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:120: Undefined control sequence.
+l.120 \@LN
+          {82}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:121: Undefined control sequence.
+l.121 \@LN
+          {83}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:122: Undefined control sequence.
+l.122 \@LN
+          {84}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:123: Undefined control sequence.
+l.123 \@LN
+          {85}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:124: Undefined control sequence.
+l.124 \@LN
+          {86}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:125: Undefined control sequence.
+l.125 \@LN
+          {87}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:126: Undefined control sequence.
+l.126 \@LN
+          {88}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:127: Undefined control sequence.
+l.127 \@LN
+          {89}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:128: Undefined control sequence.
+l.128 \@LN
+          {90}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:129: Undefined control sequence.
+l.129 \@LN
+          {91}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:130: Undefined control sequence.
+l.130 \@LN
+          {92}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:131: Undefined control sequence.
+l.131 \@LN
+          {93}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:132: Undefined control sequence.
+l.132 \@LN
+          {94}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:133: Undefined control sequence.
+l.133 \@LN
+          {95}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:134: Undefined control sequence.
+l.134 \@LN
+          {96}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:136: Undefined control sequence.
+l.136 \@LN
+          {97}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:137: Undefined control sequence.
+l.137 \@LN
+          {98}{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+out/main.aux:138: Undefined control sequence.
+l.138 \@LN
+          {99}{10}
+(That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 48927 strings out of 476025
- 1012042 string characters out of 5790016
- 1929655 words of memory out of 5000000
- 68002 multiletter control sequences out of 15000+600000
- 573083 words of font info for 331 fonts, out of 8000000 for 9000
+ 46065 strings out of 476025
+ 954215 string characters out of 5790016
+ 1851388 words of memory out of 5000000
+ 65787 multiletter control sequences out of 15000+600000
+ 514280 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,17n,120p,1060b,1983s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on out/main.pdf (37 pages, 1310833 bytes).
-PDF statistics:
- 546 PDF objects out of 1000 (max. 8388607)
- 454 compressed objects within 5 object streams
- 149 named destinations out of 1000 (max. 500000)
- 84704 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 125i,0n,120p,1046b,241s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
+out/main.aux:138:  ==> Fatal error occurred, no output PDF file produced!

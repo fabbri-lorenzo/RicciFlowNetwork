@@ -1,0 +1,18 @@
+\section{Riemannian Geometry and Curvature Notions}
+In classical Riemannian geometry, curvature can be examined from multiple perspectives. One can study the \emph{sectional curvature}, which measures how a two-dimensional plane (spanned by two tangent directions) curves. One can also investigate the \emph{Ricci curvature}, which is obtained by summing or averaging the sectional curvatures over all planes containing a given direction. Ricci curvature has special importance: for instance, it appears in Einstein’s equations of General Relativity, linking geometry to matter and energy distributions in spacetime. 
+
+Concretely, let $(M,g)$ be a Riemannian manifold, where $M$ is a smooth manifold and $g$ is the metric tensor. The Ricci curvature $\mathrm{Ric}$ is derived as a contraction of the Riemann curvature tensor, itself an operator capturing how much nearby geodesics converge or diverge. Positive Ricci curvature typically implies that geodesics tend to converge, reflecting a ``crowded'' or positively curved geometry akin to the sphere. Negative Ricci curvature implies geodesics tend to diverge, mirroring a hyperbolic or “saddle-like” structure. Zero Ricci curvature is the hallmark of Ricci-flat manifolds, with many implications for geometry and topology.
+
+\subsection{Hamilton's Ricci Flow Equation}
+Hamilton introduced the Ricci Flow as the PDE:
+\[
+\frac{\partial g_{ij}}{\partial t} = -2 \, R_{ij},
+\]
+where $g_{ij}$ are the components of the metric tensor $g$ in local coordinates and $R_{ij}$ are the components of the Ricci curvature tensor. Informally, each infinitesimal piece of the manifold changes in time, guided by curvature. Regions of \emph{high positive} Ricci curvature shrink faster, while regions of \emph{negative} Ricci curvature expand. This leads to a \emph{flow} that tends to smooth out the geometric and topological features of $M$. 
+
+One of the most famous applications of Ricci Flow on manifolds is Grigori Perelman's resolution of the Poincar\'{e} Conjecture and the more general Geometrization Conjecture for three-dimensional manifolds. Perelman’s work introduced the notion of \emph{Ricci Flow with surgery}, a procedure to remove singular regions (places where curvature blows up to infinity) and continue the flow on the remaining parts. In 3D manifolds, these singularities can be visualized as ``neck pinches'' that effectively separate the manifold into topologically simpler pieces. Perelman showed that by performing a series of well-defined surgeries, one could decompose a three-dimensional manifold into model geometric pieces, completing Hamilton’s program toward a proof of the Geometrization Conjecture.
+
+\subsection{From Smooth Settings to Discrete Geometry}
+While Ricci Flow is classically defined on smooth manifolds, there has been considerable interest in transferring these ideas to \emph{discrete} or combinatorial settings such as polyhedral surfaces, graphs, and complex networks. The general question is how to define concepts like ``curvature'' when one does not have a smooth manifold or a Riemannian metric in the usual sense. Instead, discrete analogs focus on adjacency, distances along edges, and combinatorial properties that mimic or reflect continuum notions.
+
+For surfaces composed of polygons (triangulations), one can define the curvature at a vertex via angle deficits, a concept dating back to classical differential geometry of polyhedral surfaces. However, for higher-dimensional graphs and networks that are not neatly embedded in any Euclidean space, a more general curvature definition is needed—one that depends mostly on the underlying distances and probability measures rather than an explicit embedding. 

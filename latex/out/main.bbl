@@ -220,7 +220,7 @@
       \verb 10.1007/978-981-99-0565-2
       \endverb
     \endentry
-    \entry{communitydetectionnetworksricci}{article}{}
+    \entry{Ni:communitydetectionnetworksricci}{article}{}
       \name{author}{4}{}{%
         {{hash=3cf2a7728a7502e7fffa6fb18d59b310}{%
            family={Ni},
@@ -266,6 +266,34 @@
       \verb{url}
       \verb https://arxiv.org/abs/1907.03993
       \endverb
+    \endentry
+    \entry{Ollivier-RicciLib}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0e54618b9465fc590158b94a6fc6c0ee}{%
+           family={Ni\bibnamedelima C.C.},
+           familyi={N\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Barrett\bibnamedelima S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           suffix={Cruceru\bibnamedelima C.},
+           suffixi={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \strng{fullhash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \strng{bibnamehash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \strng{authorbibnamehash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \strng{authornamehash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \strng{authorfullhash}{0e54618b9465fc590158b94a6fc6c0ee}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/saibalmars/GraphRicciCurvature.git}}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{GraphRicciCurvature}
+      \field{year}{2019}
     \endentry
     \entry{poincare:analysis-situs}{article}{}
       \name{author}{1}{}{%
@@ -457,6 +485,34 @@
       \field{title}{Introduction to String Theory}
       \field{year}{2012}
       \true{nocite}
+    \endentry
+    \entry{ZacharyKarateClubGraph}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fdc8daa132cd9d6dfd4a7a073ac407ab}{%
+           family={Zachary},
+           familyi={Z\bibinitperiod},
+           given={Wayne\bibnamedelima W.},
+           giveni={W\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \strng{fullhash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \strng{bibnamehash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \strng{authorbibnamehash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \strng{authornamehash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \strng{authorfullhash}{fdc8daa132cd9d6dfd4a7a073ac407ab}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journalsubtitle}{The University of Chicago Press Journals}
+      \field{title}{An Information Flow Model for Conflict and Fission in Small Groups}
+      \field{year}{1997}
+      \verb{urlraw}
+      \verb https://doi.org/10.1086/jar.33.4.3629752
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1086/jar.33.4.3629752
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
