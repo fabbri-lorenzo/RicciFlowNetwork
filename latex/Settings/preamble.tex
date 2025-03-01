@@ -93,6 +93,10 @@
 
 % *********************************** SI Units *********************************
 \usepackage{siunitx} % use this package module for SI units
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+\ExplSyntaxOn
+\msg_redirect_name:nnn { siunitx } { physics-pkg } { none }
+\ExplSyntaxOff
 
 
 % ******************************* Line Spacing *********************************
