@@ -477,7 +477,7 @@ supported!}
 % ******************************* Bibliography *********************************
 \ifPHD@authoryear
   \ifPHD@biblatex
-    \RequirePackage[backend=biber, style=authoryear, citestyle=alphabetic, 
+    \RequirePackage[backend=bibtex, style=authoryear, citestyle=alphabetic, 
       sorting=nty, natbib=true]{biblatex}
     \setBiBLaTeXtrue
   \else
@@ -486,7 +486,7 @@ supported!}
 \else
   \ifPHD@numbered
     \ifPHD@biblatex
-      \RequirePackage[backend=biber, style=numeric-comp, 
+      \RequirePackage[backend=bibtex, style=numeric-comp, 
         citestyle=numeric, sorting=none, natbib=true]{biblatex}
       \setBiBLaTeXtrue
     \else
@@ -506,7 +506,7 @@ supported!}
         }
     \else                                            % set default to numbered
       \ifPHD@biblatex
-        \RequirePackage[backend=biber, style=numeric-comp,
+        \RequirePackage[backend=bibtex, style=numeric-comp,
           citestyle=numeric, sorting=none, natbib=true]{biblatex}
         \setBiBLaTeXfalse
       \else
