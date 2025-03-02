@@ -73,7 +73,7 @@ A practical strategy is as follows:
     \item Perform a fixed number of Ricci Flow iterations. 
     \item For a range of potential cut thresholds $T_1, T_2, \dots, T_r$, remove edges with weight above $T_j$. 
     \item Compute modularity $Q_j$ for each $T_j$.
-    \item Select the threshold $T_j$ that yields the maximum $Q_j$.
+    \item Select the threshold $T_j$ that yields the maximum $Q_j$ preceding a drop in modularity.
 \end{enumerate}
 This threshold selection process is akin to the notion of “neck pinches” or “surgeries” in the manifold setting: a large weight often signifies a bridging structure (negative curvature region grown large) that is “pinching off” from the main components. If an external ground-truth is known, one may prefer the threshold that simultaneously optimizes ARI and modularity. In the absence of external labels, maximizing modularity is a common choice to define the “best” partition.
 
