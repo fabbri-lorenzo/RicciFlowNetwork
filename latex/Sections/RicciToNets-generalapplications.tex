@@ -1,4 +1,4 @@
-\section{General Application of Ricci Flow to Complex Networks: ARI, Modularity, and Performance}
+\section{ARI, Modularity, and Performance}
 \label{sec:ricci_flow_networks}
 
 In the study of complex networks, a fundamental task is to identify densely connected groups of nodes, commonly referred to as \emph{communities}. These communities often correspond to meaningful substructures such as friend groups in social networks, functionally related proteins in biological networks, or topics in citation networks. There are numerous algorithms that aim to extract communities---ranging from graph partitioning heuristics and centrality-based edge removal to statistical and probabilistic methods.
@@ -93,20 +93,7 @@ While the continuous Ricci Flow PDE can be computationally demanding in the smoo
 \end{enumerate}
 Despite these costs, modern computational resources and heuristics usually make discrete Ricci Flow feasible for networks of moderate size. For very large networks (millions of edges), one might rely on approximations, sampling techniques, or simplified versions of curvature (e.g., proxies to Ollivier Ricci curvature).
 
-\subsection{Empirical Performance and Use Cases}
-\label{subsec:empirical}
-
-In various studies---including the main article on \emph{Ricci Flow in Networks}~\cite{main-article}---this curvature-based approach has been tested on real-world networks (e.g., social graphs, protein-protein interaction networks, and technological networks) as well as classical synthetic benchmarks. Two classes of synthetic networks are often used:
-\begin{itemize}
-    \item \textbf{Stochastic Block Models (SBM):} Here, the nodes are divided into communities, with an internal vs.\ external edge probability controlling how well-separated they are. Ricci Flow methods can detect these communities, typically succeeding until the external link probability becomes too high (i.e.\ the communities are no longer distinct).
-    \item \textbf{LFR (Lancichinetti-Fortunato-Radicchi) Benchmarks:} LFR graphs incorporate power-law degree distributions and community sizes, matching many real networks. Curvature-based detection has shown strong performance across a range of LFR parameters, typically measured via ARI or modularity.
-\end{itemize}
-Real-world networks might offer additional challenges, such as overlapping or hierarchical community structures and heterogeneous degree distributions. Nonetheless, the geometric viewpoint remains advantageous, offering both interpretability (in the sense of manifold analogies) and robust detection of bridging edges.
-
-\subsection{Choosing Parameters: Number of Iterations, Threshold, and Measures}
-\label{subsec:choosing_params}
-
-In practice, one needs to choose:
+In practice, one needs to choose three important parameters:
 \begin{enumerate}
     \item \textbf{Number of Ricci Flow Iterations}: Stopping too soon might not emphasize bridging edges enough to isolate communities; iterating too long might lead to degeneracies (e.g., certain edges become extremely large or extremely small). An empirical strategy is to run a moderate number (e.g., 10--20 iterations) and check if measures like ARI (if a ground truth is available) or modularity saturate.
     \item \textbf{Cut Threshold for Network Surgery}: Typically chosen by scanning multiple thresholds and evaluating a measure of clustering quality (e.g., modularity) or ARI. 
@@ -124,10 +111,3 @@ Future directions could include:
 \end{itemize}
 
 All these highlight that curvature-based community detection offers a distinctive geometric lens on networks, bridging rich ideas from differential geometry to the realm of data science and large-scale graph analysis.
-
-\subsection{Concluding Remarks on Sections~\ref{sec:ricci_differential} and~\ref{sec:ricci_flow_networks}}
-We have seen how the Ricci Flow---born in smooth differential geometry---finds a natural discrete counterpart in network analysis. The conceptual framework of \emph{positive curvature} mapping to regions of local coherence and \emph{negative curvature} mapping to bridging edges provides a strong theoretical impetus for using curvature to detect clusters. Alongside this geometric perspective, performance metrics such as \emph{Adjusted Rand Index} and \emph{modularity} are critical both for evaluating detection quality and guiding the user to select an appropriate threshold for “network surgery.” 
-
-Hence, these two sections form the backbone of a Ricci Flow approach to network community detection, elaborating the geometry behind Ollivier Ricci curvature and the practical aspects of applying a flow-based method. In the subsequent parts of a full report, one might delve into \emph{specific} examples, either from synthetic benchmarks or real-world data sets, to illustrate how the method works in practice. Additionally, code implementations can be crafted (in Python, C++, MATLAB, etc.) to follow the discrete flow steps. 
-
-By situating discrete Ricci Flow in this overarching context, we emphasize that the approach is not simply a novel graph partitioning algorithm; rather, it stems from deep geometric principles with extensive theoretical underpinnings. This solid foundation helps ensure that the method is not merely a heuristic but is intimately connected to well-studied ideas in mathematical analysis, topology, and geometry.
