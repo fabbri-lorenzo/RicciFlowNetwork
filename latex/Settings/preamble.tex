@@ -57,12 +57,12 @@
 \RequirePackage[labelsep=space,tableposition=top]{caption}
 \renewcommand{\figurename}{Fig.} %to support older versions of captions.sty
 
-\definecolor{BrightLightBlue}{RGB}{51, 153, 255} %bright light blue
+%\definecolor{BrightLightBlue}{RGB}{51, 153, 255} %bright light blue
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=blue,      
-    urlcolor=BrightLightBlue, 
+    urlcolor=blue, 
     citecolor=blue,
     pdfpagemode=FullScreen}
 
@@ -93,6 +93,10 @@
 
 % *********************************** SI Units *********************************
 \usepackage{siunitx} % use this package module for SI units
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+\ExplSyntaxOn
+\msg_redirect_name:nnn { siunitx } { physics-pkg } { none }
+\ExplSyntaxOff
 
 
 % ******************************* Line Spacing *********************************
@@ -125,9 +129,9 @@
 
 % If you would like to use biblatex for your reference management, as opposed to the default `natbibpackage` pass the option `custombib` in the document class. Comment out the previous line to make sure you don't load the natbib package. Uncomment the following lines and specify the location of references.bib file
 
-\RequirePackage[backend=biber, style=numeric-comp, citestyle=numeric, sorting=nty, natbib=true]{biblatex}
-\bibliography{bibliography.bib} %Location of references.bib only for biblatex
-
+\RequirePackage[backend=bibtex, style=numeric-comp, citestyle=numeric, sorting=nty, natbib=true]{biblatex}
+%\bibliography{bibliography.bib} %Location of references.bib only for biblatex
+\addbibresource{bibliography.bib}
 \fi
 
 % changes the default name `Bibliography` -> `References'
