@@ -1,0 +1,113 @@
+%**************** POINCARE CONJECTURE ******************
+\section{Poincaré Conjecture}
+To understand the origins of Ricci Flow and its relevance to mathematics, we first need to examine how it applies to geometrical and topological problems. Hence, we begin by introducing the Poincaré conjecture and Perelman's proof. 
+
+In his 1895 paper \emph{Analysis Situs}~\cite{poincare:analysis-situs}, Poincaré laid the foundations for what we now call \emph{topology}. He clearly underlined his purpose in this article, stating:
+
+\begin{quoting}
+    \noindent \emph{\dots geometry is the art of reasoning well from badly drawn figures; however, these figures, if they are not to deceive us, must satisfy certain conditions; the proportions may be grossly altered, but the relative positions of the different parts must not be upset.}
+\end{quoting}
+
+Because we don't need to trace every historical development, we now provide modern definitions and intuitions about topology~\cite{crossley:topology}, beginning with a formal definition of a topological space.
+
+\begin{definition}[Topological space]
+    Let $X$ be a non-empty set. A \emph{topology} on $X$ is a family $\mathcal{A}$ of subsets $\mathcal{A} \ni A \subseteq X$, called \emph{open sets}, such that
+    \begin{itemize}
+        \item The empty set and $X$ are open sets,
+        \begin{equation}
+            \emptyset \in \mathcal{A}, \quad X     \in \mathcal{A}.
+        \end{equation}
+        \item The union of any collection of open sets is again an open set,
+        \begin{equation}
+            A_i \in \mathcal{A}, i \in J \implies \bigcup_{i \in J} A_i \in \mathcal{A},
+        \end{equation}
+        with $J$ a collection of indices.
+        \item The intersection of any finite number of open sets is again an open set,
+        \begin{equation}
+            A_i \in \mathcal{A}, i = 1, 2 \dots, N \implies \bigcap_{i=1}^N A_i \in \mathcal{A}.
+        \end{equation}
+    \end{itemize}    
+
+    The set $X$, with the topology $\mathcal{A}$, is called a \emph{topological space} $(X, \mathcal{A})$.
+\end{definition}
+
+We can then define a \emph{closed set} simply by taking the complement of any open set:
+
+\begin{definition}[Closed sets]
+    Given $A \in \mathcal{A}$, a subset $C \subseteq X$ is \emph{closed} if
+    \begin{equation}
+        C \; \textup{closed} \iff X \setminus C \; \textup{open} .
+    \end{equation}
+\end{definition}
+
+One crucial property of topological spaces is \emph{compactness}, which captures the idea of finiteness in this context:
+
+\begin{definition}[Compact]
+    A topological space $(X,\mathcal{A})$ is called \emph{compact} if every open cover,
+    \begin{equation}
+        X \in \bigcup_{\alpha \in C} U_\alpha ,
+    \end{equation}
+    contains a finite subcover,
+    \begin{equation}
+        X \in \bigcup_{i = 1}^N U_i .
+    \end{equation}
+\end{definition}
+
+Another important property \emph{connectedness}: intuitively, a connected space can't be partitioned into separate pieces with nothing in common. To make this intuition more precise, we first need to define a \emph{path}.
+
+\begin{definition}[Path]
+    Let $(X, \mathcal{A})$ be a topological space, and let $x,y \in X$. A \emph{path} is a continuous function $f : [0,1] \to X$ with $f(0)=x$ and $f(1)=y$. A \emph{path-component} of $X$ is an equivalence class of $X$ where $x$ and $y$ belong to the same class if a path connects them.
+\end{definition}
+
+\begin{definition}[Connected]
+    A topological space $(X,\mathcal{A})$ is \emph{connected} if it can't be represented as the union of two or more disjoint non-empty open subsets.
+\end{definition}
+
+\begin{definition}[Path connected]
+    A topological space $(X,\mathcal{A})$ is \emph{path connected} if there is exactly one path-component. For non-empty spaces, this is equivalent to saying that any two points in $X$ can be joined by a path.
+\end{definition}
+
+\begin{definition}[Simply connected]
+    A topological space $(X,\mathcal{A})$ is \emph{simply connected} if it is path connected and every path between two points can be continuously transformed into any other path connecting the same two points, while keeping the endpoints fixed.
+\end{definition}
+
+Beyond these properties, we often define continuous maps from one topological space to another. A \emph{homeomorphism} is a continuous, bijective map whose inverse is also continuous, making the two spaces essentially “the same” from a topological viewpoint.
+
+We are particularly interested in manifolds, which are topological spaces locally resembling $\R^n$. To apply Ricci Flow in a topological setting, one endows these manifolds with a richer structure — namely, a Riemannian metric. For now, let's define a general manifold:
+
+\begin{definition}[Manifold]\label{def:manifold-prev}
+    A \emph{topological manifold} is a topological space which locally resembles the real $n$-dimensional Euclidean space.
+\end{definition}
+
+\begin{definition}[Closed manifold]
+    A \emph{closed manifold} is a manifold without boundary that is also compact.
+\end{definition}
+
+Classic examples are circles ($1D$) and spheres ($2D$). We are especially interested in the $3$-sphere, the direct generalization in three dimensions:
+
+\begin{definition}[$3$-sphere]
+    In coordinates\footnote{We'll define a chart on a manifold later on, for now let's use our intuitive understanding of a set of coordinates in $\R^n$.}, a $3$-sphere centred at $(C_0,C_1,C_2,C_3)$ with radius $r$ is the set of points $(x_0,x_1,x_2,x_3) \in \R^4$ satisfying
+    \begin{equation}
+        \sum_{i=0}^3 (x_i - C_i)^2 = (x_0 - C_0)^2 + (x_1 - C_1)^2 + (x_2 - C_2)^2 + (x_3 - C_3)^2 = r^2.
+    \end{equation}
+\end{definition}
+
+As a Manifold, the $3$-sphere  is a compact, connected $3$-dimensional Manifold, with no boundary. Poincaré's conjecture can thus be stated~\cite{poincare:analysis-situs}:
+
+\begin{quotation}
+    \noindent \emph{A simply-connected closed manifold is homeomorphic to a sphere}.
+\end{quotation}
+
+Initially, Poincaré did not consider this a conjecture because it seemed trivial, yet it became one of the greatest unsolved problems in mathematics. Refined over time, its final form~\cite{poincare:complement} is:
+
+\begin{quotation}
+    \noindent \emph{Every three-dimensional topological manifold which is closed, connected, and has trivial fundamental group is homeomorphic to the three-dimensional sphere.}
+\end{quotation}
+
+To avoid going into all the complexities of homology and fundamental groups, we cite a useful result:
+
+\begin{theorem}
+    A path-connected topological space is simply connected if and only if its fundamental group is trivial.
+\end{theorem}
+
+Understanding how to prove the Poincaré conjecture requires investigating specific manifold structures, ultimately leading to the application of Ricci Flow.

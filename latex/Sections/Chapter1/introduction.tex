@@ -1,0 +1,23 @@
+%**************** OVERVIEW OF THE PROJECT ******************
+The study of networks has gained considerable attention in various fields, ranging from sociology to biology, and beyond. One of the central problems in network science is community detection, where the objective is to identify groups of nodes (communities) that are more densely connected internally than with the rest of the network. Traditional methods for community detection often rely on statistical or combinatorial approaches. However, recent developments in geometric methods have introduced new approaches to this problem by leveraging concepts from differential geometry \cite{Ni:communitydetectionnetworksricci}.
+
+A powerful geometric tool, the Ricci Flow, originally developed in the context of smooth Riemannian manifolds, can be adapted to discrete network structures. In its original formulation, the Ricci Flow evolves the metric of a manifold according to the curvature (represented by the Ricci tensor), leading to a smoothing process over time. Ollivier-Ricci curvature, a discrete approximation of Ricci curvature for graphs, provides a framework to extend this idea to networks, where the “curvature” of edges encodes structural information about node connectivity. Specifically, positive curvature tends to shrink intra-community edges, while negative curvature expands inter-community edges \cite{Ni:communitydetectionnetworksricci}.
+
+In this project, we apply Ollivier-Ricci curvature and Ricci Flow to detect the two known communities in Zachary's Karate Club graph. The approach follows the work of Ni et al. \cite{Ni:communitydetectionnetworksricci}, where Ricci Flow is used to reshape edge weights iteratively, enhancing the separation between different communities. After applying Ricci Flow, we perform edge surgery to remove weakly connected edges and extract communities as the connected components of the resulting graph.
+
+The results will be compared to the predefined community labels, allowing for a direct comparison between the detected communities and the actual community structures. 
+
+The developed code can be accessed in the corresponding GitHub repository: \textit{\href{https://github.com/fabbri-lorenzo/RicciFlowNetwork}{RicciFlowNetwork}}.
+Code documentation is accessible at \textit{\href{https://fabbri-lorenzo.github.io/RicciFlowNetwork/}{CodeDocumentation}}.
+
+To conclude this introductory chapter, we provide here a concise map of how this document is organized and how each chapter contributes to the overarching discussion.
+
+Chapter~\ref{chap:chapter2} opens with the historical motivations behind the Ricci Flow, viewing it as a geometrical tool to tackle topological problems. In particular, the Poincaré Conjecture is introduced as an example of such a problem, laying the foundations for why Ricci Flow became central in resolving deep topological questions. Given the need for a rigorous framework, the chapter proceeds with an overview of differentiable manifolds, needed for the formal definition of Ricci Flow. To complete the picture, a brief detour into string theory and non-linear sigma models highlights how Poincaré's Conjecture was eventually proved through Perelman's work, showing an instance of Ricci Flow in action.
+
+Chapter~\ref{chap:chapter3} then moves to the formal definition of Ricci Flow itself, shifting from smooth differential settings to the discrete analog known as Ollivier-Ricci curvature. This transition is relevant for the application of Ricci Flow in a network-oriented context.
+
+In Chapter~\ref{chap:chapter4}, we shift focus to the application to complex networks. Exploiting curvature as a measure of structural cohesion, the chapter illustrates how Ricci Flow techniques can pinpoint communities, detect bridging edges, and reveal global organizational properties in graph-based data.
+
+Chapter~\ref{chap:chapter5} is devoted to the code that implements these ideas. It analyses our code and the results obtained.
+
+Finally, Chapter~\ref{chap:chapter6} is devoted to conclusions and future directions.
