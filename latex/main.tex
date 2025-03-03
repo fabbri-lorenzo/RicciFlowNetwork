@@ -2,7 +2,7 @@
 % ******************************* BEGIN DOCUMENT *******************************
 % ******************************************************************************
 %\documentclass[a4paper,12pt,twoside,online,customfont,custombib,PageStyleI,draftclassic]{Settings/PhDThesisPSnPDF}
-\documentclass[a4paper,12pt,twoside,customfont,custombib,PageStyleI]{Settings/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,twoside,customfont,custombib,PageStyleI,draftclassic]{Settings/PhDThesisPSnPDF}
 
 % ********************************** Preamble **********************************
 % Preamble: Contains packages and user-defined commands and settings
@@ -10,8 +10,6 @@
 \input{Settings/myPreamble}
 \input{Settings/mySettings}
 \graphicspath{ {./Graphics} }
-%\addbibresource{bibliography.bib}
-%\bibliography{bibliography.bib}
 % ******************************** Front Matter ********************************
 \begin{document}
 
@@ -59,28 +57,31 @@
 
 % ******************************** Main Matter *********************************
 \mainmatter
-\chapter{Overview of the Project}
-\input{Sections/introduction.tex}
+\chapter{Overview of the Project}\label{chap:chapter1}
+\input{Sections/Chapter1/introduction.tex}
 
-\chapter{Introduction and Motivation}
-\input{Sections/motivation-poincare.tex}
-\input{Sections/motivation-geometry.tex}
-\input{Sections/motivation-strings.tex}
-\input{Sections/motivation-ricci-flow.tex}
+\chapter{Introduction and Motivation}\label{chap:chapter2}
+\input{Sections/Chapter2/motivation-poincare.tex}
+\input{Sections/Chapter2/motivation-geometry.tex}
+\input{Sections/Chapter2/motivation-strings.tex}
+\input{Sections/Chapter2/motivation-ricci-flow.tex}
 
-\chapter{Ricci Flow and Oliver-Ricci Curvature}
+\chapter{Ricci Flow and Oliver-Ricci Curvature}\label{chap:chapter3}
 \input{Sections/RicciOlly-intro.tex}
 \input{Sections/RicciOlly-riemmaninan.tex}
 \input{Sections/RicciOlly-discrete.tex}
-\chapter{Application to Complex Networks}
+
+\chapter{Application to Complex Networks}\label{chap:chapter4}
 \input{Sections/RicciToNets-intro.tex}
 \input{Sections/RicciToNets-generalapplications.tex}
-\chapter{The Developed Code}
+
+\chapter{The Developed Code}\label{chap:chapter5}
 \input{Sections/code-intro.tex}
 \input{Sections/code-setup.tex}
 \input{Sections/code-tests.tex}
 \input{Sections/code-karate.tex}
-\chapter{Conclusions and Future Directions}
+
+\chapter{Conclusions and Future Directions}\label{chap:chapter6}
 
 % ********************************** Appendices ********************************
 \begin{appendices} % Using appendices environment for more functunality
