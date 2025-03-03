@@ -1,0 +1,1 @@
+mv -v ./out/main.pdf ./DiscreteRicciFlow.pdf
