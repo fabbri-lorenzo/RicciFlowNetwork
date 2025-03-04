@@ -53,7 +53,7 @@ One crucial property of topological spaces is \emph{compactness}, which captures
     \end{equation}
 \end{definition}
 
-Another important property \emph{connectedness}: intuitively, a connected space can't be partitioned into separate pieces with nothing in common. To make this intuition more precise, we first need to define a \emph{path}.
+Another important property is \emph{connectedness}: intuitively, a connected space can't be partitioned into separate pieces with nothing in common. To make this intuition more precise, we first need to define a \emph{path}.
 
 \begin{definition}[Path]
     Let $(X, \mathcal{A})$ be a topological space, and let $x,y \in X$. A \emph{path} is a continuous function $f : [0,1] \to X$ with $f(0)=x$ and $f(1)=y$. A \emph{path-component} of $X$ is an equivalence class of $X$ where $x$ and $y$ belong to the same class if a path connects them.
@@ -73,20 +73,10 @@ Another important property \emph{connectedness}: intuitively, a connected space 
 
 Beyond these properties, we often define continuous maps from one topological space to another. A \emph{homeomorphism} is a continuous, bijective map whose inverse is also continuous, making the two spaces essentially “the same” from a topological viewpoint.
 
-We are particularly interested in manifolds, which are topological spaces locally resembling $\R^n$. To apply Ricci Flow in a topological setting, one endows these manifolds with a richer structure — namely, a Riemannian metric. For now, let's define a general manifold:
-
-\begin{definition}[Manifold]\label{def:manifold-prev}
-    A \emph{topological manifold} is a topological space which locally resembles the real $n$-dimensional Euclidean space.
-\end{definition}
-
-\begin{definition}[Closed manifold]
-    A \emph{closed manifold} is a manifold without boundary that is also compact.
-\end{definition}
-
-Classic examples are circles ($1D$) and spheres ($2D$). We are especially interested in the $3$-sphere, the direct generalization in three dimensions:
+A crucial closed manifold in the definition of the Poincaré conjecture is the $3$-sphere.
 
 \begin{definition}[$3$-sphere]
-    In coordinates\footnote{We'll define a chart on a manifold later on, for now let's use our intuitive understanding of a set of coordinates in $\R^n$.}, a $3$-sphere centred at $(C_0,C_1,C_2,C_3)$ with radius $r$ is the set of points $(x_0,x_1,x_2,x_3) \in \R^4$ satisfying
+    In coordinates, a $3$-sphere centred at $(C_0,C_1,C_2,C_3)$ with radius $r$ is the set of points $(x_0,x_1,x_2,x_3) \in \R^4$ satisfying
     \begin{equation}
         \sum_{i=0}^3 (x_i - C_i)^2 = (x_0 - C_0)^2 + (x_1 - C_1)^2 + (x_2 - C_2)^2 + (x_3 - C_3)^2 = r^2.
     \end{equation}
