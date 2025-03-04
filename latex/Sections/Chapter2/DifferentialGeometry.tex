@@ -12,7 +12,7 @@ To understand the applications of Ricci Flow, we need to explore the properties 
 	\label{fig:homeomorphism}
 \end{figure}
 
-Let's begin by refining the definition~\ref{def:manifold-prev} of a \emph{differentiable manifold}, ~\cite{lee:smooth,tu:manifolds}.
+Let's begin by defining a \emph{differentiable manifold}, ~\cite{lee:smooth,tu:manifolds}.
 
 \begin{definition}[Differentiable manifold]
 	An $n$-dimensional \emph{differentiable manifold} $\M$ is a topological space equipped with a family of pairs $\{ (U_i, \phi_i) \}$, called an \emph{atlas}, where
@@ -31,11 +31,29 @@ Each pair $(U_i, \phi_i)$ is called a \emph{chart}, with $U_i$ the \emph{coordin
 
 A \emph{manifold with boundary} is defined similarly, except each chart maps into the closed half-space $H^n = \{ (x^1, \dots, x^n) \in R^n | x^n \geq 0 \}$, as showed in fig.~\ref{fig:boundary}.
 
+\begin{comment}
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{Images/boundary.png}
 	\caption{A manifold $\M$ with boundary. Here, $p \in \de \M$.}
 	\label{fig:boundary}
+\end{figure}
+\end{comment}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.38\textwidth}
+		\includegraphics[width=\textwidth]{Images/boundary.png}
+		\caption{A manifold $\M$ with boundary. Here, $p \in \de \M$.}
+		\label{fig:boundary}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.42\textwidth}
+		\includegraphics[width=\textwidth]{Images/map.png}
+		\caption{A map $f \colon \M \to \mathcal{N}$ has coordinates representation $\psi \circ f \circ \phi^{-1} \colon \R^m \to \R^n$.}
+		\label{fig:map}
+	\end{subfigure}
+	\caption{Manifolds with boundaries and maps.}
 \end{figure}
 
 %***************** DIFFERENTIABLE MAPS ********************
@@ -47,12 +65,14 @@ Because each chart maps locally to $\R^n$, we adopt the usual notion of differen
 
 Relaxing the notation, we may write $\phi(p) = \{x^\mu\}$ and $\psi(f(p)) = \{y^\alpha\}$, so that $f$ is \emph{differentiable} at $p \in \M$ if $y^\alpha = f^\alpha(x^\mu)$ is.
 
+\begin{comment}
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{Images/map.png}
 	\caption{A map $f \colon \M \to \mathcal{N}$ has coordinates representation $\psi \circ f \circ \phi^{-1} \colon \R^m \to \R^n$.}
 	\label{fig:map}
 \end{figure}
+\end{comment}
 
 Three special classes of differentiable maps are especially relevant.
 
@@ -61,7 +81,7 @@ Three special classes of differentiable maps are especially relevant.
 \end{definition}
 
 \begin{definition}[Curve]
-	An \emph{open curve} in an $n$-dimensional manifold $\M$ is a map $c \colon (a,b) \to \M$, where $(a,b)$ is an open interval such that $a<0<b$. A \emph{closed curve} is a map $c \colon S^1 \to \M$. On a chart $(U,\phi)$, a curve $c(t)$ ha the coordinate representation $x=\phi \circ c \colon \R \to \R^n$. See fig.~\ref{fig:curve}
+	An \emph{open curve} in an $n$-dimensional manifold $\M$ is a map $c \colon (a,b) \to \M$, where $(a,b)$ is an open interval such that $a<0<b$. A \emph{closed curve} is a map $c \colon S^1 \to \M$. On a chart $(U,\phi)$, a curve $c(t)$ has the coordinate representation $x=\phi \circ c \colon \R \to \R^n$. See fig.~\ref{fig:curve}
 \end{definition}
 
 \begin{definition}[Function]
@@ -169,11 +189,16 @@ In coordinates, picking dual basis, such a tensor can be expanded as
 
 The set of type $(q,r)$ tensors at $p \in \M$ is denoted by $\Tau^q_{r;p}(\M)$. A vector is a $(1,0)$ tensor, while a one-form is a $(0,1)$ tensor.
 
-In order to probe a manifold structure, it's necessary to have fields defined in it, which are smoothly structures defined for each point of $\M$. Knowing the tensor structure at a point, it's easy to generalize it to the entire manifold.
+In order to probe a manifold's structure, it's necessary to introduce fields, which are smooth objects defined for each point of $\M$. Knowing the tensor structure at a point, it's easy to generalize it to the entire manifold.
 
-In particular, for a $(1,0)$ tensor, a \emph{vector field} is a vector assigned smoothly to each point of $\M$. In other words, $V$ is a vector field if $V[f] \in \F(\M)$, for any $f \in \F(\M)$. Hence, each component of a vector field is itself a smooth function from $\M$ to $\R$. We denote the set of vector fields with $\X(\M)$. Then, a vector $X \in \X(\M)$ computed at a point $p \in \M$ is a vector at $T_p \M$, meaning $X|_p \in T_p \M$.
+Considering as an example a $(1,0)$ tensor, a \emph{vector field} is a vector assigned smoothly to each point of $\M$. In other words, $V$ is a vector field if $V[f] \in \F(\M)$, for any $f \in \F(\M)$. Hence, each component of a vector field is itself a smooth function from $\M$ to $\R$. We denote the set of vector fields with $\X(\M)$. Then, a vector $X \in \X(\M)$ computed at a point $p \in \M$ is a vector at $T_p \M$, meaning $X|_p \in T_p \M$.
 
-Similarly, a \emph{tensor field} of type $(q,r)$ is a smooth assignment of an element of $\Tau^q_{r;p}(\M)$ at each point $p \in \M$. The set of tensor fields of type $(q,r)$ on $\M$ is denoted by $\Tau^q_r(\M)$.
+Taking two vector fields $X,Y \in \X(\M)$, the \emph{Lie bracket}, or \emph{commutator}, $[X,Y]$ is another vector field, which acts on a generic function $f \in \F(\M)$ by
+\begin{equation}
+	[X,Y](f) = X (Y[f]) - Y(X[f]).
+\end{equation}
+
+Generalizing, a \emph{tensor field} of type $(q,r)$ is a smooth assignment of an element of $\Tau^q_{r;p}(\M)$ at each point $p \in \M$. The set of tensor fields of type $(q,r)$ on $\M$ is denoted by $\Tau^q_r(\M)$.
 
 %***************** FLOW BY VECTOR FIELD ********************
 \subsection{Flow generated by a vector field}
@@ -216,14 +241,14 @@ Applying the existence and uniqueness theorems for ordinary differential equatio
 	\end{itemize}
 \end{theorem}
 
-It is important to note that if the vector field $X$ is complete — that is, if every integral curve can be extended for all time — then the flow is globally defined on $\R$. In contrast, if $X$ is not complete, the flow might only exist around $t = 0$.
+It is important to note that if the vector field $X$ is complete — that is, if every integral curve can be extended for all values of the parameter — then the flow is globally defined on $\R$. In contrast, if $X$ is not complete, the flow might only exist around $t = 0$.
 
 Just as flows generated by vector fields encode the dynamics of points on a manifold, the Ricci flow encodes the information about the evolution of a manifold's metric. The correct setting to work in is a Riemannian manifold. 
 
 
 %***************** RIEMANNIAN MANIFOLDS ********************
 \subsection{Riemannian Manifolds}
-A Riemannian manifold is a smooth manifold equipped with a Riemannian metric.
+A Riemannian manifold is a smooth manifold equipped with a Riemannian metric~\cite{lee:riemann}.
 
 \begin{definition}
 	Let $\M$ be a differentiable manifold. A \emph{Riemannian metric} $g$ on $\M$ is a type $(0,2)$ tensor field on $\M$ such that, at each point $p \in \M$:
@@ -245,12 +270,13 @@ It is usual convention to omit the point $p$, denote the inverse metric as $g^{\
 \begin{equation}
 	\omega_\mu = g_{\mu\nu} U^\nu, \quad U^\mu = g^{\mu\nu} \omega_\nu .
 \end{equation}
+One implicitly refers to this isomorphism by saying that the metric allows raising and lowering indices.
+
+In a Riemannian manifold, the standard notion of differentiation does not preserve the tensorial character of geometric objects. To overcome this difficulty, we introduce the concept of the \emph{covariant derivative}. It extends the idea of directional derivatives to curved spaces, and allows us to define the concept of parallelism on a manifold.
 
 %***************** COVARIANT DERIVATIVE ********************
 \subsection{Covariant Derivatives}
-In a curved manifold, the standard notion of differentiation does not preserve the tensorial character of geometric objects. To overcome this difficulty, we introduce the concept of the \emph{covariant derivative}. It extends the idea of directional derivatives to curved spaces, and allows us to define the concept of parallelism on a manifold.
-
-To define this, we first introduce the concept of an \emph{affine connection}.
+We first introduce the concept of an \emph{affine connection}.
 \begin{definition}
     An \emph{affine connection} $\nabla$ is a map $\nabla \colon \X(\M) \times \X(\M) \to \X(\M)$, or $(X,Y) \mapsto \nabla_X Y$ which satisfies the following conditions
     \begin{subequations}
@@ -264,13 +290,13 @@ To define this, we first introduce the concept of an \emph{affine connection}.
     where $f \in \F(\M)$ and $X,Y,Z \in \X(\M)$.
 \end{definition}
 
-Take a chart $(U, \phi)$ with the coordinate $x = \phi(p)$ on $\M$, and define the functions $\Gamma^\lambda_{\nu\mu}$ called \emph{Christoffel symbols}, by
+Take a chart $(U, \phi)$ with the coordinate $x = \phi(p)$ on $\M$, and define the functions $\Gamma^\lambda_{\nu\mu}$, called \emph{Christoffel symbols}, by
 \begin{equation}
     \nabla_\nu e_\mu \equiv \nabla_{e_\nu} e_\mu = e_\lambda \Gamma^\lambda_{\nu\mu},
 \end{equation}
-where $\{e_\mu\} = \{\de_\mu\}$ is the coordinate basis in $T_p \M$.
+where $\{e_\mu\} = \{\de_\mu\}$ is the coordinate basis in $T_p \M$. By computing their transformation rule under a generic change of coordinates, one can show that Christoffel symbols are \emph{not} components of a tensor.
 
-Once the action of $\nabla$ on the basis vectors is defined, we can compute its action on any vectors, in particular
+Once the action of $\nabla$ on the basis vectors is defined, we can compute its action on any vector, i.e.,
 \begin{equation}\label{eq:def-cov-der}
     \nabla_V W = V^\mu \left( \frac{\de W^\lambda}{\de x^\mu} + W^\nu \Gamma^\lambda_{\mu\nu} \right) e_\lambda .
 \end{equation}
@@ -288,13 +314,15 @@ For Riemannian manifolds endowed with a metric tensor $g$, the affine connection
 \end{equation}
 Intuitively, this means that angles between vectors are conserved while parallelly transporting them along each other.
 
+Curvature provides a quantitative measure of how a manifold deviates from being flat. Since $\Gamma$ is not a tensor, it can't have an intrinsic geometric meaning as a measure of the curvature. To serve this purpose, one introduces the \emph{torsion} and \emph{Riemann tensor}.
+
 %***************** CURVATURE ********************
 \subsection{Curvature and Ricci Tensor}
 
-Curvature provides a quantitative measure of how a manifold deviates from being flat. Since $\Gamma$ is not a tensor, it can't have an intrinsic geometric meaning as a measure of the curvature. To serve this purpose, one introduces the \emph{torsion tensor} $T \colon \X(\M) \otimes \X(\M) \to \X(\M) $ and the \emph{Riemann tensor} $R \colon \X(\M) \otimes \X(\M) \otimes \X(\M) \to \X(\M) $. They're defined by
+The \emph{torsion tensor} $T \colon \X(\M) \otimes \X(\M) \to \X(\M) $ and the \emph{Riemann tensor} $R \colon \X(\M) \otimes \X(\M) \otimes \X(\M) \to \X(\M) $, also called \emph{curvature tensor}, are defined by
 \begin{align}
     T(X, Y) &\equiv \nabla_X Y - \nabla_Y X - [X,Y], \\
-    R(X,Y,Z) &\equiv \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X,Y]} Z. \label{eq:def-riemann}.
+    R(X,Y,Z) &\equiv \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X,Y]} Z \label{eq:def-riemann}.
 \end{align}
 
 For simplicity, we consider torsionless connections, for which the Christoffel symbols are symmetric, meaning that
@@ -314,9 +342,9 @@ and the Riemann tensor has components
 Using the general definition~\eqref{eq:def-riemann}, one can prove the following identities
 \begin{subequations}
 \begin{gather}
-    R_{\mu\nu\rho\sigma} = - R_{\nu\mu\rho\sigma} = - R_{\mu\nu\sigma\rho} \\
-    R_{\mu\nu\rho\sigma} = R_{\rho\sigma\mu\nu} \\
-    R^\mu_{\nu\rho\sigma} + R^\mu_{\sigma\nu\rho} + R^\mu_{\rho\sigma\nu} = 0
+    R_{\mu\nu\rho\sigma} = - R_{\nu\mu\rho\sigma} = - R_{\mu\nu\sigma\rho}, \\
+    R_{\mu\nu\rho\sigma} = R_{\rho\sigma\mu\nu}, \\
+    R^\mu_{\nu\rho\sigma} + R^\mu_{\sigma\nu\rho} + R^\mu_{\rho\sigma\nu} = 0.
 \end{gather}
 \end{subequations}
 
