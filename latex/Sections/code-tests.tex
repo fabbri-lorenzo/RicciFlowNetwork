@@ -104,9 +104,9 @@ In fig.~\ref{fig:LFR_Surgery} we have the graph after surgery (we chose as cutof
 \end{figure}
 
 \subsection{Further Tests on Lancichinetti-Fortunato-Radicchi Graphs}
-As a final test for our code we decided to try reproducing a result presented in the work of Ni et al. \cite{Ni:communitydetectionnetworksricci} (see \textit{figure 8a} at page 12). In particular, it is about applying Ricci Flow on different LFR graphs differing for the modularity parameter $\mu$. Of course one expects the ARI to decrease with increasing values of $\mu$ as the community structure becomes less defined.
+As a final test for our code we decided to try reproducing a result presented in the work of Ni et al. \cite{Ni:communitydetectionnetworksricci} (see \textit{figure 8a} at page 12). In particular, it is about applying Ricci Flow on different LFR graphs differing for the modularity parameter $\mu$ and the average degree. Of course one expects the ARI to decrease with increasing values of $\mu$ as the community structure becomes less defined.
 
-In fig.~\ref{fig:LFR_OTD} we present our results with OTD method for curvature evaluation
+In fig.~\ref{fig:LFR_OTD} we present our results with OTD method for curvature evaluation. ARI decreases with increasing $\mu$ as expected and does not show significant differences between different values of average degree.
 \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{../tests/LFRResults/LFR_OTD.png}
@@ -114,7 +114,7 @@ In fig.~\ref{fig:LFR_OTD} we present our results with OTD method for curvature e
     \label{fig:LFR_OTD}
 \end{figure}
 
-using first OTD and then ATD
+On the other hand, fig.~\ref{fig:LFR_ATD} shows a much poor performance and the choice of the average degree seems to be more relevant. This is in accordance with ATD method being faster than OTD, but also less precise.
 \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{../tests/LFRResults/LFR_ATD.png}
@@ -124,7 +124,7 @@ using first OTD and then ATD
 
 Our graphs do not match exactly the plots of Ni et al., as for them the loss of ARI starts from higher values of $\mu$. This could be for various reasons:
 \begin{itemize}
-    \item It is unclear which parameter they used to generate LFR graphs. For example, using Networkx it is not possible to control exactly the number of communities (only a minimum and maximum number can be set), so they probably generated their graphs in a different but unspecified way.
+    \item It is unclear which parameter they used to generate LFR graphs. For example, using Networkx it is not possible to control exactly the number of communities (only a minimum and maximum number can be set), so they probably generated their graphs in a different way, fixing some parameters we did not have complete control on.
     \item They used an average ARI, probably generating the same graph multiple times. We generated the graph and applied the Ricci Flow just once due to an already high execution time.
-    \item Their surgery process it is not specified in detail. They might have used multiple surgeries over the same Ricci Flow process to remove possible singularities affecting the final performance (even though this should not be the case for this kind of graph).
+    \item Their surgery process is not specified in detail. They might have used multiple surgeries over the same Ricci Flow process to remove possible singularities affecting the final performance (even though this should not be the case for this kind of graph).
 \end{itemize}
