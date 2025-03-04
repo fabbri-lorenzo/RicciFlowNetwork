@@ -51,7 +51,7 @@ In addition to plotting ARI and modularity with various cutoff thresholds, we al
     \label{fig:Karate_Accuracy}
 \end{figure}
 
-
+From fig.~\ref{fig:Karate_Communities_a} we can see the graph after having perform surgery with the best cutoff giving an ARI of $\approx$0.772; which is almost the best result one can get for the Karate Club graph for most of the community detection algorithm \cite{Ni:communitydetectionnetworksricci}. To understand better the detected community structure we have them depicted in fig.~\ref{fig:Karate_Communities_b}. Here we can see that only two nodes have been placed in the wrong community.
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -67,9 +67,12 @@ In addition to plotting ARI and modularity with various cutoff thresholds, we al
         \caption{Detected communities after surgery on Karate graph.}
         \label{fig:Karate_Communities_b}
     \end{subfigure}
-    \caption{Comparison of Karate graph after surgery and corrensponding connected components (i.e. the detected communities).}
+    \caption{Comparison of Karate graph after surgery and corresponding connected components (i.e. the detected communities).}
 \end{figure}
 
+Lastly, we compared the results for ARI and modularity with other two popular community detection algorithms: \textit{Louvian} and \textit{Girvan-Newman}. Results are presented in fig.~\ref{fig:Karate_Comparison}; for modularity obtained from Ricci Flow algorithm we mean the modularity value corresponding to the chosen cutoff for surgery (i.e. modularity at the end of Ricci Flow process, which we recall is evaluated using Louvian method). 
+
+Ricci Flow seems to have transformed the graph in such a way that its modularity has increased, it is higher than the one of the original graph detected by the two other methods. But perhaps the most significant result is that Ricci Flow methods yields a better ARI than Louvian method, which gives only $\approx$0.5, and the same value as Girvan-Newman.
 \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{../KarateClubResults/Comparison.png}
