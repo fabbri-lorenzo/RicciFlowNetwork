@@ -1,6 +1,6 @@
 %**************** BASICS OF GEOMETRY ******************
 \section{Basics of Differential Geometry}
-To understand the applications of Ricci Flow, we need to explore the properties of Riemannian manifolds, especially how to define a flow on a manifold and how it relates to differential equations. We will see that the Ricci Flow can be viewed as a differential equation for a family of metrics on a Riemannian manifold.
+To understand the applications of Ricci Flow, we need to explore the properties of Riemannian manifolds, particularly how to define a flow on a manifold and its relation to differential equations. We will see that the Ricci Flow can be viewed as a differential equation for a family of metrics on a Riemannian manifold.
 
 
 %***************** DIFFERENTIABLE MANIFOLDS ********************
@@ -18,7 +18,7 @@ Let's begin by refining the definition~\ref{def:manifold-prev} of a \emph{differ
 	An $n$-dimensional \emph{differentiable manifold} $\M$ is a topological space equipped with a family of pairs $\{ (U_i, \phi_i) \}$, called an \emph{atlas}, where
 	\begin{itemize}
 		\item Each $U_i$ is an open set in $\M$, and $\cup_i U_i = \M$.
-		\item Each $\phi_i$ is a homeomorphism from $U_i$ onto an open subset $U_i'\subseteq \R^n$, as showed in fig.~\ref{fig:homeomorphism}
+		\item Each $\phi_i$ is a homeomorphism from $U_i$ onto an open subset $U_i'\subseteq \R^n$, as shown in fig.~\ref{fig:homeomorphism}
 		\item For any $U_i$ and $U_j$ with $U_i \cap U_j \neq \emptyset$, the map
 		      \begin{equation*}
 			      \phi_i \circ \phi_j^{-1} \colon \phi_j (U_i \cap U_j) \to \phi_i(U_i \cap U_j),
@@ -40,7 +40,7 @@ A \emph{manifold with boundary} is defined similarly, except each chart maps int
 
 %***************** DIFFERENTIABLE MAPS ********************
 \subsection{Differentiable Maps}
-Because each chart maps locally to $\R^n$, we adopt the usual notion of differentiability. Let $\M$ and $\mathcal{N} $ be manifolds of dimension $m$ and $n$, respectively. Let's consider a map $f: \M \to \mathcal{N}$, as showed in fig.~\ref{fig:map}. Considering the charts $(U, \phi)$ on $\M$ and $(V,\psi)$ on $\mathcal{N}$, the coordinate representation of $f$ is
+Because each chart maps locally to $\R^n$, we adopt the usual notion of differentiability. Let $\M$ and $\mathcal{N} $ be manifolds of dimension $m$ and $n$, respectively. Consider a map $f: \M \to \mathcal{N}$, as shown in fig.~\ref{fig:map}. Considering the charts $(U, \phi)$ on $\M$ and $(V,\psi)$ on $\mathcal{N}$, the coordinate representation of $f$ is
 \begin{equation}
 	\phi \circ f \circ \phi^{-1}: \R^m \to \R^n .
 \end{equation}
@@ -86,7 +86,7 @@ Three special classes of differentiable maps are especially relevant.
 
 %***************** VECTORS ********************
 \subsection{Vectors}
-An effective way to define a \emph{vector} on a manifold is through directional derivatives of functions along curves. Let $c\colon (a,b) \to \M$ be a curve with $c(0)=p$, and let $f \colon \M \to \R$ be any smooth function, as showed in fig.~\ref{fig:vector}. The \emph{tangent vector} at $p$ is the directional derivative of $f(c(t))$ along the curve $c(t)$ at $t=0$, that is,
+A useful way to define a \emph{vector} on a manifold is through directional derivatives of functions along curves. Let $c\colon (a,b) \to \M$ be a curve with $c(0)=p$, and let $f \colon \M \to \R$ be any smooth function, as showed in fig.~\ref{fig:vector}. The \emph{tangent vector} at $p$ is the directional derivative of $f(c(t))$ along the curve $c(t)$ at $t=0$, that is,
 \begin{equation}
 	X[f] \coloneq \left. \frac{\ud f (c(t))}{\ud t}\right|_{t=0} = \left. \frac{\partial f}{\partial x^\mu} \frac{\ud x^\mu(c(t))}{\ud t} \right|_{t=0} = X^\mu \left(\frac{\de f}{\de x^\mu}\right),
 \end{equation}
@@ -125,11 +125,11 @@ making $\dim T_p \M = \dim \M = n$. Further, for each $V \in T_p \M$, we can exp
 
 %***************** ONE-FORMS ********************
 \subsection{One-Forms}
-Because each $T_p \M$ is a vector space, its \emph{dual} space $T^*_p \M$, called \emph{cotangent space}, consists of linear functionals on $T_p \M$. An element 
+Since each $T_p \M$ is a vector space, its \emph{dual} space $T^*_p \M$, called the \emph{cotangent space}, consists of linear functionals on $T_p \M$. An element 
 \begin{equation}
     T^*_p \M \ni \omega \colon T_p \M \to \R
 \end{equation}
-is called \emph{one-form} at $p$. The simplest example is the \emph{differential} $\ud f$ of a function $f \in \F(\M)$. Its action on a vector $V \in T_p \M$ is defined by
+is called \emph{one-form} at $p$. The simplest example is the \emph{differential} $\ud f$ of a function $f \in \F(\M)$. Its action on a vector $V \in T_p \M$ is given by
 \begin{equation}
 	\scalar{\ud f}{V} \equiv V[f] = V^\mu \frac{\de f}{\de x^\mu} \in \R.
 \end{equation}
@@ -154,7 +154,7 @@ is defined by
 
 %***************** TENSORS AND TENSOR FIELDS ********************
 \subsection{Tensors and Tensor Fields}
-From multilinear algebra, a \emph{tensor} of type $(q,r)$ at $p \in \M$ is a multilinear map 
+In multilinear algebra, a \emph{tensor} of type $(q,r)$ at $p \in \M$ is a multilinear map 
 \begin{equation}
 	T^{(q,r)} \colon
 	\underbrace{T^*_p \M \otimes \dots \otimes T^*_p \M}_\text{$q$ times}
@@ -177,11 +177,19 @@ Similarly, a \emph{tensor field} of type $(q,r)$ is a smooth assignment of an el
 
 %***************** FLOW BY VECTOR FIELD ********************
 \subsection{Flow generated by a vector field}
-A vector field $X \in \X(\M)$ cab generate a \emph{flow} $\sigma \colon \R \times \M \to \M$. Concretely, for each initial point $x_0 \in \M$, the map
+A smooth vector field on a manifold naturally gives rise to a flow, a continuous mapping that describes how points move along the trajectories defined by the field.
+
+Specifically, if $X$ is a vector field on $\M$, its associated flow is a map
 \begin{equation}
-    t \mapsto \sigma(t, x_0)
+    \sigma \colon \R \times \M \to \M,
 \end{equation}
-is an \emph{integral curve} of $X$, satisfying the system of ODEs in local coordinates
+such that for each point $x$ in $\M$, the curve defined by $t \mapsto \sigma(t, x)$ is an integral curve of $X$. In other words, at each parameter value $t$ the tangent vector to the curve coincides with the value of $X$ at the point $\sigma(t,x)$.
+
+In local coordinates, if we write $X$ in the form
+\begin{equation}
+    X = X^\mu \de_\mu,
+\end{equation}
+then the integral curve passing through an initial point $x_0$ satisfies the system of ordinary differential equations
 \begin{equation}\label{eq:ode-flow-coordinates}
 	\frac{\ud}{\ud t} \sigma^\mu (t,x_0) = X^\mu (\sigma(t,x_0)),
 \end{equation}
@@ -190,19 +198,27 @@ with the initial condition
 	\sigma^\mu(0,x_0) = x^\mu_0.
 \end{equation}
 
-The fundamental flow property is
+A key property of the flow is its group-like behaviour. Indeed, for any two real numbers $t$ and $s$ and for any $x\in\M$, we have
 \begin{equation}\label{eq:property-flow}
-	\sigma(t, \sigma^\mu(s,x_0)) = \sigma(t+s,x_0),
+	\sigma(t, \sigma^\mu(s,x)) = \sigma(t+s,x),
 \end{equation}
 
-\begin{theorem}
-	For any point $x \in \M$, there exists a differentiable map $\sigma \colon \R \times \M \to \M$ such that
+This property states that flowing first for a parameter $s$ and then for an additional parameter $t$ is equivalent to flowing continuously for a parameter $t + s$. It also implies that each mapping $\sigma(t,\,\cdot)$ is invertible with inverse $\sigma(-t,\,\cdot)$.
+
+Applying the existence and uniqueness theorems for ordinary differential equations, one can prove the following theorem.
+
+\begin{theorem}[Fundamental Existence Theorem for Flows]
+	For any point $x \in \M$, there exists a unique differentiable map $\sigma \colon \R \times \M \to \M$, satisfying
 	\begin{itemize}
 		\item $\sigma(0,x) = x$;
 		\item $t \mapsto \sigma(t,x)$ is a solution of~\eqref{eq:ode-flow-coordinates} and~\eqref{eq:ode-flow-initial-condition};
 		\item $\sigma(t,\sigma^\mu(s,x)) = \sigma(t+s,x)$.
 	\end{itemize}
 \end{theorem}
+
+It is important to note that if the vector field $X$ is complete — that is, if every integral curve can be extended for all time — then the flow is globally defined on $\R$. In contrast, if $X$ is not complete, the flow might only exist around $t = 0$.
+
+Just as flows generated by vector fields encode the dynamics of points on a manifold, the Ricci flow encodes the information about the evolution of a manifold's metric. The correct setting to work in is a Riemannian manifold. 
 
 
 %***************** METRIC TENSOR ********************
