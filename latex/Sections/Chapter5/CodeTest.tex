@@ -124,7 +124,7 @@ On the other hand, fig.~\ref{fig:LFR_ATD} shows a much poorer performance and th
 
 Our graphs do not match exactly the plots of Ni et al., as for them the loss of ARI starts from higher values of $\mu$. This could be for various reasons:
 \begin{itemize}
-    \item It is unclear which parameter they used to generate LFR graphs. For example, using Networkx it is not possible to control exactly the number of communities (only a minimum and maximum number can be set), so they probably generated their graphs differently, fixing some parameters we did not have complete control on.
+    \item It is unclear which parameter they used to generate LFR graphs. For example, using NetworkX it is not possible to control exactly the number of communities (only a minimum and maximum number can be set), so they probably generated their graphs differently, fixing some parameters we did not have complete control on.
     \item They used an average ARI, probably generating the same graph multiple times. We generated the graph and applied the Ricci Flow just once due to an already high execution time.
     \item Their surgery process is not specified in detail. They might have used multiple surgeries over the same Ricci Flow process to remove possible singularities affecting the final performance (even though this should not be the case for this kind of graph).
 \end{itemize}

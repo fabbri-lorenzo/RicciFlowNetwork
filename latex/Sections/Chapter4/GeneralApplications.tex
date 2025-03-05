@@ -56,10 +56,10 @@ However, the Rand Index does not correct for chance agreement. The \emph{Adjuste
 \end{equation}
 which yields a value that ranges from 0 (or negative, depending on definition) up to 1. Here, 1 indicates the clustering $C$ exactly matches the ground-truth $G$, whereas an ARI near 0 suggests random agreement.
 
-\subsubsection{Applying ARI to Ricci Flow-based Community Detection}
+\subsection{Applying ARI to Ricci Flow-based Community Detection}
 When applying Ricci Flow on a network, one typically obtains a final partition of the graph by removing edges beyond a certain length. If a ground-truth labelling exists, we compute the ARI to assess how well these communities align with the reference. If $\mathrm{ARI}$ is high, that means the geometric approach successfully captured the intended grouping. By examining the ARI as a function of the threshold, one can also decide the best cutoff for the “network surgery.” In practice, one might do a range of threshold values, measure the ARI for each, and pick the threshold that maximizes it (assuming the ground-truth is known). In contexts where the ground-truth partition is not known, we might rely on internal validation measures, such as modularity, to guess a suitable threshold.
 
-\subsubsection{Definition of Modularity}
+\subsection{Definition of Modularity}
 \emph{Modularity} is one of the most commonly used internal metrics for community detection in networks. Proposed initially by Newman and Girvan, it quantifies how well a particular partition of the network divides the nodes into communities that are dense internally and sparse between each other.
 
 Let us consider a network with $n$ nodes and $m$ edges (or total edge weight if it is a weighted graph). For a given partition of the network into $k$ communities, the modularity $Q$ is computed as:
@@ -68,7 +68,7 @@ Q \;=\;\frac{1}{2m} \sum_{i,j}\Bigl(A_{ij} \;-\;\frac{d_i\,d_j}{2m}\Bigr) \,\del
 \end{equation}
 where $A_{ij}$ is the adjacency matrix (or the weight matrix), $d_i$ is the degree (or sum of weights) of node $i$, $c_i$ is the community label of node $i$, and $\delta(c_i, c_j)$ is 1 if $i$ and $j$ are in the same community and 0 otherwise. The term $\frac{d_i d_j}{2m}$ approximates the expected number of edges (or expected weight) between $i$ and $j$ if edges are distributed randomly but respect node degrees. High modularity indicates that the actual number of intra-community edges is significantly above random expectation.
 
-\subsubsection{Modularity as a Stopping or Surgery Criterion}
+\subsection{Modularity as a Stopping or Surgery Criterion}
 When using Ricci Flow for community detection, one can track how modularity evolves as edges get re-weighted and as one tries different thresholds for cutting. Typically, there is an intuitive sweet spot where further cutting does not substantially improve the modularity and might begin to over-segment the network. 
 
 A practical strategy is as follows:
