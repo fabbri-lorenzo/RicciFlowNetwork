@@ -8,28 +8,28 @@ The Ricci Flow-based technique for network community detection focuses on the ge
 
 Here are the major steps (in broad terms) for using Ricci Flow to detect communities:
 \begin{enumerate}
-    \item \textbf{Initialization}: Assign an initial weight to each edge $(x,y)$. Often, one starts with uniform weights or with weights based on an existing property such as adjacency or similarity.
-    \item \textbf{Probability Measures}: Choose how to define the measure $m_x$ at each node $x$. A popular simple choice is to put uniform weight on all neighbors of $x$, ensuring $\sum_{v \in \text{neighbors}(x)} m_x(v)=1$. Other weighting schemes (e.g., discounting more distant neighbors) can also be used.
-    \item \textbf{Curvature Computation}: For each edge $(x,y)$, compute the Ollivier Ricci curvature $\kappa(x,y)$ by solving the discrete optimal transport problem and using 
-    \[
+    \item \emph{Initialization}: Assign an initial weight to each edge $(x,y)$. Often, one starts with uniform weights or with weights based on an existing property such as adjacency or similarity.
+    \item \emph{Probability Measures}: Choose how to define the measure $m_x$ at each node $x$. A popular simple choice is to put uniform weight on all neighbours of $x$, ensuring $\sum_{v \in \text{neighbours}(x)} m_x(v)=1$. Other weighting schemes (e.g., discounting more distant neighbours) can also be used.
+    \item \emph{Curvature Computation}: For each edge $(x,y)$, compute the Ollivier Ricci curvature $\kappa(x,y)$ by solving the discrete optimal transport problem and using 
+    \begin{equation}
     \kappa(x,y) = 1 - \frac{W(m_x, m_y)}{d(x,y)}.
-    \]
-    \item \textbf{Discrete Ricci Flow Update}: Adjust the edge weight according to
-    \[
+    \end{equation}
+    \item \emph{Discrete Ricci Flow Update}: Adjust the edge weight according to
+    \begin{equation}
     w_{xy}^{(i+1)} = w_{xy}^{(i)} \;-\; \eta \,\kappa_{xy}^{(i)} \; d_{xy}^{(i)}.
-    \]
-    Often, one sets $\eta=1$ and updates all edges simultaneously, then recomputes shortest path distances $d(\cdot,\cdot)$ for the next iteration. The total number of iterations can be chosen based on convergence criteria or practical heuristics.
-    \item \textbf{Network Surgery}: After a certain number of iterations, examine the distribution of edge weights. Typically, bridging edges (those connecting separate communities) will have grown in length. Choose a threshold $T$ such that edges with $w_{xy} > T$ are considered “cuts,” removing them from the graph. The connected components that remain are taken as the identified communities.
-    \item \textbf{Post-Processing}: If a graph has hierarchical communities, additional steps (e.g., repeating the process within subcomponents) might be performed to further subdivide the clusters.
+    \end{equation}
+    Often, one sets $\eta=1$ and updates all edges simultaneously, then recomputes the shortest path distances $d(\cdot,\cdot)$ for the next iteration. The total number of iterations can be chosen based on convergence criteria or practical heuristics.
+    \item \emph{Network Surgery}: After a certain number of iterations, examine the distribution of edge weights. Typically, bridging edges (those connecting separate communities) will have grown in length. Choose a threshold $T$ such that edges with $w_{xy} > T$ are considered “cuts,” removing them from the graph. The connected components that remain are taken as the identified communities.
+    \item \emph{Post-Processing}: If a graph has hierarchical communities, additional steps (e.g., repeating the process within subcomponents) might be performed to further subdivide the clusters.
 \end{enumerate}
 
 In practice, one needs to choose three important parameters:
 \begin{enumerate}
-    \item \textbf{Number of Ricci Flow Iterations}: Stopping too soon might not emphasize bridging edges enough to isolate communities; iterating too long might lead to degeneracies (e.g., certain edges become extremely large or extremely small). An empirical strategy is to run a moderate number (e.g., 10--20 iterations) and check if measures like ARI (if a ground truth is available) or modularity saturate.
+    \item \emph{Number of Ricci Flow Iterations}: Stopping too soon might not emphasize bridging edges enough to isolate communities; iterating too long might lead to degeneracies (e.g., certain edges become extremely large or extremely small). An empirical strategy is to run a moderate number (e.g., 10--20 iterations) and check if measures like ARI (if a ground truth is available) or modularity saturate.
 
-    \item \textbf{Cut Threshold for Network Surgery}: Typically chosen by scanning multiple thresholds and evaluating a measure of clustering quality (e.g., modularity) or ARI. The threshold essentially encodes when an edge has grown so large that it is acting as a “neck” in geometric terms and should be removed.
+    \item \emph{Cut Threshold for Network Surgery}: Typically chosen by scanning multiple thresholds and evaluating a measure of clustering quality (e.g., modularity) or ARI. The threshold essentially encodes when an edge has grown so large that it is acting as a “neck” in geometric terms and should be removed.
 
-    \item \textbf{Mass Distributions}: The simplest is uniform distribution on neighbors (sometimes with or without a fraction of mass at the node itself). More sophisticated distributions might downweight distant neighbors, especially in large or weighted networks, thereby changing the computed transportation distance (whether OTD or ATD) and influencing the resulting curvature values.
+    \item \emph{Mass Distributions}: The simplest is uniform distribution on neighbours (sometimes with or without a fraction of mass at the node itself). More sophisticated distributions might downweight distant neighbours, especially in large or weighted networks, thereby changing the computed transportation distance (whether OTD or ATD) and influencing the resulting curvature values.
 \end{enumerate}
 
 Then, one needs to validate the method and also make it feasible for cases where ground truth is not available. For these purposes we can make use of \emph{Adjusted Rand Index (ARI)} and \emph{Modularity}.
@@ -38,9 +38,9 @@ Then, one needs to validate the method and also make it feasible for cases where
 The \emph{Adjusted Rand Index (ARI)} is a popular external validation measure to compare a discovered clustering with a known ground-truth partition. Suppose you have a set of $n$ items (in our case, the $n$ nodes of a network). Let $C = \{C_1, \ldots, C_r\}$ be a partition of these items into $r$ clusters found by some method, and let $G = \{G_1, \ldots, G_s\}$ be the ground-truth (or reference) partition into $s$ clusters. The Rand Index (RI) measures the fraction of item pairs that are \emph{consistently} assigned in both partitions (i.e., either assigned together in both or assigned to different clusters in both). 
 
 Formally, the Rand Index is given by:
-\[
+\begin{equation}
 \mathrm{RI}(C,G) \;=\; \frac{a + d}{a + b + c + d},
-\]
+\end{equation}
 where 
 \begin{itemize}
     \item $a$ is the number of pairs of items that are in the same cluster in $C$ \emph{and} in the same cluster in $G$,
@@ -51,21 +51,21 @@ where
 Because $a+d$ counts all the agreements (put together or kept apart) and $b+c$ counts the disagreements, $\mathrm{RI}(C,G)$ is between 0 and 1, with 1 meaning a perfect match of the partitions.
 
 However, the Rand Index does not correct for chance agreement. The \emph{Adjusted Rand Index} refines this by subtracting the expected RI of random partitions and rescaling. One can define:
-\[
+\begin{equation}
 \mathrm{ARI}(C,G) \;=\; \frac{\mathrm{RI}(C,G)\;-\;\mathrm{Expected}[\mathrm{RI}]}{\max(\mathrm{RI})\;-\;\mathrm{Expected}[\mathrm{RI}]},
-\]
+\end{equation}
 which yields a value that ranges from 0 (or negative, depending on definition) up to 1. Here, 1 indicates the clustering $C$ exactly matches the ground-truth $G$, whereas an ARI near 0 suggests random agreement.
 
 \subsubsection{Applying ARI to Ricci Flow-based Community Detection}
-When applying Ricci Flow on a network, one typically obtains a final partition of the graph by removing edges beyond a certain length. If a ground-truth labeling exists, we compute the ARI to assess how well these communities align with the reference. If $\mathrm{ARI}$ is high, that means the geometric approach successfully captured the intended grouping. By examining the ARI as a function of the threshold, one can also decide the best cutoff for the “network surgery.” In practice, one might do a range of threshold values, measure the ARI for each, and pick the threshold that maximizes it (assuming the ground-truth is known). In contexts where the ground-truth partition is not known, we might rely on internal validation measures, such as modularity, to guess a suitable threshold.
+When applying Ricci Flow on a network, one typically obtains a final partition of the graph by removing edges beyond a certain length. If a ground-truth labelling exists, we compute the ARI to assess how well these communities align with the reference. If $\mathrm{ARI}$ is high, that means the geometric approach successfully captured the intended grouping. By examining the ARI as a function of the threshold, one can also decide the best cutoff for the “network surgery.” In practice, one might do a range of threshold values, measure the ARI for each, and pick the threshold that maximizes it (assuming the ground-truth is known). In contexts where the ground-truth partition is not known, we might rely on internal validation measures, such as modularity, to guess a suitable threshold.
 
 \subsubsection{Definition of Modularity}
 \emph{Modularity} is one of the most commonly used internal metrics for community detection in networks. Proposed initially by Newman and Girvan, it quantifies how well a particular partition of the network divides the nodes into communities that are dense internally and sparse between each other.
 
 Let us consider a network with $n$ nodes and $m$ edges (or total edge weight if it is a weighted graph). For a given partition of the network into $k$ communities, the modularity $Q$ is computed as:
-\[
+\begin{equation}
 Q \;=\;\frac{1}{2m} \sum_{i,j}\Bigl(A_{ij} \;-\;\frac{d_i\,d_j}{2m}\Bigr) \,\delta(c_i, c_j),
-\]
+\end{equation}
 where $A_{ij}$ is the adjacency matrix (or the weight matrix), $d_i$ is the degree (or sum of weights) of node $i$, $c_i$ is the community label of node $i$, and $\delta(c_i, c_j)$ is 1 if $i$ and $j$ are in the same community and 0 otherwise. The term $\frac{d_i d_j}{2m}$ approximates the expected number of edges (or expected weight) between $i$ and $j$ if edges are distributed randomly but respect node degrees. High modularity indicates that the actual number of intra-community edges is significantly above random expectation.
 
 \subsubsection{Modularity as a Stopping or Surgery Criterion}
@@ -85,6 +85,6 @@ This threshold selection process is akin to the notion of “neck pinches” or 
 
 A hallmark of the classical Ricci Flow with surgery on manifolds is that when the flow develops singularities (often visualized as “neck pinches”), the manifold is physically separated into topologically distinct pieces. Drawing an analogy, in discrete Ricci Flow on graphs, the edges that grow large (due to negative curvature) can be viewed as “singularities” or bridging regions, reminiscent of the neck that pinches in a continuous manifold. The act of removing these edges at some iteration is the direct analog of performing surgery on the manifold. After removing these “necks,” the graph breaks into connected components, each presumably representing a dense or well-curved subregion, i.e., a community.
 
-In practice, we carry out this network surgery step once or multiple times, balancing the preservation of meaningful connectivity with the desire to isolate truly separated clusters. Because many real networks can exhibit hierarchical or multi-level community structures, it is possible that each sub-component can be further refined if we continue the process within it. This multi-scale approach can be repeated if one suspects nested communities.
+In practice, we carry out this network surgery step once or multiple times, balancing the preservation of meaningful connectivity with the desire to isolate truly separated clusters. Because many real networks can exhibit hierarchical or multi-level community structures, it is possible that each subcomponent can be further refined if we continue the process within it. This multiscale approach can be repeated if one suspects nested communities.
 
 From a more theoretical vantage point, \emph{why} does curvature---in the sense of Ollivier---detect communities so well? Intuitively, the geometry of a manifold with positive curvature is reminiscent of a cohesive, ``ball-like'' region, while negatively curved regions show hyperbolic expansions akin to branching. In network terms, cohesive subgraphs correspond to a “positive curvature signature” because local random walks or local mass distributions align more easily, whereas bridging edges or tree-like expansions create a negative curvature effect. 

@@ -1,0 +1,12 @@
+To adapt Ollivier's construction to a graph $G = (V,E)$ where $V$ is the set of nodes and $E$ is the set of edges (possibly with weights), one often assigns to each node $x$ a probability measure $m_x$. A typical choice is to concentrate the mass uniformly on $x$’s neighbours, possibly with some parameter $\alpha$ to keep a fraction of the mass at $x$ itself. Let $W(m_x, m_y)$ denote the Wasserstein distance between $m_x$ and $m_y$. The Ollivier Ricci curvature $\kappa(x,y)$ along the edge $(x,y)$ is defined as 
+\begin{equation}
+\kappa(x,y) \;=\; 1 \;-\;\frac{W\bigl(m_x, m_y\bigr)}{d(x,y)},
+\end{equation}
+where $d(x,y)$ is the usual shortest-path distance (or a weight-based distance) between $x$ and $y$. Intuitively:
+\begin{itemize}
+    \item If many neighbours of $x$ align well with those of $y$, then $W(m_x,m_y)$ is relatively small compared to $d(x,y)$, giving a larger curvature.
+    \item If the neighbours do not overlap much, $W(m_x,m_y)$ will be comparatively large, implying smaller (or possibly negative) curvature.
+\end{itemize}
+This lines up with the idea that a highly ``clustered'' or cohesive set of nodes—often indicating an underlying community—acts more like a positively curved region in the manifold analogy, whereas edges bridging distant clusters reflect negative curvature. These insights lead to a method for analysing and partitioning networks by focusing on edges with specific curvature characteristics.
+
+
