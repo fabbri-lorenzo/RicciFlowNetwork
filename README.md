@@ -20,6 +20,7 @@ In this project, we apply **Ollivier-Ricci curvature** and **Ricci Flow** to det
 ## Requirements
 To run this project, you need the following dependencies:
 
+- GraphRicciCurvature
 - NetworkX
 - NumPy
 - Matplotlib
@@ -29,7 +30,7 @@ To run this project, you need the following dependencies:
 You can install them with:
 
 ```bash
-pip install networkx numpy matplotlib scikit-learn tqdm
+pip install GraphRicciCurvature networkx numpy matplotlib scikit-learn tqdm
 ```
 
 ## Data
