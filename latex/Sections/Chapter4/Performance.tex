@@ -1,5 +1,5 @@
 
-\section{Performance considerations}
+\section{Performance Considerations}
 \label{sec:ricci_flow_networks_performance}
 
 While the continuous Ricci Flow PDE can be computationally demanding in the smooth case, the discrete version has its own set of computational challenges. The major cost typically arises in Wasserstein Distances. Computing $W(m_x, m_y)$ for each edge $(x,y)$. In a graph with $n$ nodes and $e$ edges, if we attempt an exact solution of the optimal transport problem, it can become computationally expensive. However, in many practical discrete settings, especially with local probability measures $m_x$ that concentrate mass on immediate neighbours, $W(m_x,m_y)$ can often be computed with simpler combinatorial formulas or approximations ~\cite{Ni:communitydetectionnetworksricci}. 
