@@ -1,3 +1,5 @@
 \begin{abstract}
-    This project uses Ricci Flow as a geometric approach to detect community structures in networks. It applies Ollivier-Ricci curvature to adjust the weights of edges in a graph, iterating the process to shrink intra-community edges and stretch inter-community edges. Having tested the Ricci Flow method, our goal was identifying the pre-labelled communities of a real dataset: Zachary's Karate Club graph \cite{ZacharyKarateClubGraph}.
+    This project uses Ricci Flow as a geometric approach to detect community structures in networks. Specifically, it applies Ollivier-Ricci curvature to adjust edge weights in a graph, iterating the process to shrink intra-community edges and stretch inter-community edges. Then, surgery is performed to separate the graph into distinct connected components, representing communities.
+
+    After having tested the Ricci Flow method on synthetic graphs, we applied it to a real dataset: Zachary's Karate Club graph~\cite{ZacharyKarateClubGraph}, aiming to accurately identify its pre-labelled communities.
 \end{abstract}
