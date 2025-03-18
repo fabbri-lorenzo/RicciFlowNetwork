@@ -1,1 +1,1 @@
-mv -v ./out/main.pdf ./DiscreteRicciFlow.pdf
+mv -v ./out/main.pdf ./notes.pdf

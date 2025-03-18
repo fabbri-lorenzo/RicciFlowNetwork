@@ -6,7 +6,7 @@ In the study of complex networks, a fundamental task is to identify densely conn
 
 The Ricci Flow-based technique for network community detection focuses on the geometric viewpoint: an edge with significantly negative Ricci curvature may signify a \emph{bridge} between distinct communities, whereas edges with positive curvature are typically nestled within cohesive communities. Iteratively adjusting edge weights according to Ollivier Ricci curvature has the effect of “magnifying” bridging edges and “contracting” internal edges, ultimately making a subsequent threshold-based cut reveal the inherent clusters.
 
-Here are the major steps (in broad terms) for using Ricci Flow to detect communities:
+The main steps for using Ricci Flow to detect communities are:
 \begin{enumerate}
     \item \emph{Initialization}: Assign an initial weight to each edge $(x,y)$. Often, one starts with uniform weights or with weights based on an existing property such as adjacency or similarity.
     \item \emph{Probability Measures}: Choose how to define the measure $m_x$ at each node $x$. A popular simple choice is to put uniform weight on all neighbours of $x$, ensuring $\sum_{v \in \text{neighbours}(x)} m_x(v)=1$. Other weighting schemes (e.g., discounting more distant neighbours) can also be used.
@@ -34,7 +34,7 @@ In practice, one needs to choose three important parameters:
 
 Then, one needs to validate the method and also make it feasible for cases where ground truth is not available. For these purposes we can make use of \emph{Adjusted Rand Index (ARI)} and \emph{Modularity}.
 
-\subsubsection{General Definition of ARI}
+\subsection{General Definition of ARI}
 The \emph{Adjusted Rand Index (ARI)} is a popular external validation measure to compare a discovered clustering with a known ground-truth partition. Suppose you have a set of $n$ items (in our case, the $n$ nodes of a network). Let $C = \{C_1, \ldots, C_r\}$ be a partition of these items into $r$ clusters found by some method, and let $G = \{G_1, \ldots, G_s\}$ be the ground-truth (or reference) partition into $s$ clusters. The Rand Index (RI) measures the fraction of item pairs that are \emph{consistently} assigned in both partitions (i.e., either assigned together in both or assigned to different clusters in both). 
 
 Formally, the Rand Index is given by:
@@ -43,9 +43,9 @@ Formally, the Rand Index is given by:
 \end{equation}
 where 
 \begin{itemize}
-    \item $a$ is the number of pairs of items that are in the same cluster in $C$ \emph{and} in the same cluster in $G$,
-    \item $b$ is the number of pairs of items that are in the same cluster in $C$ but in different clusters in $G$,
-    \item $c$ is the number of pairs that are in different clusters in $C$ but in the same cluster in $G$,
+    \item $a$ is the number of pairs of items that are in the same cluster in $C$ \emph{and} in the same cluster in $G$;
+    \item $b$ is the number of pairs of items that are in the same cluster in $C$ but in different clusters in $G$;
+    \item $c$ is the number of pairs that are in different clusters in $C$ but in the same cluster in $G$;
     \item $d$ is the number of pairs that are in different clusters in $C$ and in different clusters in $G$.
 \end{itemize}
 Because $a+d$ counts all the agreements (put together or kept apart) and $b+c$ counts the disagreements, $\mathrm{RI}(C,G)$ is between 0 and 1, with 1 meaning a perfect match of the partitions.

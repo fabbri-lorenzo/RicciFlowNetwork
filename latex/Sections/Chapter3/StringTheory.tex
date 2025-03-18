@@ -2,7 +2,7 @@
 \section{Non-Linear Sigma Models and String Theory}
 The standard starting point of string theory is \emph{Polyakov action}, which represents a bosonic, classical, one-dimensional, string~\cite{weigand:string,polchinski:strings}. This latter traces out a two-dimensional worldsheet $\Sigma$, whose intrinsic coordinates are $\xi^a = (\tau, \sigma)$, $a = 1,2$. Further, the string is embedded in a $26$-dimensional spacetime, and from this point of view it's described by the bosonic coordinates $X^\mu(\xi)$, $\mu = 0, \dots 25$. We focus on the \emph{closed string}, defined by the periodicity condition $X^\mu(\tau,\sigma) = X^\mu (\tau, \sigma + l)$.
 
-The metric on spacetime is denoted by $g_{\mu\nu}$, while the metric on the worldsheet is $\gamma_{ab}$. For a flat spacetime, with Minkowski metric $g_{\mu\nu} \equiv \eta_{\mu\nu} = \textup{diag}(-1,+1,+1,+1)$, the action reads
+The metric on spacetime is denoted by $g_{\mu\nu}$, while the metric on the worldsheet is $\gamma_{ab}$. For a flat spacetime, with Minkowski metric $g_{\mu\nu} \equiv \eta_{\mu\nu} = \textup{diag}(-1,+1,\dots,+1)$, the action reads
 \begin{equation}\label{eq:polyakov}
     S_P [X^\mu(\xi), \gamma_{ab}(\xi)] = -\frac{1}{4\pi\alpha'} \int_\Sigma \ud \tau \ud \sigma \sqrt{-\det(\gamma)} \, \gamma^{ab} \de_a X_\mu (\xi) \de_b X^\mu (\xi),
 \end{equation}
@@ -38,9 +38,9 @@ One additional feature of the Polyakov action~\eqref{eq:polyakov} is the invaria
 
 Without going into the details, the presence of this symmetry is considered as a consistency condition for the theory, as it allows for a perturbative interpretation of the interactions. 
 
-Since the action which contains~\eqref{eq:expansion-coordinates} describes an interacting quantum field theory, it must undergo renormalization, to cure divergences. A generic property of renormalized theories is that the coupling constant is running. This is, however, incompatible with the conformal symmetry~\eqref{eq:conformal-transformation}, it implies scale-invariance.
+Since the action which contains~\eqref{eq:expansion-coordinates} describes an interacting quantum field theory, it must undergo renormalization, to cure divergences. A generic property of renormalized theories is that the coupling constant is running. This is, however, incompatible with the conformal symmetry~\eqref{eq:conformal-transformation}, which implies scale-invariance.
 
-Therefore, to tackle the quantum anomaly of the conformal symmetry, one should impose the \emph{$\beta$-function} vanishes,
+Therefore, to tackle the quantum anomaly of the conformal symmetry, one should impose that the \emph{$\beta$-function} vanishes,
 \begin{equation}
     \beta(g_{\mu\nu}) = M \frac{\de}{\de M} g_{\mu\nu} \overset{!}{=} 0.
 \end{equation}
