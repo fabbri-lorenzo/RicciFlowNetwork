@@ -110,7 +110,7 @@ In fig.~\ref{fig:LFR_OTD} we present our results with OTD method for curvature e
 \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{../tests/LFRResults/LFR_OTD.png}
-    \caption{LFR OTD}
+    \caption{LFR OTD.}
     \label{fig:LFR_OTD}
 \end{figure}
 
@@ -128,3 +128,36 @@ Our graphs do not match exactly the plots of Ni et al., as for them the loss of 
     \item They used an average ARI, probably generating the same graph multiple times. We generated the graph and applied the Ricci Flow just once due to an already high execution time.
     \item Their surgery process is not specified in detail. They might have used multiple surgeries over the same Ricci Flow process to remove possible singularities affecting the final performance (even though this should not be the case for this kind of graph).
 \end{itemize}
+
+\subsection{Execution Times}
+To conclude our testing part, we added some test performed on a LFR graph with fixed mixing parameter $\mu=0.20$ and average degree of 20. 
+We compared execution times for OTD and ATD methods applied to the same LFR graph, looking at the behaviour and stability for incresing iteration number in the Ricci Flow process.
+First we used a graph made up of $n$=500 nodes (fig.~\ref{fig:times_500}), in which we can see that ATD takes more iterations to converge and its performance is by no means comparable with the better OTD method. Even advantages in execution times for ATD are small and not consistent.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{../tests/LFRResults/Exe_times_LFR_500_nodes.png}
+    \caption{LFR execution times and ARI comparison between OTD and ATD methods for $n$=500.}
+    \label{fig:times_500}
+\end{figure}
+
+Then we set $n$=1000 and from fig.~\ref{fig:times_1000} we can see that the results are quite similar to the previous case but with an higher ARI for ATD method. Of course overall execution times increase with higher $n$ as expected.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{../tests/LFRResults/Exe_times_LFR_1000_nodes.png}
+    \caption{LFR execution times and ARI comparison between OTD and ATD methods for $n$=1000.}
+    \label{fig:times_1000}
+\end{figure}
+
+Lastly, we tested on a much bigger graph having $n$=2500, results are given in fig.~\ref{fig:times_2500}. Here we see a significant difference in execution times when the Ricci Flow is performed with 30 iterations.
+ATD is more than a minute slower even thought its ARI has already converged. This is a bit unexpected but it might be due to the complexity of the graph with such a high number of nodes. Probably ATD does not succeed in 
+making the graph structure converge and continues (unsuccessfully) updating curvatures consuming execution time. Again, the higher ARI of ATD for few iterations numbers can be explained as the method having updated the graph few times and so its original structure is still preserved at some level.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{../tests/LFRResults/Exe_times_LFR_2500_nodes.png}
+    \caption{LFR execution times and ARI comparison between OTD and ATD methods for $n$=2500.}
+    \label{fig:times_2500}
+\end{figure}
+
+From this analysis we can say that ATD takes in general more iterations to converge and is more unstable if compared with OTD.
+As expected, ATD never performs better than OTD, what surprised us was ATD execution time, especially for the graph with $n=2500$.
+We expected ATD to be faster with more consistence, even thought the behaviour could be explained as ATD is best suited for simple graph structures and thus might suffer when one has a graph with a high number of nodes.

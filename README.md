@@ -15,7 +15,7 @@ The essay for the exam can be found [here](latex/DiscreteRicciFlow.pdf)
 ## Introduction
 In this project, we apply **Ollivier-Ricci curvature** and **Ricci Flow** to detect the two known communities in Zachary’s Karate Club graph. The approach follows the work of Ni et al. (2019), where Ricci Flow is used to reshape edge weights iteratively, enhancing the separation between different communities. After applying Ricci Flow, we perform edge surgery to remove weakly connected edges and extract communities as the connected components of the resulting graph.
 
-**Documentation** can be built inside 'docs' folder using Sphynx, or it is simply accessible [here](https://fancy-dodol-4d2c6d.netlify.app/).
+**Documentation** can be built inside 'docs' folder using Sphynx, or it is simply accessible [here](https://ricciflowdocumentation.netlify.app/).
 
 ## Requirements
 To run this project, you need the following dependencies:

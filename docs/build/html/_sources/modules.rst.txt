@@ -5,6 +5,7 @@ RicciFlowNetwork
    :maxdepth: 4
 
    karate_club
-   LFR
    toymodel
+   LFR
+   exe_times_LFR
    utils
