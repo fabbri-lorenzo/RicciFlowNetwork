@@ -2,7 +2,7 @@
 This repository implements community detection on **Zachary's Karate Club graph** using **Discrete Ricci Flow** with Python, based on the methodology presented in the paper ["Community Detection on Networks with Ricci Flow"](https://doi.org/10.1038/s41598-019-46380-9) by Chien-Chun Ni et al.
 
 This is a project for the course on Complex Networks of the University of Bologna.
-The essay for the exam can be found [here](latex/DiscreteRicciFlow.pdf)
+The essay for the exam can be found [here](latex/notes.pdf)
 
 ## Table of Contents
   - [Introduction](#introduction)
